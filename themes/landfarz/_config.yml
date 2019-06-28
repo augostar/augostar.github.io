@@ -1,0 +1,30 @@
+menu:
+  首页: /
+  文章: /archives
+  项目地址:  https://github.com/AugoStar/Augo
+
+sidebar: right
+
+widgets :
+- music
+- search
+- category
+- recent_posts
+- tag 
+
+- tagcloud
+
+# Duoshuo
+duoshuo_shortname: 
+
+fancybox: false
+comments : false
+# duoshuo_shortname : true
+
+google_analytics:
+rss: 
+google_site_verification: 
+baidu_site_verification: 
+icon: 
+
+
