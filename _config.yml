@@ -16,10 +16,10 @@ timezone:
 # https://augostar.github.io/augostar.geihub.io/
 # augostar.gethub.io 
 # https://augostar.github.io/augostar.gethub.io/
-url: https://augostar.github.io/augostar.gethub.io/
+url: https://augostar.github.io
 # https://augostar.github.io/augostar.gethub.io/
 # augostar.gethub.io
-root: /augostar.gethub.io/
+root: /
 # root:  /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -85,8 +85,8 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/AugoStar/augostar.gethub.io.git
-  # augostar.gethub.io
+  # https://github.com/augostar/augostar.github.io.git
+  repo: https://github.com/augostar/augostar.github.io.git
   branch : master
 admin:
   username: Augo526
