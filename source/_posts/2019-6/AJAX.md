@@ -1,27 +1,33 @@
 ---
+
 title: AJAX的使用
-date: 2019-6-27 09:44:07
+date: 2019-6-27
 tags: web前段
 category: web前段
 
 ---
+
 ### AJAX
+
 AJAX = Asynchronous JavaScript and XML(异步的javaScript 和XML).
 AJAX不是编程语言，而是一种使用现有标准的新方法。
 AJAX最大的优点是在不重新加载整个界面的情况下、可以与服务器交换数据并更新部分网页内容。
 AJAX不需要任何浏览器插件，但需要用户允许javascript在浏览器执行
+
+<!-- more -->
+
 ### AJAX是基于现有的Internet标准
+
 XMLHttpRequest对象(异步的与服务器交换数据)
 javaScript/DOM (信息显示/交互)
 CSS(给数据定义样式)
 XML/JSON(作为转换数据的格式)
 
+``` html
 
-```
 <div><h2>使用AJAX修改文本内容</h2></div>
 	<button type="button" onclick="loadXMLDoc()">修改内容</button>
 
-	
 	<script>
 		var xmlhttp;
 		if(window.XMLHttpRequest){
@@ -53,29 +59,6 @@ XML/JSON(作为转换数据的格式)
 			xmlhttp.responseText;
 			}
 		}
-		
 	</script>
-	
-	
-	
-	
+
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

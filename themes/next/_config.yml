@@ -92,19 +92,27 @@ index_with_subtitle: false
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  主页: / || home
-  # # about: /about/ || user
-  # # tags: /tags/ || tags
-  # # categories: /categories/ || th
-  # # archives: /archives/ || archive
-  # # schedule: /schedule/ || calendar
-  # # sitemap: /sitemap.xml || sitemap
-  # # commonweal: /404/ || heartbeat
-  # # about: /about/ || user
-  标签: /tags/ || tags
-  类别: /categories/ || th
-  文档: /archives/ || archive
-  日程表: /schedule/ || calendar
+  home: / || home                          //首页
+  archives: /archives/ || archive          //归档
+  categories: /categories/ || th           //分类
+  tags: /tags/ || tags                     //标签
+  about: /about/ || user                   //关于
+  schedule: /schedule/ || calendar        //日程表
+  #sitemap: /sitemap.xml || sitemap        //站点地图
+  #commonweal: /404/ || heartbeat          //公益404
+  # 主页: / || home
+  # # # about: /about/ || user
+  # # # tags: /tags/ || tags
+  # # # categories: /categories/ || th
+  # # # archives: /archives/ || archive
+  # # # schedule: /schedule/ || calendar
+  # # # sitemap: /sitemap.xml || sitemap
+  # # # commonweal: /404/ || heartbeat
+  # # # about: /about/ || user
+  # 标签: /tags/ || tags
+  # 类别: /categories/ || th
+  # 文档: /archives/ || archive
+  # 日程表: /schedule/ || calendar
 # | archives | archives: /archives | 归档页 |
 # | categories | categories: /categories | 分类页 |
 # | tags | tags: /tags | 标签页 |
@@ -207,13 +215,13 @@ sidebar:
   #display: remove
 
   # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).
-  offset: 12
+  offset: 6
 
   # Back to top in sidebar (only for Pisces | Gemini).
-  b2t: false
+  b2t: ture
 
   # Scroll percent label in b2t button.
-  scrollpercent: false
+  scrollpercent: true
 
   # Enable sidebar on narrow view (only for Muse | Mist).
   onmobile: false
@@ -250,9 +258,11 @@ post_meta:
 post_wordcount:
   item_text: true
   wordcount: true
-  min2read: false
+  min2read: true
   totalcount: true
   separated_meta: true
+
+
 
 # Wechat Subscriber
 #wechat_subscriber:
@@ -445,7 +455,7 @@ gitment:
 # This plugin is more useful in China, make sure you known how to use it.
 # And you can find the use guide at official webiste: http://www.jiathis.com/.
 # Warning: JiaThis does not support https.
-#jiathis:
+jiathis: ture
   ##uid: Get this uid from http://www.jiathis.com/
 #add_this_id:
 
@@ -697,7 +707,7 @@ motion:
 fancybox: true
 
 # Progress bar in the top during page loading.
-pace: false
+pace: ture
 # Themes list:
 #pace-theme-big-counter
 #pace-theme-bounce
