@@ -210,12 +210,12 @@
     <title>2019-12/es6</title>
     <url>/2019/12/20/2019-12/es6/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="node-js中exports和module-exports的区别"><a href="#node-js中exports和module-exports的区别" class="headerlink" title="node.js中exports和module.exports的区别"></a>node.js中exports和module.exports的区别</h3>
-        <div id="aplayer-OjpvjHQM" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-fBSBURfa" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-OjpvjHQM"),
+            element: document.getElementById("aplayer-fBSBURfa"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -480,20 +480,6 @@ npm 安装</code></pre><p>​        npm install jshint -g</p>
       </tags>
   </entry>
   <entry>
-    <title>webEnglish</title>
-    <url>/2019/10/11/2019-9/web/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="web"><a href="#web" class="headerlink" title="web"></a>web</h3><a id="more"></a>
-<p>Hyper Text Markup Language(超文本标记语言, 又称 HTML)<br>Cascading Style Sheets (层叠式样式表, 又称 CSS)<br>Document Object Model (文档对象模型, 又称 DOM)<br>JavaScript Programming Language (JavaScript编程语言, 又称: ECMAScript 6, ES6, JavaScript 2015)<br>Web API’s (Web应用程序接口, 又称 HTML5 API 或浏览器 API)<br>Hypertext Transfer Protocol (超文本传输协议, 又称 HTTP)<br>Uniform Resource Locator’s (统一资源定位符, 又称 URL)<br>JavaScript Object Notation (JavaScript对象表示, 又称 JSON)<br>Web Content Accessibility Guidelines (网页内容无障碍设计指南, 又称 WCAG) &amp; Accessible Rich Internet Applications (富Internet应用程序的无障碍设计, 又称 ARIA)</p>
-<p>Content Management System (内容管理系统, 又称 CMS)<br>Node.js<br>Cross-browser testing (跨浏览器测试)<br>Cross-platform testing (跨平台测试)<br>Unit Testing (单元测试)<br>Cross-device testing (跨设备测试)<br>Accessibility / WAI-ARIA (无障碍访问/无障碍富Internet应用程序)<br>Search Engine Optimization (搜索引擎优化, 又称 SEO)<br>Interaction or User Interface design (交互或用户设计)<br>User Experience (用户体验)<br>Usability (可用性/易用性)<br>E-commerce Systems (电子商务系统)<br>Portal Systems (门户系统)<br>Wireframing (框架)<br>CSS layout / Grids (CSS 布局/栅格系统)<br>DOM manipulation (e.g. jQuery) (DOM 操作)<br>Mobile Web Performance (移动Web性能)<br>Load Testing (载荷测试)<br>Performance Testing (性能测试)<br>Progressive Enhancement / Graceful Degradation (渐进增强/优雅降级)<br>Version Control (e.g. GIT) (版本控制)<br>MVC / MVVM / MV (MV 框架)<br>Functional Programming (函数式编程)<br>Data Formats (e.g. JSON, XML) (数据格式)<br>Data API’s (e.g Restful API) (数据API)<br>Web Font Embedding (Web字体嵌入)<br>Scalable Vector Graphics (可伸缩向量图形, 又称 SVG)<br>Regular Expressions (正则表达式)<br>Content Strategy (内容策略)<br>Microdata / Microformats (微数据/微格式)<br>Task Runners, Build Tools, Process Automation Tools (任务管道, 构建工具, 过程自动化工具)<br>Responsive Web Design (响应式设计)<br>Object Oriented Programming (面向对象编程)<br>Application Architecture (应用架构)<br>Modules (模块)<br>Dependency Managers (依赖关系管理)<br>Package Managers (包管理)<br>JavaScript Animation (JavaScript 动画)<br>CSS Animation (CSS 动画)<br>Charts / Graphs (图表/图形)<br>UI widgets (UI工具集)<br>Code Quality Testing (代码质量测试)<br>Code Coverage Testing (代码覆盖测试)<br>Code Complexity Analysis (代码复杂度测试)<br>Integration Testing (集成测试)<br>Command Line / CLI (命令行/命令行界面)<br>Templating Strategies (模板策略)<br>Templating Engines (模板引擎)<br>Single Page Applications (单页应用)<br>XHR Requests (aka AJAX) (XHR 请求, 又称 AJAX)<br>Web/Browser Security (Web/浏览器安全)<br>HTML Semantics (HTML 语义化)<br>Browser Developer Tools (浏览器开发者工具)</p>
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>webpack配置文件设置</title>
     <url>/2019/10/11/2019-9/webpack.config.js/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Webpack是用于为浏览器构建JavaScript模块脚本的前端工具</p>
@@ -513,6 +499,20 @@ npm 安装</code></pre><p>​        npm install jshint -g</p>
 
 
 
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>webEnglish</title>
+    <url>/2019/10/11/2019-9/web/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="web"><a href="#web" class="headerlink" title="web"></a>web</h3><a id="more"></a>
+<p>Hyper Text Markup Language(超文本标记语言, 又称 HTML)<br>Cascading Style Sheets (层叠式样式表, 又称 CSS)<br>Document Object Model (文档对象模型, 又称 DOM)<br>JavaScript Programming Language (JavaScript编程语言, 又称: ECMAScript 6, ES6, JavaScript 2015)<br>Web API’s (Web应用程序接口, 又称 HTML5 API 或浏览器 API)<br>Hypertext Transfer Protocol (超文本传输协议, 又称 HTTP)<br>Uniform Resource Locator’s (统一资源定位符, 又称 URL)<br>JavaScript Object Notation (JavaScript对象表示, 又称 JSON)<br>Web Content Accessibility Guidelines (网页内容无障碍设计指南, 又称 WCAG) &amp; Accessible Rich Internet Applications (富Internet应用程序的无障碍设计, 又称 ARIA)</p>
+<p>Content Management System (内容管理系统, 又称 CMS)<br>Node.js<br>Cross-browser testing (跨浏览器测试)<br>Cross-platform testing (跨平台测试)<br>Unit Testing (单元测试)<br>Cross-device testing (跨设备测试)<br>Accessibility / WAI-ARIA (无障碍访问/无障碍富Internet应用程序)<br>Search Engine Optimization (搜索引擎优化, 又称 SEO)<br>Interaction or User Interface design (交互或用户设计)<br>User Experience (用户体验)<br>Usability (可用性/易用性)<br>E-commerce Systems (电子商务系统)<br>Portal Systems (门户系统)<br>Wireframing (框架)<br>CSS layout / Grids (CSS 布局/栅格系统)<br>DOM manipulation (e.g. jQuery) (DOM 操作)<br>Mobile Web Performance (移动Web性能)<br>Load Testing (载荷测试)<br>Performance Testing (性能测试)<br>Progressive Enhancement / Graceful Degradation (渐进增强/优雅降级)<br>Version Control (e.g. GIT) (版本控制)<br>MVC / MVVM / MV (MV 框架)<br>Functional Programming (函数式编程)<br>Data Formats (e.g. JSON, XML) (数据格式)<br>Data API’s (e.g Restful API) (数据API)<br>Web Font Embedding (Web字体嵌入)<br>Scalable Vector Graphics (可伸缩向量图形, 又称 SVG)<br>Regular Expressions (正则表达式)<br>Content Strategy (内容策略)<br>Microdata / Microformats (微数据/微格式)<br>Task Runners, Build Tools, Process Automation Tools (任务管道, 构建工具, 过程自动化工具)<br>Responsive Web Design (响应式设计)<br>Object Oriented Programming (面向对象编程)<br>Application Architecture (应用架构)<br>Modules (模块)<br>Dependency Managers (依赖关系管理)<br>Package Managers (包管理)<br>JavaScript Animation (JavaScript 动画)<br>CSS Animation (CSS 动画)<br>Charts / Graphs (图表/图形)<br>UI widgets (UI工具集)<br>Code Quality Testing (代码质量测试)<br>Code Coverage Testing (代码覆盖测试)<br>Code Complexity Analysis (代码复杂度测试)<br>Integration Testing (集成测试)<br>Command Line / CLI (命令行/命令行界面)<br>Templating Strategies (模板策略)<br>Templating Engines (模板引擎)<br>Single Page Applications (单页应用)<br>XHR Requests (aka AJAX) (XHR 请求, 又称 AJAX)<br>Web/Browser Security (Web/浏览器安全)<br>HTML Semantics (HTML 语义化)<br>Browser Developer Tools (浏览器开发者工具)</p>
 ]]></content>
       <categories>
         <category>web</category>
@@ -609,40 +609,6 @@ print (baidu)
       </tags>
   </entry>
   <entry>
-    <title>React应用</title>
-    <url>/2019/09/01/2019-9/React/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="React-学习"><a href="#React-学习" class="headerlink" title="React 学习"></a>React 学习</h3><ul>
-<li>React是目前最热门的前端框架</li>
-<li>现在最好的社区支持和生态圈</li>
-<li>大量的第三方工具</li>
-</ul>
-<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
-<li>组件模式 代码复用和团队分工</li>
-<li>虚拟DOM 性能优势</li>
-<li>移动端支持 夸终端</li>
-</ul>
-<h3 id="学习React-Create-React-App-是React的脚手架工具-也是创建的最佳方式"><a href="#学习React-Create-React-App-是React的脚手架工具-也是创建的最佳方式" class="headerlink" title="学习React Create React App 是React的脚手架工具 也是创建的最佳方式"></a>学习React Create React App 是React的脚手架工具 也是创建的最佳方式</h3><p>需要        所需环境node环境</p>
-<a id="more"></a>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm create-react-app my-app</span><br><span class="line">cd my-app</span><br><span class="line">npm start</span><br></pre></td></tr></table></figure>
-
-<p>npx 是npm5.2+ 附带的package运行工具<br>生成部署文件</p>
-<hr>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo创建个人博客</title>
     <url>/2019/09/01/2019-6/hexo/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Hexo 是一个快速、简洁且高效的博客框架。<br>    Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。<br>    Hexo 使用</p>
@@ -677,6 +643,40 @@ hexo d</code></pre><h3 id="文章顶置"><a href="#文章顶置" class="headerli
       </categories>
       <tags>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>React应用</title>
+    <url>/2019/09/01/2019-9/React/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="React-学习"><a href="#React-学习" class="headerlink" title="React 学习"></a>React 学习</h3><ul>
+<li>React是目前最热门的前端框架</li>
+<li>现在最好的社区支持和生态圈</li>
+<li>大量的第三方工具</li>
+</ul>
+<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
+<li>组件模式 代码复用和团队分工</li>
+<li>虚拟DOM 性能优势</li>
+<li>移动端支持 夸终端</li>
+</ul>
+<h3 id="学习React-Create-React-App-是React的脚手架工具-也是创建的最佳方式"><a href="#学习React-Create-React-App-是React的脚手架工具-也是创建的最佳方式" class="headerlink" title="学习React Create React App 是React的脚手架工具 也是创建的最佳方式"></a>学习React Create React App 是React的脚手架工具 也是创建的最佳方式</h3><p>需要        所需环境node环境</p>
+<a id="more"></a>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm create-react-app my-app</span><br><span class="line">cd my-app</span><br><span class="line">npm start</span><br></pre></td></tr></table></figure>
+
+<p>npx 是npm5.2+ 附带的package运行工具<br>生成部署文件</p>
+<hr>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -916,48 +916,6 @@ hexo d</code></pre><h3 id="文章顶置"><a href="#文章顶置" class="headerli
       </tags>
   </entry>
   <entry>
-    <title>CSSBUG</title>
-    <url>/2019/06/20/2019-6/cssbug/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="BFC基本概念"><a href="#BFC基本概念" class="headerlink" title="BFC基本概念"></a>BFC基本概念</h3><p>BFC:块级格式化上下文</p>
-<p>BFC基本概念：BFC是CSS布局的一个概念，是一块独立的渲染区域，是一个环境，里面的元素不会影响到外部的元素。</p>
-<p>父级元素和兄弟元素边距重叠，重叠原则取最大值。空空元素的边距重叠是取margin与padding的最大值</p>
-<a id="more"></a>
-
-<p>1、根元素，即HTML元素（最大的一个BFC）</p>
-<p>2、就对定位元素 （position的值为absolute或fixed）</p>
-<p>3、行内块（display为inline-block）</p>
-<p>4、表格单元（display为table、table-cell、table-caption、inline-block等 HTML表格相关的属性）</p>
-<p>5、弹性盒（display为flex 或者inline-flex）</p>
-<p>6、默认值。内容不会被修剪，会呈现在元素框之外（overflow不为visible）</p>
-<p>可以让父级元素的高度包含子浮动元素，清除内部的浮动（原理：触发父div的BFC属性是下面的子div都处于父div的同一个BFC时，可以阻止margin重叠）</p>
-<h3 id="论iframe的优缺点"><a href="#论iframe的优缺点" class="headerlink" title="论iframe的优缺点"></a>论iframe的优缺点</h3><p>html5不再执行使用frame iframe只有src属性</p>
-<ol>
-<li>使用iframe的优缺点<ul>
-<li>优点<ol>
-<li>程序调入静态页面比较方便</li>
-<li>页面和程序分离<ul>
-<li>缺点</li>
-</ul>
-</li>
-</ol>
-</li>
-<li>缺点<br> 1.iframe有不好之处 样式脚本需要额外链如 ，会增加请求。另外用js放盗链只防得了小偷，防不了大盗<br> 2.iframe好在能够把原先的网页全部原封不动显示下来,但是如果用在首页,是搜索引擎最讨厌的.那么你<br>的网站即使做的在好,也排不到好的名次! <ol start="3">
-<li>调用外部页面,需要额外调用css,给页面带来额外的请求次数;</li>
-<li>链接导航疑问。运用框架结构时，你必须保证正确配置所有的导航链接，如不然，会给访问者带来很大<br>的麻烦。比如被链接的页面出现在导航框架内，这种情况下访问者便被陷住了，因为此时他没有其他地点<br>可去。</li>
-</ol>
-</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>css</category>
-      </categories>
-      <tags>
-        <tag>webBUG</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>bootstrap框架</title>
     <url>/2019/06/20/2019-6/bootstrap/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="复习Bootstrap"><a href="#复习Bootstrap" class="headerlink" title="复习Bootstrap"></a>复习Bootstrap</h3><p>选择Soucrce code 源码下载<br>Bootstrap是依赖于jquery 的</p>
@@ -1074,6 +1032,48 @@ hexo d</code></pre><h3 id="文章顶置"><a href="#文章顶置" class="headerli
       </categories>
       <tags>
         <tag>web前段框架</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSSBUG</title>
+    <url>/2019/06/20/2019-6/cssbug/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="BFC基本概念"><a href="#BFC基本概念" class="headerlink" title="BFC基本概念"></a>BFC基本概念</h3><p>BFC:块级格式化上下文</p>
+<p>BFC基本概念：BFC是CSS布局的一个概念，是一块独立的渲染区域，是一个环境，里面的元素不会影响到外部的元素。</p>
+<p>父级元素和兄弟元素边距重叠，重叠原则取最大值。空空元素的边距重叠是取margin与padding的最大值</p>
+<a id="more"></a>
+
+<p>1、根元素，即HTML元素（最大的一个BFC）</p>
+<p>2、就对定位元素 （position的值为absolute或fixed）</p>
+<p>3、行内块（display为inline-block）</p>
+<p>4、表格单元（display为table、table-cell、table-caption、inline-block等 HTML表格相关的属性）</p>
+<p>5、弹性盒（display为flex 或者inline-flex）</p>
+<p>6、默认值。内容不会被修剪，会呈现在元素框之外（overflow不为visible）</p>
+<p>可以让父级元素的高度包含子浮动元素，清除内部的浮动（原理：触发父div的BFC属性是下面的子div都处于父div的同一个BFC时，可以阻止margin重叠）</p>
+<h3 id="论iframe的优缺点"><a href="#论iframe的优缺点" class="headerlink" title="论iframe的优缺点"></a>论iframe的优缺点</h3><p>html5不再执行使用frame iframe只有src属性</p>
+<ol>
+<li>使用iframe的优缺点<ul>
+<li>优点<ol>
+<li>程序调入静态页面比较方便</li>
+<li>页面和程序分离<ul>
+<li>缺点</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>缺点<br> 1.iframe有不好之处 样式脚本需要额外链如 ，会增加请求。另外用js放盗链只防得了小偷，防不了大盗<br> 2.iframe好在能够把原先的网页全部原封不动显示下来,但是如果用在首页,是搜索引擎最讨厌的.那么你<br>的网站即使做的在好,也排不到好的名次! <ol start="3">
+<li>调用外部页面,需要额外调用css,给页面带来额外的请求次数;</li>
+<li>链接导航疑问。运用框架结构时，你必须保证正确配置所有的导航链接，如不然，会给访问者带来很大<br>的麻烦。比如被链接的页面出现在导航框架内，这种情况下访问者便被陷住了，因为此时他没有其他地点<br>可去。</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>css</category>
+      </categories>
+      <tags>
+        <tag>webBUG</tag>
       </tags>
   </entry>
   <entry>
