@@ -3,7 +3,7 @@
     background-image: url("/images/bg.jpg") !important;
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
-    background-position: 0 100% !important;
+    background-size: 100% !important;
   }
 }
 /* normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -1948,7 +1948,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #2eada1;
+  background: #0de470;
 }
 .links-of-blogroll {
   font-size: 13px;

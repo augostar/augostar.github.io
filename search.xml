@@ -16,13 +16,40 @@
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>git远程操作</p>
 <a id="more"></a>
 
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 在当前目录新建一个Git代码库</span><br><span class="line">git init</span><br><span class="line"></span><br><span class="line"># 新建一个目录，将其初始化为Git代码库</span><br><span class="line">git init [project-name]</span><br><span class="line"></span><br><span class="line"># 下载一个项目和它的整个代码历史</span><br><span class="line">git clone [url]</span><br></pre></td></tr></table></figure>
+
+<h3 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 显示当前的Git配置</span><br><span class="line">git config --list</span><br><span class="line"></span><br><span class="line"># 编辑Git配置文件</span><br><span class="line">git config -e [--global]</span><br><span class="line"></span><br><span class="line"># 设置提交代码时的用户信息</span><br><span class="line">git config [--global] user.name &quot;[name]&quot;</span><br><span class="line">git config [--global] user.email &quot;[email address]&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="增加-删除文件"><a href="#增加-删除文件" class="headerlink" title="增加/删除文件"></a>增加/删除文件</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 添加指定文件到暂存区</span><br><span class="line">git add [file1] [file2] ...</span><br><span class="line"></span><br><span class="line"># 添加指定目录到暂存区，包括子目录</span><br><span class="line">git add [dir]</span><br><span class="line"></span><br><span class="line"># 添加当前目录的所有文件到暂存区</span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line"># 添加每个变化前，都会要求确认</span><br><span class="line"># 对于同一个文件的多处变化，可以实现分次提交</span><br><span class="line">git add -p</span><br><span class="line"></span><br><span class="line"># 删除工作区文件，并且将这次删除放入暂存区</span><br><span class="line">git rm [file1] [file2] ...</span><br><span class="line"></span><br><span class="line"># 停止追踪指定文件，但该文件会保留在工作区</span><br><span class="line">git rm --cached [file]</span><br><span class="line"></span><br><span class="line"># 改名文件，并且将这个改名放入暂存区</span><br><span class="line">git mv [file-original] [file-renamed]</span><br></pre></td></tr></table></figure>
+
+<h3 id="代码提交"><a href="#代码提交" class="headerlink" title="代码提交"></a>代码提交</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 提交暂存区到仓库区</span><br><span class="line">git commit -m [message]</span><br><span class="line"></span><br><span class="line"># 提交暂存区的指定文件到仓库区</span><br><span class="line">git commit [file1] [file2] ... -m [message]</span><br><span class="line"></span><br><span class="line"># 提交工作区自上次commit之后的变化，直接到仓库区</span><br><span class="line">git commit -a</span><br><span class="line"></span><br><span class="line"># 提交时显示所有diff信息</span><br><span class="line">git commit -v</span><br><span class="line"></span><br><span class="line"># 使用一次新的commit，替代上一次提交</span><br><span class="line"># 如果代码没有任何新变化，则用来改写上一次commit的提交信息</span><br><span class="line">git commit --amend -m [message]</span><br><span class="line"></span><br><span class="line"># 重做上一次commit，并包括指定文件的新变化</span><br><span class="line">git commit --amend [file1] [file2] ...</span><br></pre></td></tr></table></figure>
+
+<h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 列出所有本地分支</span><br><span class="line">git branch</span><br><span class="line"></span><br><span class="line"># 列出所有远程分支</span><br><span class="line">git branch -r</span><br><span class="line"></span><br><span class="line"># 列出所有本地分支和远程分支</span><br><span class="line">git branch -a</span><br><span class="line"></span><br><span class="line"># 新建一个分支，但依然停留在当前分支</span><br><span class="line">git branch [branch-name]</span><br><span class="line"></span><br><span class="line"># 新建一个分支，并切换到该分支</span><br><span class="line">git checkout -b [branch]</span><br><span class="line"></span><br><span class="line"># 新建一个分支，指向指定commit</span><br><span class="line">git branch [branch] [commit]</span><br><span class="line"></span><br><span class="line"># 新建一个分支，与指定的远程分支建立追踪关系</span><br><span class="line">git branch --track [branch] [remote-branch]</span><br><span class="line"></span><br><span class="line"># 切换到指定分支，并更新工作区</span><br><span class="line">git checkout [branch-name]</span><br><span class="line"></span><br><span class="line"># 切换到上一个分支</span><br><span class="line">git checkout -</span><br><span class="line"></span><br><span class="line"># 建立追踪关系，在现有分支与指定的远程分支之间</span><br><span class="line">git branch --set-upstream [branch] [remote-branch]</span><br><span class="line"></span><br><span class="line"># 合并指定分支到当前分支</span><br><span class="line">git merge [branch]</span><br><span class="line"></span><br><span class="line"># 选择一个commit，合并进当前分支</span><br><span class="line">git cherry-pick [commit]</span><br><span class="line"></span><br><span class="line"># 删除分支</span><br><span class="line">git branch -d [branch-name]</span><br><span class="line"></span><br><span class="line"># 删除远程分支</span><br><span class="line">git push origin --delete [branch-name]</span><br><span class="line">git branch -dr [remote&#x2F;branch]</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看信息"><a href="#查看信息" class="headerlink" title="查看信息"></a>查看信息</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 显示有变更的文件</span><br><span class="line">git status</span><br><span class="line"></span><br><span class="line"># 显示当前分支的版本历史</span><br><span class="line">git log</span><br><span class="line"></span><br><span class="line"># 显示commit历史，以及每次commit发生变更的文件</span><br><span class="line">git log --stat</span><br><span class="line"></span><br><span class="line"># 搜索提交历史，根据关键词</span><br><span class="line">git log -S [keyword]</span><br><span class="line"></span><br><span class="line"># 显示某个commit之后的所有变动，每个commit占据一行</span><br><span class="line">git log [tag] HEAD --pretty&#x3D;format:%s</span><br><span class="line"></span><br><span class="line"># 显示某个commit之后的所有变动，其&quot;提交说明&quot;必须符合搜索条件</span><br><span class="line">git log [tag] HEAD --grep feature</span><br><span class="line"></span><br><span class="line"># 显示某个文件的版本历史，包括文件改名</span><br><span class="line">git log --follow [file]</span><br><span class="line">git whatchanged [file]</span><br><span class="line"></span><br><span class="line"># 显示指定文件相关的每一次diff</span><br><span class="line">git log -p [file]</span><br><span class="line"></span><br><span class="line"># 显示过去5次提交</span><br><span class="line">git log -5 --pretty --oneline</span><br><span class="line"></span><br><span class="line"># 显示所有提交过的用户，按提交次数排序</span><br><span class="line">git shortlog -sn</span><br><span class="line"></span><br><span class="line"># 显示指定文件是什么人在什么时间修改过</span><br><span class="line">git blame [file]</span><br><span class="line"></span><br><span class="line"># 显示暂存区和工作区的差异</span><br><span class="line">git diff</span><br><span class="line"></span><br><span class="line"># 显示暂存区和上一个commit的差异</span><br><span class="line">git diff --cached [file]</span><br><span class="line"></span><br><span class="line"># 显示工作区与当前分支最新commit之间的差异</span><br><span class="line">git diff HEAD</span><br><span class="line"></span><br><span class="line"># 显示两次提交之间的差异</span><br><span class="line">git diff [first-branch]...[second-branch]</span><br><span class="line"></span><br><span class="line"># 显示今天你写了多少行代码</span><br><span class="line">git diff --shortstat &quot;@&#123;0 day ago&#125;&quot;</span><br><span class="line"></span><br><span class="line"># 显示某次提交的元数据和内容变化</span><br><span class="line">git show [commit]</span><br><span class="line"></span><br><span class="line"># 显示某次提交发生变化的文件</span><br><span class="line">git show --name-only [commit]</span><br><span class="line"></span><br><span class="line"># 显示某次提交时，某个文件的内容</span><br><span class="line">git show [commit]:[filename]</span><br><span class="line"></span><br><span class="line"># 显示当前分支的最近几次提交</span><br><span class="line">git reflog</span><br></pre></td></tr></table></figure>
+
+<h3 id="远程同步"><a href="#远程同步" class="headerlink" title="远程同步"></a>远程同步</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 下载远程仓库的所有变动</span><br><span class="line">git fetch [remote]</span><br><span class="line"></span><br><span class="line"># 显示所有远程仓库</span><br><span class="line">git remote -v</span><br><span class="line"></span><br><span class="line"># 显示某个远程仓库的信息</span><br><span class="line">git remote show [remote]</span><br><span class="line"></span><br><span class="line"># 增加一个新的远程仓库，并命名</span><br><span class="line">git remote add [shortname] [url]</span><br><span class="line"></span><br><span class="line"># 取回远程仓库的变化，并与本地分支合并</span><br><span class="line">git pull [remote] [branch]</span><br><span class="line"></span><br><span class="line"># 上传本地指定分支到远程仓库</span><br><span class="line">git push [remote] [branch]</span><br><span class="line"></span><br><span class="line"># 强行推送当前分支到远程仓库，即使有冲突</span><br><span class="line">git push [remote] --force</span><br><span class="line"></span><br><span class="line"># 推送所有分支到远程仓库</span><br><span class="line">git push [remote] --all</span><br></pre></td></tr></table></figure>
+
+<h3 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 恢复暂存区的指定文件到工作区</span><br><span class="line">git checkout [file]</span><br><span class="line"></span><br><span class="line"># 恢复某个commit的指定文件到暂存区和工作区</span><br><span class="line">git checkout [commit] [file]</span><br><span class="line"></span><br><span class="line"># 恢复暂存区的所有文件到工作区</span><br><span class="line">git checkout .</span><br><span class="line"></span><br><span class="line"># 重置暂存区的指定文件，与上一次commit保持一致，但工作区不变</span><br><span class="line">git reset [file]</span><br><span class="line"></span><br><span class="line"># 重置暂存区与工作区，与上一次commit保持一致</span><br><span class="line">git reset --hard </span><br><span class="line"></span><br><span class="line"># 重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变</span><br><span class="line">git reset [commit]</span><br><span class="line"></span><br><span class="line"># 重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致(即撤销 merge，回到合并其他分支的分支下，执行以下命令)</span><br><span class="line">git reset --hard [commit]</span><br><span class="line"></span><br><span class="line"># 重置当前HEAD为指定commit，但保持暂存区和工作区不变</span><br><span class="line">git reset --keep [commit]</span><br><span class="line"></span><br><span class="line"># 新建一个commit，用来撤销指定commit</span><br><span class="line"># 后者的所有变化都将被前者抵消，并且应用到当前分支</span><br><span class="line">git revert [commit]</span><br><span class="line"></span><br><span class="line"># 暂时将未提交的变化移除，稍后再移入</span><br><span class="line">git stash</span><br><span class="line">git stash pop</span><br></pre></td></tr></table></figure>
+
+<h3 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 列出所有tag</span><br><span class="line">git tag</span><br><span class="line"></span><br><span class="line"># 新建一个tag在当前commit</span><br><span class="line">git tag [tag]</span><br><span class="line"></span><br><span class="line"># 新建一个tag在指定commit</span><br><span class="line">git tag [tag] [commit]</span><br><span class="line"></span><br><span class="line"># 删除本地tag</span><br><span class="line">git tag -d [tag]</span><br><span class="line"></span><br><span class="line"># 删除远程tag</span><br><span class="line">git push origin :refs&#x2F;tags&#x2F;[tagName]</span><br><span class="line"></span><br><span class="line"># 查看tag信息</span><br><span class="line">git show [tag]</span><br><span class="line"></span><br><span class="line"># 提交指定tag</span><br><span class="line">git push [remote] [tag]</span><br><span class="line"></span><br><span class="line"># 提交所有tag</span><br><span class="line">git push [remote] --tags</span><br><span class="line"></span><br><span class="line"># 新建一个分支，指向某个tag</span><br><span class="line">git checkout -b [branch] [tag]</span><br></pre></td></tr></table></figure>
+
+<h3 id="生成一个可供发布的压缩包"><a href="#生成一个可供发布的压缩包" class="headerlink" title="生成一个可供发布的压缩包"></a>生成一个可供发布的压缩包</h3><p>git archive</p>
 <h3 id="git-clone"><a href="#git-clone" class="headerlink" title="git clone"></a>git clone</h3><p>克隆远程仓库到本地<br>比如克隆jQuery</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;jquery&#x2F;jquery.git</span><br></pre></td></tr></table></figure>
 
 <h3 id="克隆远程仓库到指定目录下"><a href="#克隆远程仓库到指定目录下" class="headerlink" title="克隆远程仓库到指定目录下"></a>克隆远程仓库到指定目录下</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone &lt;版本库地址&gt; &lt;本地目录名&gt;</span><br></pre></td></tr></table></figure>
 
 <h3 id="git-clone-支持多种协议"><a href="#git-clone-支持多种协议" class="headerlink" title="git clone 支持多种协议"></a>git clone 支持多种协议</h3><p>http[s] ssh git file ftp[s] rsync …</p>
-<h3 id="列出所有远程主机-查看远程主机的地址"><a href="#列出所有远程主机-查看远程主机的地址" class="headerlink" title="列出所有远程主机 查看远程主机的地址"></a>列出所有远程主机 查看远程主机的地址</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git remote</span><br></pre></td></tr></table></figure>
+<h3 id="列出所有远程主机-查看远程主机的地址"><a href="#列出所有远程主机-查看远程主机的地址" class="headerlink" title="列出所有远程主机 查看远程主机的地址"></a>列出所有远程主机 查看远程主机的地址</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#列出所有远程主机</span><br><span class="line">git remote</span><br><span class="line"># 查看远程主机的地址</span><br><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
+
+<h3 id="克隆指定远程主机"><a href="#克隆指定远程主机" class="headerlink" title="克隆指定远程主机"></a>克隆指定远程主机</h3><p>git clone -o URL<br>git remote<br>jQuery</p>
+<h3 id="添加远程主机"><a href="#添加远程主机" class="headerlink" title="添加远程主机"></a>添加远程主机</h3><p>git remote add &lt;主机名&gt; &lt;网址&gt;</p>
+<h3 id="删除远程主机"><a href="#删除远程主机" class="headerlink" title="删除远程主机"></a>删除远程主机</h3><p>git remote rm &lt;主机名&gt;</p>
+<h3 id="重命名远程主机"><a href="#重命名远程主机" class="headerlink" title="重命名远程主机"></a>重命名远程主机</h3><p>git remote rename &lt;原主机名&gt; &lt;新主机名&gt;</p>
+<h3 id="修改远程仓库地址"><a href="#修改远程仓库地址" class="headerlink" title="修改远程仓库地址"></a>修改远程仓库地址</h3><p>git remote set-url origin [url]</p>
+<h3 id="取回远程主机的更新"><a href="#取回远程主机的更新" class="headerlink" title="取回远程主机的更新"></a>取回远程主机的更新</h3><p>git fetch &lt;远程主机名&gt;</p>
+<h3 id="推送到指定主机并设置默认主机"><a href="#推送到指定主机并设置默认主机" class="headerlink" title="推送到指定主机并设置默认主机"></a>推送到指定主机并设置默认主机</h3><p>git push -u origin master</p>
 ]]></content>
       <tags>
         <tag>git</tag>
@@ -134,43 +161,15 @@
       </tags>
   </entry>
   <entry>
-    <title>webpack配置文件设置</title>
-    <url>/2019/12/20/2019-12/webpack.config.js/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Webpack是用于为浏览器构建JavaScript模块脚本的前端工具</p>
-<a id="more"></a>
-
-<p>全局安装 npm install -g webpack </p>
-<p>安装到项目内 npm install –save-dev webpack</p>
-<p>安装webpack脚手架 npm install  -D webpack webpack-cli</p>
-<p>安装webpack服务器 npm install  -g webpack-dev-server</p>
-<p>安装loader npm install  -D style-loader css-loader</p>
-<h3 id="文件内部配置"><a href="#文件内部配置" class="headerlink" title="文件内部配置"></a>文件内部配置</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;导入路径模块</span><br><span class="line">const path &#x3D; require(&quot;path&quot;);</span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">	&#x2F;&#x2F;所选模式告诉webpack相应地使用其内置优化。</span><br><span class="line">	mode:&quot;production&quot;,&#x2F;&#x2F;生产模式</span><br><span class="line">	mode:&quot;development&quot;,&#x2F;&#x2F;开发模式</span><br><span class="line">	mode:&quot;none&quot;,&#x2F;&#x2F;默认模式</span><br><span class="line">    &#x2F;&#x2F; 入口</span><br><span class="line">    entry: &#123;</span><br><span class="line">     	bundle2:&quot;.&#x2F;App.css&quot;,</span><br><span class="line">        bundl:[&quot;.&#x2F;main.js&quot;,&quot;.&#x2F;main1.js&quot;,&quot;.&#x2F;main.jsx&quot;],</span><br><span class="line">        </span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; 出口</span><br><span class="line">    output: &#123;</span><br><span class="line">        &#x2F;&#x2F; 绝对路径</span><br><span class="line">        filename: &#39;[name].js&#39;,</span><br><span class="line">        path:path.resolve(__dirname,&quot;dist&quot;)</span><br><span class="line">    &#125;,</span><br><span class="line">    filename:&quot;bundle.js&quot;,&#x2F;&#x2F;入口快的文件名模板</span><br><span class="line">    filename:&quot;[name].js&quot;,&#x2F;&#x2F;入口快的文件名模板</span><br><span class="line">    filename:&quot;[chunkhash].js&quot;,&#x2F;&#x2F;入口快的文件名模板</span><br><span class="line">    </span><br><span class="line">    publicPath: &quot;&#x2F;assets&#x2F;&quot;, &#x2F;&#x2F; string</span><br><span class="line">    publicPath: &quot;&quot;,</span><br><span class="line">    publicPath: &quot;https:&#x2F;&#x2F;cdn.example.com&#x2F;&quot;,</span><br><span class="line">    &#x2F;&#x2F; 输出解析文件的目录url相对于HTML页面</span><br><span class="line">    &#x2F;&#x2F; 模块</span><br><span class="line">     library: &quot;MyLibrary&quot;, &#x2F;&#x2F; string,</span><br><span class="line">        libraryTarget: &quot;umd2&quot;, &#x2F;&#x2F; 通用模块定义</span><br><span class="line">        libraryTarget: &quot;commonjs2&quot;, &#x2F;&#x2F; exported with module.exports</span><br><span class="line">        libraryTarget: &quot;commonjs-module&quot;, &#x2F;&#x2F; 使用 module.exports 导出</span><br><span class="line">        libraryTarget: &quot;commonjs&quot;, &#x2F;&#x2F; 作为 exports 的属性导出</span><br><span class="line">        libraryTarget: &quot;amd&quot;, &#x2F;&#x2F; 使用 AMD 定义方法来定义</span><br><span class="line">        libraryTarget: &quot;this&quot;, &#x2F;&#x2F; 在 this 上设置属性</span><br><span class="line">        libraryTarget: &quot;var&quot;, &#x2F;&#x2F; 变量定义于根作用域下</span><br><span class="line">        libraryTarget: &quot;assign&quot;, &#x2F;&#x2F; 盲分配(blind assignment)</span><br><span class="line">        libraryTarget: &quot;window&quot;, &#x2F;&#x2F; 在 window 对象上设置属性</span><br><span class="line">        libraryTarget: &quot;global&quot;, &#x2F;&#x2F; property set to global object</span><br><span class="line">        libraryTarget: &quot;jsonp&quot;, &#x2F;&#x2F; jsonp wrapper</span><br><span class="line">    &#x2F;&#x2F; 导出库(exported library)的名称</span><br><span class="line">    &#x2F;&#x2F;模块相关的配置</span><br><span class="line">    module: &#123;</span><br><span class="line">    &#x2F;&#x2F;模块规则 配置loader 解析器等选项）</span><br><span class="line">        rules:[</span><br><span class="line">            &#123;</span><br><span class="line">            </span><br><span class="line">            &#x2F;&#x2F; 每个选项都接收一个正则表达式 或字符 匹配条件</span><br><span class="line">            	&#x2F;&#x2F;正则选择文件 test 或者 include 具有相同的作用</span><br><span class="line">                test:&#x2F;\.jsx?$&#x2F;,</span><br><span class="line">                &#x2F;&#x2F;导入模块</span><br><span class="line">                exclude:&#x2F;(node_modules)&#x2F;,</span><br><span class="line">                use:&#123;</span><br><span class="line">                    loader:&#39;babel-loader&#39;,</span><br><span class="line">                    options:&#123;</span><br><span class="line">                        presets: [&#39;react&#39;]</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,&#123;</span><br><span class="line">                test:&#x2F;\.css$&#x2F;,</span><br><span class="line">                use : [&#39;style-loader&#39;,&#39;css-loader&#39;]</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"> </span><br><span class="line">   </span><br><span class="line">    &#x2F;&#x2F; 插件</span><br><span class="line">    plugins:[],</span><br><span class="line">    &#x2F;&#x2F; 开发服务器</span><br><span class="line">    devServer:&#123;</span><br><span class="line">        proxy: &#123; &#x2F;&#x2F; proxy URLs to backend development server</span><br><span class="line">          &#39;&#x2F;api&#39;: &#39;http:&#x2F;&#x2F;localhost:3000&#39;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#x2F;&#x2F; 模块安装</span><br><span class="line">        &#x2F;&#x2F; npm install webpack-dev-server --save-dev</span><br><span class="line">        &#x2F;&#x2F; contentBase: path.resolve(__dirname, &#39;dist&#39;),</span><br><span class="line">        &#x2F;&#x2F; host: &#39;192.168.1.9&#39;,</span><br><span class="line">        &#x2F;&#x2F; compress: true, &#x2F;&#x2F;服务端是否启用压缩</span><br><span class="line">        &#x2F;&#x2F; port:1717</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="如果导入babel模块之后报错"><a href="#如果导入babel模块之后报错" class="headerlink" title="如果导入babel模块之后报错"></a>如果导入babel模块之后报错</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Cannot find module &#39;@babel&#x2F;core&#39;</span><br><span class="line"> babel-loader@8 requires Babel 7.x (the package &#39;@babel&#x2F;core&#39;). If you&#39;d like to use Babel 6.x (&#39;babel-core&#39;), you should install &#39;babel-loader@7&#39;.ou should install &#39;babel-loader@7&#39;.</span><br></pre></td></tr></table></figure>
-
-<p>以上报错内容出现的原因</p>
-<p>bable-loader和babel-core的版本不对应所查询的</p>
-<p>babel-loader 8.x对应的是babel-core 7.x</p>
-<p>babel-loader 7.x 对应的是babel-core 6.x</p>
-<p>查看完版本执行 </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save-dev babel-loader@7.1.5</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-  </entry>
-  <entry>
     <title>2019-12/es6</title>
     <url>/2019/12/20/2019-12/es6/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="node-js中exports和module-exports的区别"><a href="#node-js中exports和module-exports的区别" class="headerlink" title="node.js中exports和module.exports的区别"></a>node.js中exports和module.exports的区别</h3>
-        <div id="aplayer-UBNHdARF" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-fRFkKgAw" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-UBNHdARF"),
+            element: document.getElementById("aplayer-fRFkKgAw"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -199,8 +198,8 @@
 <p>module.exports 返回的是模块对象本身，返回的是一个类</p>
 <p>使用上的区别是exports的方法可直接调用</p>
 <p>module.exports需要new对象之后才可以调用</p>
-<p>require<code>: node 和 es6 都支持的引入</code></p>
-<p>export / import<code>: 只有es6 支持的导出引入</code></p>
+<p>require`: node 和 es6 都支持的引入</p>
+<p>export / import` : 只有es6 支持的导出引入</p>
 <p>module.exports / exports`: 只有 node 支持的导出</p>
 <p><code>CommonJS</code>定义的模块分为: 模块标识(<code>module</code>)、模块定义(<code>exports</code>) 、模块引用(<code>require</code>)</p>
 <h3 id="export-和-export-default"><a href="#export-和-export-default" class="headerlink" title="export 和 export default"></a>export 和 export default</h3><p>export与export default均可用于导出常量、函数、文件、模块等</p>
@@ -211,6 +210,12 @@
 <p><code>export / import</code> : 只有es6 支持的导出引入</p>
 <p>module.exports / exports`: 只有 node 支持的导出</p>
 ]]></content>
+      <categories>
+        <category>node</category>
+      </categories>
+      <tags>
+        <tag>node</tag>
+      </tags>
   </entry>
   <entry>
     <title>2019-12/editorconfig</title>
@@ -231,7 +236,7 @@
 ]]></content>
   </entry>
   <entry>
-    <title>javascipt</title>
+    <title>js</title>
     <url>/2019/12/20/2019-12/javascipt/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="html标签绑定事件方法"><a href="#html标签绑定事件方法" class="headerlink" title="html标签绑定事件方法"></a>html标签绑定事件方法</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"TEST"</span> <span class="attr">onclick</span>=<span class="string">"functionName(this);"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -249,6 +254,12 @@
 
 <p>支持IE、Opera</p>
 ]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
   </entry>
   <entry>
     <title>前端框架集合</title>
@@ -434,20 +445,6 @@ npm 安装</code></pre><p>​        npm install jshint -g</p>
       </tags>
   </entry>
   <entry>
-    <title>webEnglish</title>
-    <url>/2019/10/11/2019-9/web/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="web"><a href="#web" class="headerlink" title="web"></a>web</h3><a id="more"></a>
-<p>Hyper Text Markup Language(超文本标记语言, 又称 HTML)<br>Cascading Style Sheets (层叠式样式表, 又称 CSS)<br>Document Object Model (文档对象模型, 又称 DOM)<br>JavaScript Programming Language (JavaScript编程语言, 又称: ECMAScript 6, ES6, JavaScript 2015)<br>Web API’s (Web应用程序接口, 又称 HTML5 API 或浏览器 API)<br>Hypertext Transfer Protocol (超文本传输协议, 又称 HTTP)<br>Uniform Resource Locator’s (统一资源定位符, 又称 URL)<br>JavaScript Object Notation (JavaScript对象表示, 又称 JSON)<br>Web Content Accessibility Guidelines (网页内容无障碍设计指南, 又称 WCAG) &amp; Accessible Rich Internet Applications (富Internet应用程序的无障碍设计, 又称 ARIA)</p>
-<p>Content Management System (内容管理系统, 又称 CMS)<br>Node.js<br>Cross-browser testing (跨浏览器测试)<br>Cross-platform testing (跨平台测试)<br>Unit Testing (单元测试)<br>Cross-device testing (跨设备测试)<br>Accessibility / WAI-ARIA (无障碍访问/无障碍富Internet应用程序)<br>Search Engine Optimization (搜索引擎优化, 又称 SEO)<br>Interaction or User Interface design (交互或用户设计)<br>User Experience (用户体验)<br>Usability (可用性/易用性)<br>E-commerce Systems (电子商务系统)<br>Portal Systems (门户系统)<br>Wireframing (框架)<br>CSS layout / Grids (CSS 布局/栅格系统)<br>DOM manipulation (e.g. jQuery) (DOM 操作)<br>Mobile Web Performance (移动Web性能)<br>Load Testing (载荷测试)<br>Performance Testing (性能测试)<br>Progressive Enhancement / Graceful Degradation (渐进增强/优雅降级)<br>Version Control (e.g. GIT) (版本控制)<br>MVC / MVVM / MV (MV 框架)<br>Functional Programming (函数式编程)<br>Data Formats (e.g. JSON, XML) (数据格式)<br>Data API’s (e.g Restful API) (数据API)<br>Web Font Embedding (Web字体嵌入)<br>Scalable Vector Graphics (可伸缩向量图形, 又称 SVG)<br>Regular Expressions (正则表达式)<br>Content Strategy (内容策略)<br>Microdata / Microformats (微数据/微格式)<br>Task Runners, Build Tools, Process Automation Tools (任务管道, 构建工具, 过程自动化工具)<br>Responsive Web Design (响应式设计)<br>Object Oriented Programming (面向对象编程)<br>Application Architecture (应用架构)<br>Modules (模块)<br>Dependency Managers (依赖关系管理)<br>Package Managers (包管理)<br>JavaScript Animation (JavaScript 动画)<br>CSS Animation (CSS 动画)<br>Charts / Graphs (图表/图形)<br>UI widgets (UI工具集)<br>Code Quality Testing (代码质量测试)<br>Code Coverage Testing (代码覆盖测试)<br>Code Complexity Analysis (代码复杂度测试)<br>Integration Testing (集成测试)<br>Command Line / CLI (命令行/命令行界面)<br>Templating Strategies (模板策略)<br>Templating Engines (模板引擎)<br>Single Page Applications (单页应用)<br>XHR Requests (aka AJAX) (XHR 请求, 又称 AJAX)<br>Web/Browser Security (Web/浏览器安全)<br>HTML Semantics (HTML 语义化)<br>Browser Developer Tools (浏览器开发者工具)</p>
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>webpack配置文件设置</title>
     <url>/2019/10/11/2019-9/webpack.config.js/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Webpack是用于为浏览器构建JavaScript模块脚本的前端工具</p>
@@ -467,6 +464,20 @@ npm 安装</code></pre><p>​        npm install jshint -g</p>
 
 
 
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>webEnglish</title>
+    <url>/2019/10/11/2019-9/web/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="web"><a href="#web" class="headerlink" title="web"></a>web</h3><a id="more"></a>
+<p>Hyper Text Markup Language(超文本标记语言, 又称 HTML)<br>Cascading Style Sheets (层叠式样式表, 又称 CSS)<br>Document Object Model (文档对象模型, 又称 DOM)<br>JavaScript Programming Language (JavaScript编程语言, 又称: ECMAScript 6, ES6, JavaScript 2015)<br>Web API’s (Web应用程序接口, 又称 HTML5 API 或浏览器 API)<br>Hypertext Transfer Protocol (超文本传输协议, 又称 HTTP)<br>Uniform Resource Locator’s (统一资源定位符, 又称 URL)<br>JavaScript Object Notation (JavaScript对象表示, 又称 JSON)<br>Web Content Accessibility Guidelines (网页内容无障碍设计指南, 又称 WCAG) &amp; Accessible Rich Internet Applications (富Internet应用程序的无障碍设计, 又称 ARIA)</p>
+<p>Content Management System (内容管理系统, 又称 CMS)<br>Node.js<br>Cross-browser testing (跨浏览器测试)<br>Cross-platform testing (跨平台测试)<br>Unit Testing (单元测试)<br>Cross-device testing (跨设备测试)<br>Accessibility / WAI-ARIA (无障碍访问/无障碍富Internet应用程序)<br>Search Engine Optimization (搜索引擎优化, 又称 SEO)<br>Interaction or User Interface design (交互或用户设计)<br>User Experience (用户体验)<br>Usability (可用性/易用性)<br>E-commerce Systems (电子商务系统)<br>Portal Systems (门户系统)<br>Wireframing (框架)<br>CSS layout / Grids (CSS 布局/栅格系统)<br>DOM manipulation (e.g. jQuery) (DOM 操作)<br>Mobile Web Performance (移动Web性能)<br>Load Testing (载荷测试)<br>Performance Testing (性能测试)<br>Progressive Enhancement / Graceful Degradation (渐进增强/优雅降级)<br>Version Control (e.g. GIT) (版本控制)<br>MVC / MVVM / MV (MV 框架)<br>Functional Programming (函数式编程)<br>Data Formats (e.g. JSON, XML) (数据格式)<br>Data API’s (e.g Restful API) (数据API)<br>Web Font Embedding (Web字体嵌入)<br>Scalable Vector Graphics (可伸缩向量图形, 又称 SVG)<br>Regular Expressions (正则表达式)<br>Content Strategy (内容策略)<br>Microdata / Microformats (微数据/微格式)<br>Task Runners, Build Tools, Process Automation Tools (任务管道, 构建工具, 过程自动化工具)<br>Responsive Web Design (响应式设计)<br>Object Oriented Programming (面向对象编程)<br>Application Architecture (应用架构)<br>Modules (模块)<br>Dependency Managers (依赖关系管理)<br>Package Managers (包管理)<br>JavaScript Animation (JavaScript 动画)<br>CSS Animation (CSS 动画)<br>Charts / Graphs (图表/图形)<br>UI widgets (UI工具集)<br>Code Quality Testing (代码质量测试)<br>Code Coverage Testing (代码覆盖测试)<br>Code Complexity Analysis (代码复杂度测试)<br>Integration Testing (集成测试)<br>Command Line / CLI (命令行/命令行界面)<br>Templating Strategies (模板策略)<br>Templating Engines (模板引擎)<br>Single Page Applications (单页应用)<br>XHR Requests (aka AJAX) (XHR 请求, 又称 AJAX)<br>Web/Browser Security (Web/浏览器安全)<br>HTML Semantics (HTML 语义化)<br>Browser Developer Tools (浏览器开发者工具)</p>
 ]]></content>
       <categories>
         <category>web</category>
@@ -596,35 +607,6 @@ print (baidu)
       </tags>
   </entry>
   <entry>
-    <title>hexo创建个人博客</title>
-    <url>/2019/09/01/2019-6/hexo/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Hexo 是一个快速、简洁且高效的博客框架。<br>    Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。<br>    Hexo 使用</p>
-<a id="more"></a>
-<h3 id="如何使用hexo搭建自己的个人博客"><a href="#如何使用hexo搭建自己的个人博客" class="headerlink" title="如何使用hexo搭建自己的个人博客"></a>如何使用hexo搭建自己的个人博客</h3><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"># 安装hexo</span><br><span class="line">npm install hexo-cli -g</span><br><span class="line"># 创建 创建项目文件</span><br><span class="line"><span class="built_in">mkdir</span> myblog</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line"># 初始化</span><br><span class="line">npm install</span><br><span class="line"># 开始服务</span><br><span class="line">hexo server</span><br><span class="line"># 命令简写</span><br><span class="line">hexo clean          #清除生成的文件</span><br><span class="line">hexo s              #本地启动</span><br><span class="line">hexo n "文章名称"    # 创建文章</span><br><span class="line">hexo g              # 生成静态文件</span><br><span class="line">hexo d              #上传至远程</span><br></pre></td></tr></table></figure>
-
-<h3 id="用于git部署的"><a href="#用于git部署的" class="headerlink" title="用于git部署的"></a>用于git部署的</h3><pre><code>用于git部署的 hexo-deployer-git
-npm install hexo-deployer-git --save</code></pre><h3 id="用于创建RSS-hexo-generator-feed"><a href="#用于创建RSS-hexo-generator-feed" class="headerlink" title="用于创建RSS hexo-generator-feed"></a>用于创建RSS hexo-generator-feed</h3><pre><code>** RSS是某一站点用来和其它站点之间共享内容的一种简易方式，也叫聚合内容。**
-作用就将需要的内容集合在一起，方便浏览阅读
-npm install --save hexo-generator-feed</code></pre><h3 id="使用-Hexo-插件插入音乐-视频"><a href="#使用-Hexo-插件插入音乐-视频" class="headerlink" title="使用 Hexo 插件插入音乐/视频"></a>使用 Hexo 插件插入音乐/视频</h3><pre><code>** hexo-tag-aplayer：https://github.com/grzhan/hexo-tag-aplayer) **
-** hexo-tag-dplayer： https://github.com/NextMoe/hexo-tag-dplayer **</code></pre><h3 id="页面顶置"><a href="#页面顶置" class="headerlink" title="页面顶置"></a>页面顶置</h3><pre><code>安装hexo插件
-npm uninstall hexo-generator-index --save
-npm install hexo-generator-index-pin-top --save
-文章中添加 top: true
-文章顶置标签
-/themes/next/layout/_macro目录下的post.swig文件，定位到&lt;div class=&quot;post-meta&quot;&gt;标签下，插入如下代码：
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if post.top %&#125;</span><br><span class="line">    &lt;i class&#x3D;&quot;fa fa-thumb-tack&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">    &lt;font color&#x3D;green&gt;置顶&lt;&#x2F;font&gt;</span><br><span class="line">    &lt;span class&#x3D;&quot;post-meta-divider&quot;&gt;|&lt;&#x2F;span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-文章内容顶置
-修改 node_modules/hexo-generator-index/lib/generator.js 文件
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">posts.data &#x3D; posts.data.sort(function(a, b) &#123;</span><br><span class="line">    if(a.top &amp;&amp; b.top) &#123; &#x2F;&#x2F; 两篇文章top都有定义</span><br><span class="line">        if(a.top &#x3D;&#x3D; b.top) return b.date - a.date; &#x2F;&#x2F; 若top值一样则按照文章日期降序排</span><br><span class="line">        else return b.top - a.top; &#x2F;&#x2F; 否则按照top值降序排</span><br><span class="line">    &#125;</span><br><span class="line">    else if(a.top &amp;&amp; !b.top) &#123; &#x2F;&#x2F; 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）</span><br><span class="line">        return -1;</span><br><span class="line">    &#125;</span><br><span class="line">    else if(!a.top &amp;&amp; b.top) &#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    else return b.date - a.date; &#x2F;&#x2F; 都没定义按照文章日期降序排</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></code></pre>]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>React应用</title>
     <url>/2019/09/01/2019-9/React/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="React-学习"><a href="#React-学习" class="headerlink" title="React 学习"></a>React 学习</h3><ul>
@@ -656,6 +638,35 @@ npm install hexo-generator-index-pin-top --save
       </categories>
       <tags>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo创建个人博客</title>
+    <url>/2019/09/01/2019-6/hexo/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Hexo 是一个快速、简洁且高效的博客框架。<br>    Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。<br>    Hexo 使用</p>
+<a id="more"></a>
+<h3 id="如何使用hexo搭建自己的个人博客"><a href="#如何使用hexo搭建自己的个人博客" class="headerlink" title="如何使用hexo搭建自己的个人博客"></a>如何使用hexo搭建自己的个人博客</h3><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"># 安装hexo</span><br><span class="line">npm install hexo-cli -g</span><br><span class="line"># 创建 创建项目文件</span><br><span class="line"><span class="built_in">mkdir</span> myblog</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line"># 初始化</span><br><span class="line">npm install</span><br><span class="line"># 开始服务</span><br><span class="line">hexo server</span><br><span class="line"># 命令简写</span><br><span class="line">hexo clean          #清除生成的文件</span><br><span class="line">hexo s              #本地启动</span><br><span class="line">hexo n "文章名称"    # 创建文章</span><br><span class="line">hexo g              # 生成静态文件</span><br><span class="line">hexo d              #上传至远程</span><br></pre></td></tr></table></figure>
+
+<h3 id="用于git部署的"><a href="#用于git部署的" class="headerlink" title="用于git部署的"></a>用于git部署的</h3><pre><code>用于git部署的 hexo-deployer-git
+npm install hexo-deployer-git --save</code></pre><h3 id="用于创建RSS-hexo-generator-feed"><a href="#用于创建RSS-hexo-generator-feed" class="headerlink" title="用于创建RSS hexo-generator-feed"></a>用于创建RSS hexo-generator-feed</h3><pre><code>** RSS是某一站点用来和其它站点之间共享内容的一种简易方式，也叫聚合内容。**
+作用就将需要的内容集合在一起，方便浏览阅读
+npm install --save hexo-generator-feed</code></pre><h3 id="使用-Hexo-插件插入音乐-视频"><a href="#使用-Hexo-插件插入音乐-视频" class="headerlink" title="使用 Hexo 插件插入音乐/视频"></a>使用 Hexo 插件插入音乐/视频</h3><pre><code>** hexo-tag-aplayer：https://github.com/grzhan/hexo-tag-aplayer) **
+** hexo-tag-dplayer： https://github.com/NextMoe/hexo-tag-dplayer **</code></pre><h3 id="页面顶置"><a href="#页面顶置" class="headerlink" title="页面顶置"></a>页面顶置</h3><pre><code>安装hexo插件
+npm uninstall hexo-generator-index --save
+npm install hexo-generator-index-pin-top --save
+文章中添加 top: true
+文章顶置标签
+/themes/next/layout/_macro目录下的post.swig文件，定位到&lt;div class=&quot;post-meta&quot;&gt;标签下，插入如下代码：
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if post.top %&#125;</span><br><span class="line">    &lt;i class&#x3D;&quot;fa fa-thumb-tack&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">    &lt;font color&#x3D;green&gt;置顶&lt;&#x2F;font&gt;</span><br><span class="line">    &lt;span class&#x3D;&quot;post-meta-divider&quot;&gt;|&lt;&#x2F;span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+文章内容顶置
+修改 node_modules/hexo-generator-index/lib/generator.js 文件
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">posts.data &#x3D; posts.data.sort(function(a, b) &#123;</span><br><span class="line">    if(a.top &amp;&amp; b.top) &#123; &#x2F;&#x2F; 两篇文章top都有定义</span><br><span class="line">        if(a.top &#x3D;&#x3D; b.top) return b.date - a.date; &#x2F;&#x2F; 若top值一样则按照文章日期降序排</span><br><span class="line">        else return b.top - a.top; &#x2F;&#x2F; 否则按照top值降序排</span><br><span class="line">    &#125;</span><br><span class="line">    else if(a.top &amp;&amp; !b.top) &#123; &#x2F;&#x2F; 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）</span><br><span class="line">        return -1;</span><br><span class="line">    &#125;</span><br><span class="line">    else if(!a.top &amp;&amp; b.top) &#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    else return b.date - a.date; &#x2F;&#x2F; 都没定义按照文章日期降序排</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></code></pre>]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -847,47 +858,37 @@ npm install hexo-generator-index-pin-top --save
       </tags>
   </entry>
   <entry>
-    <title>CSS样式</title>
-    <url>/2019/06/20/2019-6/cssstyle/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>css一些常用的基本属性</p>
+    <title>webpack配置文件设置</title>
+    <url>/2019/06/20/2019-12/webpack.config.js/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Webpack是用于为浏览器构建JavaScript模块脚本的前端工具</p>
 <a id="more"></a>
 
-<h3 id="设定盒子的边框不增加盒子的宽高去除浏览器默认内外边框"><a href="#设定盒子的边框不增加盒子的宽高去除浏览器默认内外边框" class="headerlink" title="设定盒子的边框不增加盒子的宽高去除浏览器默认内外边框"></a>设定盒子的边框不增加盒子的宽高去除浏览器默认内外边框</h3><p>*{<br>  margin: 0;<br>  padding: 0;<br>  box-sizing: border-box;<br>  -webkit-box-sizing: border-box;<br>  -moz-box-sizing: border-box;<br>  box-sizing: border-box;</p>
-<p>}</p>
-<h3 id="清除浏览器默认样式自行定义防止不同浏览器不同样式"><a href="#清除浏览器默认样式自行定义防止不同浏览器不同样式" class="headerlink" title="清除浏览器默认样式自行定义防止不同浏览器不同样式"></a>清除浏览器默认样式自行定义防止不同浏览器不同样式</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">input</span>,<span class="selector-tag">button</span>,<span class="selector-tag">select</span>,<span class="selector-tag">textarea</span>&#123;</span><br><span class="line">  <span class="attribute">appearance</span>: none;</span><br><span class="line">  <span class="attribute">-webkit-appearance</span>: none;</span><br><span class="line">  <span class="attribute">-moz-appearance</span>: none;</span><br><span class="line">  <span class="attribute">outline</span>: none;</span><br><span class="line">  <span class="attribute">border</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>全局安装 npm install -g webpack </p>
+<p>安装到项目内 npm install –save-dev webpack</p>
+<p>安装webpack脚手架 npm install  -D webpack webpack-cli</p>
+<p>安装webpack服务器 npm install  -g webpack-dev-server</p>
+<p>安装loader npm install  -D style-loader css-loader</p>
+<h3 id="文件内部配置"><a href="#文件内部配置" class="headerlink" title="文件内部配置"></a>文件内部配置</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;导入路径模块</span><br><span class="line">const path &#x3D; require(&quot;path&quot;);</span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">	&#x2F;&#x2F;所选模式告诉webpack相应地使用其内置优化。</span><br><span class="line">	mode:&quot;production&quot;,&#x2F;&#x2F;生产模式</span><br><span class="line">	mode:&quot;development&quot;,&#x2F;&#x2F;开发模式</span><br><span class="line">	mode:&quot;none&quot;,&#x2F;&#x2F;默认模式</span><br><span class="line">    &#x2F;&#x2F; 入口</span><br><span class="line">    entry: &#123;</span><br><span class="line">     	bundle2:&quot;.&#x2F;App.css&quot;,</span><br><span class="line">        bundl:[&quot;.&#x2F;main.js&quot;,&quot;.&#x2F;main1.js&quot;,&quot;.&#x2F;main.jsx&quot;],</span><br><span class="line">        </span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; 出口</span><br><span class="line">    output: &#123;</span><br><span class="line">        &#x2F;&#x2F; 绝对路径</span><br><span class="line">        filename: &#39;[name].js&#39;,</span><br><span class="line">        path:path.resolve(__dirname,&quot;dist&quot;)</span><br><span class="line">    &#125;,</span><br><span class="line">    filename:&quot;bundle.js&quot;,&#x2F;&#x2F;入口快的文件名模板</span><br><span class="line">    filename:&quot;[name].js&quot;,&#x2F;&#x2F;入口快的文件名模板</span><br><span class="line">    filename:&quot;[chunkhash].js&quot;,&#x2F;&#x2F;入口快的文件名模板</span><br><span class="line">    </span><br><span class="line">    publicPath: &quot;&#x2F;assets&#x2F;&quot;, &#x2F;&#x2F; string</span><br><span class="line">    publicPath: &quot;&quot;,</span><br><span class="line">    publicPath: &quot;https:&#x2F;&#x2F;cdn.example.com&#x2F;&quot;,</span><br><span class="line">    &#x2F;&#x2F; 输出解析文件的目录url相对于HTML页面</span><br><span class="line">    &#x2F;&#x2F; 模块</span><br><span class="line">     library: &quot;MyLibrary&quot;, &#x2F;&#x2F; string,</span><br><span class="line">        libraryTarget: &quot;umd2&quot;, &#x2F;&#x2F; 通用模块定义</span><br><span class="line">        libraryTarget: &quot;commonjs2&quot;, &#x2F;&#x2F; exported with module.exports</span><br><span class="line">        libraryTarget: &quot;commonjs-module&quot;, &#x2F;&#x2F; 使用 module.exports 导出</span><br><span class="line">        libraryTarget: &quot;commonjs&quot;, &#x2F;&#x2F; 作为 exports 的属性导出</span><br><span class="line">        libraryTarget: &quot;amd&quot;, &#x2F;&#x2F; 使用 AMD 定义方法来定义</span><br><span class="line">        libraryTarget: &quot;this&quot;, &#x2F;&#x2F; 在 this 上设置属性</span><br><span class="line">        libraryTarget: &quot;var&quot;, &#x2F;&#x2F; 变量定义于根作用域下</span><br><span class="line">        libraryTarget: &quot;assign&quot;, &#x2F;&#x2F; 盲分配(blind assignment)</span><br><span class="line">        libraryTarget: &quot;window&quot;, &#x2F;&#x2F; 在 window 对象上设置属性</span><br><span class="line">        libraryTarget: &quot;global&quot;, &#x2F;&#x2F; property set to global object</span><br><span class="line">        libraryTarget: &quot;jsonp&quot;, &#x2F;&#x2F; jsonp wrapper</span><br><span class="line">    &#x2F;&#x2F; 导出库(exported library)的名称</span><br><span class="line">    &#x2F;&#x2F;模块相关的配置</span><br><span class="line">    module: &#123;</span><br><span class="line">    &#x2F;&#x2F;模块规则 配置loader 解析器等选项）</span><br><span class="line">        rules:[</span><br><span class="line">            &#123;</span><br><span class="line">            </span><br><span class="line">            &#x2F;&#x2F; 每个选项都接收一个正则表达式 或字符 匹配条件</span><br><span class="line">            	&#x2F;&#x2F;正则选择文件 test 或者 include 具有相同的作用</span><br><span class="line">                test:&#x2F;\.jsx?$&#x2F;,</span><br><span class="line">                &#x2F;&#x2F;导入模块</span><br><span class="line">                exclude:&#x2F;(node_modules)&#x2F;,</span><br><span class="line">                use:&#123;</span><br><span class="line">                    loader:&#39;babel-loader&#39;,</span><br><span class="line">                    options:&#123;</span><br><span class="line">                        presets: [&#39;react&#39;]</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,&#123;</span><br><span class="line">                test:&#x2F;\.css$&#x2F;,</span><br><span class="line">                use : [&#39;style-loader&#39;,&#39;css-loader&#39;]</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"> </span><br><span class="line">   </span><br><span class="line">    &#x2F;&#x2F; 插件</span><br><span class="line">    plugins:[],</span><br><span class="line">    &#x2F;&#x2F; 开发服务器</span><br><span class="line">    devServer:&#123;</span><br><span class="line">        proxy: &#123; &#x2F;&#x2F; proxy URLs to backend development server</span><br><span class="line">          &#39;&#x2F;api&#39;: &#39;http:&#x2F;&#x2F;localhost:3000&#39;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#x2F;&#x2F; 模块安装</span><br><span class="line">        &#x2F;&#x2F; npm install webpack-dev-server --save-dev</span><br><span class="line">        &#x2F;&#x2F; contentBase: path.resolve(__dirname, &#39;dist&#39;),</span><br><span class="line">        &#x2F;&#x2F; host: &#39;192.168.1.9&#39;,</span><br><span class="line">        &#x2F;&#x2F; compress: true, &#x2F;&#x2F;服务端是否启用压缩</span><br><span class="line">        &#x2F;&#x2F; port:1717</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<h3 id="定义变量"><a href="#定义变量" class="headerlink" title="定义变量"></a>定义变量</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span>&#123;</span><br><span class="line">  <span class="attribute">--color</span>:red</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 使用变量 */</span></span><br><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>:<span class="built_in">var</span>(--color);</span><br><span class="line">  <span class="comment">/* 也可这样使用如果变量未定义就是用的二个参数 */</span></span><br><span class="line">  <span class="attribute">color</span>:<span class="built_in">var</span>(--color,#<span class="number">000</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 局部变量声明 */</span></span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">  <span class="attribute">--color</span>:red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">span</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>:<span class="built_in">var</span>(--color);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="javascript如何操作css变量"><a href="#javascript如何操作css变量" class="headerlink" title="javascript如何操作css变量"></a>javascript如何操作css变量</h3><p>操作全局变量<br>document.documentElement.style.setProperty(“–data_name”,”data_value”)<br>操作局部变量<br>document.querySelectorAll(selector)[0].style.setProperty(“–data_name”,”data_value”);</p>
-<h3 id="设置显示行数-2行-溢出隐藏加省略号"><a href="#设置显示行数-2行-溢出隐藏加省略号" class="headerlink" title="设置显示行数 2行 溢出隐藏加省略号"></a>设置显示行数 2行 溢出隐藏加省略号</h3><p>溢出隐藏<br>overflow: hidden;<br>显示省略号来代替被修剪的文本<br>text-overflow: ellipsis;<br>display: -webkit-box;<br>-webkit-line-clamp: 2;（行数）<br>-webkit-box-orient: vertical;</p>
-<!-- more -->
 
-<ul>
-<li><h3 id="设置日期居右显示"><a href="#设置日期居右显示" class="headerlink" title="设置日期居右显示"></a>设置日期居右显示</h3></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span>&#123;</span><br><span class="line">  <span class="attribute">positio</span>:relative</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span> <span class="selector-tag">span</span>&#123;</span><br><span class="line">  <span class="attribute">position</span>:absolute;</span><br><span class="line">  <span class="attribute">right</span>:<span class="number">0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="如果导入babel模块之后报错"><a href="#如果导入babel模块之后报错" class="headerlink" title="如果导入babel模块之后报错"></a>如果导入babel模块之后报错</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Cannot find module &#39;@babel&#x2F;core&#39;</span><br><span class="line"> babel-loader@8 requires Babel 7.x (the package &#39;@babel&#x2F;core&#39;). If you&#39;d like to use Babel 6.x (&#39;babel-core&#39;), you should install &#39;babel-loader@7&#39;.ou should install &#39;babel-loader@7&#39;.</span><br></pre></td></tr></table></figure>
 
-<h3 id="背景关联-文档比较长-文档向下滚动式-背景图像也会随之滚动"><a href="#背景关联-文档比较长-文档向下滚动式-背景图像也会随之滚动" class="headerlink" title="背景关联 文档比较长 文档向下滚动式 背景图像也会随之滚动"></a>背景关联 文档比较长 文档向下滚动式 背景图像也会随之滚动</h3><p>当文档滚动到超过图像的位置时 图像就会消失<br>可通过background-attachment属性防止这种滚动 可以声明图像对于可视区是固定的fixed<br>因此不会受到滚动的影响了<br>background-image:url(/i/eg_bg_02.gif);<br>background-repeat:no-repeat;<br>background-attachment:fixed</p>
-<h3 id="超链接-a标签"><a href="#超链接-a标签" class="headerlink" title="超链接 a标签"></a>超链接 a标签</h3><p>a:link 初始状态<br>a:hover 鼠标移上<br>a:active 鼠标点击时<br>a:visited 访问过后</p>
-<h3 id="垂直居中"><a href="#垂直居中" class="headerlink" title="垂直居中"></a>垂直居中</h3><p>display: inline-block;</p>
-<h3 id="清楚浮动"><a href="#清楚浮动" class="headerlink" title="清楚浮动"></a>清楚浮动</h3><p>.clearfix {<br>  overflow: auto;<br> /×兼容ie6×/<br>  zoom: 1;<br>}</p>
-<h3 id="内联块bug"><a href="#内联块bug" class="headerlink" title="内联块bug"></a>内联块bug</h3><p>  display: inline-block;<br>  vertical-align: top;</p>
-<h3 id="布局文字样式"><a href="#布局文字样式" class="headerlink" title="布局文字样式"></a>布局文字样式</h3><p>  padding: 1em;<br>  -moz-column-count: 3;<br>  -moz-column-gap: 1em;<br>  -webkit-column-count: 3;<br>  -webkit-column-gap: 1em;<br>  column-count: 3;<br>  column-gap: 1em;<br>  文字诗文排版样式</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.text</span> &#123;</span><br><span class="line">  <span class="attribute">float</span>: right;</span><br><span class="line">  <span class="attribute">padding-right</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">padding-top</span>:<span class="number">150px</span> ;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">18px</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">30px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">350px</span>;</span><br><span class="line">  <span class="attribute">writing-mode</span>: tb-lr;</span><br><span class="line">  <span class="attribute">letter-spacing</span>:<span class="number">13px</span>;</span><br><span class="line">  <span class="comment">/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/</span></span><br><span class="line">  <span class="attribute">-webkit-writing-mode</span>: vertical-rl;</span><br><span class="line">  <span class="attribute">writing-mode</span>: vertical-rl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上报错内容出现的原因</p>
+<p>bable-loader和babel-core的版本不对应所查询的</p>
+<p>babel-loader 8.x对应的是babel-core 7.x</p>
+<p>babel-loader 7.x 对应的是babel-core 6.x</p>
+<p>查看完版本执行 </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save-dev babel-loader@7.1.5</span><br></pre></td></tr></table></figure>
 
-<h3 id="设置打印样式"><a href="#设置打印样式" class="headerlink" title="设置打印样式"></a>设置打印样式</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;link rel="stylesheet" href="print.css" media="print"&gt;</span><br><span class="line"><span class="keyword">@media</span> print &#123;</span><br><span class="line">  <span class="comment">/* print style sheets go here */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@import</span> url(print.css) print;</span><br></pre></td></tr></table></figure>
 
-<h3 id="强制同一行内显示所有文本不换行"><a href="#强制同一行内显示所有文本不换行" class="headerlink" title="强制同一行内显示所有文本不换行"></a>强制同一行内显示所有文本不换行</h3><p>让文字不换行，无论css宽度设置多少，所有文字都在一行显示。特别是标题列表，我们只想显示一行标题内容，而有时宽度有限标题文字多了width又有限，这个时候我们可以使用white-space样式让他一排显示不换行</p>
-<p>语法与结构</p>
-<p>1、white-space 语法： white-space: normal nowrap</p>
-<p>2、white-space参数 ： normal : 默认处理方法  nowrap： 强制在同一行内显示所有文字直到文本结束或者遇到br标签对象才能换行</p>
-<h3 id="css常用字体"><a href="#css常用字体" class="headerlink" title="css常用字体"></a>css常用字体</h3><p>宋体  SimSun<br>黑体  SimHei<br>微软雅黑  Microsoft?YaHei<br>微软正黑体  Microsoft?JhengHei<br>新宋体  NSimSun<br>新细明体  PMingLiU<br>细明体  MingLiU<br>标楷体  DFKai-SB<br>仿宋  FangSong<br>楷体  KaiTi<br>仿宋_GB2312 FangSong_GB2312<br>楷体_GB2312 KaiTi_GB2312</p>
+
 ]]></content>
       <categories>
-        <category>CSS</category>
+        <category>前段框架</category>
       </categories>
       <tags>
-        <tag>CSS</tag>
+        <tag>前段框架</tag>
       </tags>
   </entry>
   <entry>
@@ -930,6 +931,50 @@ npm install hexo-generator-index-pin-top --save
       </categories>
       <tags>
         <tag>webBUG</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSS样式</title>
+    <url>/2019/06/20/2019-6/cssstyle/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>css一些常用的基本属性</p>
+<a id="more"></a>
+
+<h3 id="设定盒子的边框不增加盒子的宽高去除浏览器默认内外边框"><a href="#设定盒子的边框不增加盒子的宽高去除浏览器默认内外边框" class="headerlink" title="设定盒子的边框不增加盒子的宽高去除浏览器默认内外边框"></a>设定盒子的边框不增加盒子的宽高去除浏览器默认内外边框</h3><p>*{<br>  margin: 0;<br>  padding: 0;<br>  box-sizing: border-box;<br>  -webkit-box-sizing: border-box;<br>  -moz-box-sizing: border-box;<br>  box-sizing: border-box;</p>
+<p>}</p>
+<h3 id="清除浏览器默认样式自行定义防止不同浏览器不同样式"><a href="#清除浏览器默认样式自行定义防止不同浏览器不同样式" class="headerlink" title="清除浏览器默认样式自行定义防止不同浏览器不同样式"></a>清除浏览器默认样式自行定义防止不同浏览器不同样式</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">input</span>,<span class="selector-tag">button</span>,<span class="selector-tag">select</span>,<span class="selector-tag">textarea</span>&#123;</span><br><span class="line">  <span class="attribute">appearance</span>: none;</span><br><span class="line">  <span class="attribute">-webkit-appearance</span>: none;</span><br><span class="line">  <span class="attribute">-moz-appearance</span>: none;</span><br><span class="line">  <span class="attribute">outline</span>: none;</span><br><span class="line">  <span class="attribute">border</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="定义变量"><a href="#定义变量" class="headerlink" title="定义变量"></a>定义变量</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span>&#123;</span><br><span class="line">  <span class="attribute">--color</span>:red</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 使用变量 */</span></span><br><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>:<span class="built_in">var</span>(--color);</span><br><span class="line">  <span class="comment">/* 也可这样使用如果变量未定义就是用的二个参数 */</span></span><br><span class="line">  <span class="attribute">color</span>:<span class="built_in">var</span>(--color,#<span class="number">000</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 局部变量声明 */</span></span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">  <span class="attribute">--color</span>:red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">span</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>:<span class="built_in">var</span>(--color);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="javascript如何操作css变量"><a href="#javascript如何操作css变量" class="headerlink" title="javascript如何操作css变量"></a>javascript如何操作css变量</h3><p>操作全局变量<br>document.documentElement.style.setProperty(“–data_name”,”data_value”)<br>操作局部变量<br>document.querySelectorAll(selector)[0].style.setProperty(“–data_name”,”data_value”);</p>
+<h3 id="设置显示行数-2行-溢出隐藏加省略号"><a href="#设置显示行数-2行-溢出隐藏加省略号" class="headerlink" title="设置显示行数 2行 溢出隐藏加省略号"></a>设置显示行数 2行 溢出隐藏加省略号</h3><p>溢出隐藏<br>overflow: hidden;<br>显示省略号来代替被修剪的文本<br>text-overflow: ellipsis;<br>display: -webkit-box;<br>-webkit-line-clamp: 2;（行数）<br>-webkit-box-orient: vertical;</p>
+<!-- more -->
+
+<ul>
+<li><h3 id="设置日期居右显示"><a href="#设置日期居右显示" class="headerlink" title="设置日期居右显示"></a>设置日期居右显示</h3></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span>&#123;</span><br><span class="line">  <span class="attribute">positio</span>:relative</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span> <span class="selector-tag">span</span>&#123;</span><br><span class="line">  <span class="attribute">position</span>:absolute;</span><br><span class="line">  <span class="attribute">right</span>:<span class="number">0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="背景关联-文档比较长-文档向下滚动式-背景图像也会随之滚动"><a href="#背景关联-文档比较长-文档向下滚动式-背景图像也会随之滚动" class="headerlink" title="背景关联 文档比较长 文档向下滚动式 背景图像也会随之滚动"></a>背景关联 文档比较长 文档向下滚动式 背景图像也会随之滚动</h3><p>当文档滚动到超过图像的位置时 图像就会消失<br>可通过background-attachment属性防止这种滚动 可以声明图像对于可视区是固定的fixed<br>因此不会受到滚动的影响了<br>background-image:url(/i/eg_bg_02.gif);<br>background-repeat:no-repeat;<br>background-attachment:fixed</p>
+<h3 id="超链接-a标签"><a href="#超链接-a标签" class="headerlink" title="超链接 a标签"></a>超链接 a标签</h3><p>a:link 初始状态<br>a:hover 鼠标移上<br>a:active 鼠标点击时<br>a:visited 访问过后</p>
+<h3 id="垂直居中"><a href="#垂直居中" class="headerlink" title="垂直居中"></a>垂直居中</h3><p>display: inline-block;</p>
+<h3 id="清楚浮动"><a href="#清楚浮动" class="headerlink" title="清楚浮动"></a>清楚浮动</h3><p>.clearfix {<br>  overflow: auto;<br> /×兼容ie6×/<br>  zoom: 1;<br>}</p>
+<h3 id="内联块bug"><a href="#内联块bug" class="headerlink" title="内联块bug"></a>内联块bug</h3><p>  display: inline-block;<br>  vertical-align: top;</p>
+<h3 id="布局文字样式"><a href="#布局文字样式" class="headerlink" title="布局文字样式"></a>布局文字样式</h3><p>  padding: 1em;<br>  -moz-column-count: 3;<br>  -moz-column-gap: 1em;<br>  -webkit-column-count: 3;<br>  -webkit-column-gap: 1em;<br>  column-count: 3;<br>  column-gap: 1em;<br>  文字诗文排版样式</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.text</span> &#123;</span><br><span class="line">  <span class="attribute">float</span>: right;</span><br><span class="line">  <span class="attribute">padding-right</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">padding-top</span>:<span class="number">150px</span> ;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">18px</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">30px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">350px</span>;</span><br><span class="line">  <span class="attribute">writing-mode</span>: tb-lr;</span><br><span class="line">  <span class="attribute">letter-spacing</span>:<span class="number">13px</span>;</span><br><span class="line">  <span class="comment">/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/</span></span><br><span class="line">  <span class="attribute">-webkit-writing-mode</span>: vertical-rl;</span><br><span class="line">  <span class="attribute">writing-mode</span>: vertical-rl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置打印样式"><a href="#设置打印样式" class="headerlink" title="设置打印样式"></a>设置打印样式</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;link rel="stylesheet" href="print.css" media="print"&gt;</span><br><span class="line"><span class="keyword">@media</span> print &#123;</span><br><span class="line">  <span class="comment">/* print style sheets go here */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@import</span> url(print.css) print;</span><br></pre></td></tr></table></figure>
+
+<h3 id="强制同一行内显示所有文本不换行"><a href="#强制同一行内显示所有文本不换行" class="headerlink" title="强制同一行内显示所有文本不换行"></a>强制同一行内显示所有文本不换行</h3><p>让文字不换行，无论css宽度设置多少，所有文字都在一行显示。特别是标题列表，我们只想显示一行标题内容，而有时宽度有限标题文字多了width又有限，这个时候我们可以使用white-space样式让他一排显示不换行</p>
+<p>语法与结构</p>
+<p>1、white-space 语法： white-space: normal nowrap</p>
+<p>2、white-space参数 ： normal : 默认处理方法  nowrap： 强制在同一行内显示所有文字直到文本结束或者遇到br标签对象才能换行</p>
+<h3 id="css常用字体"><a href="#css常用字体" class="headerlink" title="css常用字体"></a>css常用字体</h3><p>宋体  SimSun<br>黑体  SimHei<br>微软雅黑  Microsoft?YaHei<br>微软正黑体  Microsoft?JhengHei<br>新宋体  NSimSun<br>新细明体  PMingLiU<br>细明体  MingLiU<br>标楷体  DFKai-SB<br>仿宋  FangSong<br>楷体  KaiTi<br>仿宋_GB2312 FangSong_GB2312<br>楷体_GB2312 KaiTi_GB2312</p>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
       </tags>
   </entry>
   <entry>
