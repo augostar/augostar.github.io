@@ -116,7 +116,7 @@
 
 
 
-  <meta name="keywords" content="web前段框架," />
+  <meta name="keywords" content="CSS," />
 
 
 
@@ -127,16 +127,16 @@
 
 
 
-<meta name="description" content="设置显示行数 2行 溢出隐藏加省略号溢出隐藏overflow: hidden;显示省略号来代替被修剪的文本text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;（行数）-webkit-box-orient: vertical;">
+<meta name="description" content="css一些常用的基本属性">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS样式">
 <meta property="og:url" content="https://m.atyit.com/2019/06/20/2019-6/cssstyle/index.html">
 <meta property="og:site_name" content="Augo">
-<meta property="og:description" content="设置显示行数 2行 溢出隐藏加省略号溢出隐藏overflow: hidden;显示省略号来代替被修剪的文本text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;（行数）-webkit-box-orient: vertical;">
+<meta property="og:description" content="css一些常用的基本属性">
 <meta property="article:published_time" content="2019-06-19T16:00:00.000Z">
-<meta property="article:modified_time" content="2019-12-20T02:37:01.069Z">
+<meta property="article:modified_time" content="2019-12-25T07:32:25.562Z">
 <meta property="article:author" content="Augo">
-<meta property="article:tag" content="web前段框架">
+<meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
 
 
@@ -409,6 +409,12 @@
 
         <div class="post-meta">
           <span class="post-time">
+             
+            <i class="fa fa-thumb-tack"></i>
+            <font color=7D26CD>置顶</font>
+            <span class="post-meta-divider">|</span>
+          
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -439,8 +445,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/css/" itemprop="url" rel="index">
-                    <span itemprop="name">css</span>
+                  <a href="/categories/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
                   </a>
                 </span>
 
@@ -491,7 +497,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  524
+                  763
                 </span>
               
 
@@ -507,7 +513,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  3
                 </span>
               
             </div>
@@ -528,45 +534,39 @@
       
 
       
-        <h3 id="设置显示行数-2行-溢出隐藏加省略号"><a href="#设置显示行数-2行-溢出隐藏加省略号" class="headerlink" title="设置显示行数 2行 溢出隐藏加省略号"></a>设置显示行数 2行 溢出隐藏加省略号</h3><p>溢出隐藏<br>overflow: hidden;<br>显示省略号来代替被修剪的文本<br>text-overflow: ellipsis;<br>display: -webkit-box;<br>-webkit-line-clamp: 2;（行数）<br>-webkit-box-orient: vertical;</p>
+        <p>css一些常用的基本属性</p>
 <a id="more"></a>
+
+<h3 id="设定盒子的边框不增加盒子的宽高去除浏览器默认内外边框"><a href="#设定盒子的边框不增加盒子的宽高去除浏览器默认内外边框" class="headerlink" title="设定盒子的边框不增加盒子的宽高去除浏览器默认内外边框"></a>设定盒子的边框不增加盒子的宽高去除浏览器默认内外边框</h3><p>*{<br>  margin: 0;<br>  padding: 0;<br>  box-sizing: border-box;<br>  -webkit-box-sizing: border-box;<br>  -moz-box-sizing: border-box;<br>  box-sizing: border-box;</p>
+<p>}</p>
+<h3 id="清除浏览器默认样式自行定义防止不同浏览器不同样式"><a href="#清除浏览器默认样式自行定义防止不同浏览器不同样式" class="headerlink" title="清除浏览器默认样式自行定义防止不同浏览器不同样式"></a>清除浏览器默认样式自行定义防止不同浏览器不同样式</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">input</span>,<span class="selector-tag">button</span>,<span class="selector-tag">select</span>,<span class="selector-tag">textarea</span>&#123;</span><br><span class="line">  <span class="attribute">appearance</span>: none;</span><br><span class="line">  <span class="attribute">-webkit-appearance</span>: none;</span><br><span class="line">  <span class="attribute">-moz-appearance</span>: none;</span><br><span class="line">  <span class="attribute">outline</span>: none;</span><br><span class="line">  <span class="attribute">border</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="定义变量"><a href="#定义变量" class="headerlink" title="定义变量"></a>定义变量</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span>&#123;</span><br><span class="line">  <span class="attribute">--color</span>:red</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 使用变量 */</span></span><br><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>:<span class="built_in">var</span>(--color);</span><br><span class="line">  <span class="comment">/* 也可这样使用如果变量未定义就是用的二个参数 */</span></span><br><span class="line">  <span class="attribute">color</span>:<span class="built_in">var</span>(--color,#<span class="number">000</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 局部变量声明 */</span></span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">  <span class="attribute">--color</span>:red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">span</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>:<span class="built_in">var</span>(--color);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="javascript如何操作css变量"><a href="#javascript如何操作css变量" class="headerlink" title="javascript如何操作css变量"></a>javascript如何操作css变量</h3><p>操作全局变量<br>document.documentElement.style.setProperty(“–data_name”,”data_value”)<br>操作局部变量<br>document.querySelectorAll(selector)[0].style.setProperty(“–data_name”,”data_value”);</p>
+<h3 id="设置显示行数-2行-溢出隐藏加省略号"><a href="#设置显示行数-2行-溢出隐藏加省略号" class="headerlink" title="设置显示行数 2行 溢出隐藏加省略号"></a>设置显示行数 2行 溢出隐藏加省略号</h3><p>溢出隐藏<br>overflow: hidden;<br>显示省略号来代替被修剪的文本<br>text-overflow: ellipsis;<br>display: -webkit-box;<br>-webkit-line-clamp: 2;（行数）<br>-webkit-box-orient: vertical;</p>
+<!-- more -->
 
 <ul>
 <li><h3 id="设置日期居右显示"><a href="#设置日期居右显示" class="headerlink" title="设置日期居右显示"></a>设置日期居右显示</h3></li>
 </ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span>&#123;</span><br><span class="line">	<span class="attribute">positio</span>:relative</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span> <span class="selector-tag">span</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>:absolute;</span><br><span class="line">	<span class="attribute">right</span>:<span class="number">0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span>&#123;</span><br><span class="line">  <span class="attribute">positio</span>:relative</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span> <span class="selector-tag">span</span>&#123;</span><br><span class="line">  <span class="attribute">position</span>:absolute;</span><br><span class="line">  <span class="attribute">right</span>:<span class="number">0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>背景关联 文档比较长 文档向下滚动式 背景图像也会随之滚动<br>当文档滚动到超过图像的位置时 图像就会消失<br>可通过background-attachment属性防止这种滚动 可以声明图像对于可视区是固定的fixed<br>因此不会受到滚动的影响了<br>background-image:url(/i/eg_bg_02.gif);<br>background-repeat:no-repeat;<br>background-attachment:fixed</p>
-<p>超链接 a标签<br>a:link 初始状态<br>a:hover 鼠标移上<br>a:active 鼠标点击时<br>a:visited 访问过后</p>
-<p>垂直居中<br>display: inline-block;</p>
-<h3 id="设定盒子的边框不增加-盒子的宽高"><a href="#设定盒子的边框不增加-盒子的宽高" class="headerlink" title="设定盒子的边框不增加 盒子的宽高"></a>设定盒子的边框不增加 盒子的宽高</h3><ul>
-<li>{<br>-webkit-box-sizing: border-box;<br>   -moz-box-sizing: border-box;<pre><code>box-sizing: border-box;</code></pre>}</li>
-</ul>
+<h3 id="背景关联-文档比较长-文档向下滚动式-背景图像也会随之滚动"><a href="#背景关联-文档比较长-文档向下滚动式-背景图像也会随之滚动" class="headerlink" title="背景关联 文档比较长 文档向下滚动式 背景图像也会随之滚动"></a>背景关联 文档比较长 文档向下滚动式 背景图像也会随之滚动</h3><p>当文档滚动到超过图像的位置时 图像就会消失<br>可通过background-attachment属性防止这种滚动 可以声明图像对于可视区是固定的fixed<br>因此不会受到滚动的影响了<br>background-image:url(/i/eg_bg_02.gif);<br>background-repeat:no-repeat;<br>background-attachment:fixed</p>
+<h3 id="超链接-a标签"><a href="#超链接-a标签" class="headerlink" title="超链接 a标签"></a>超链接 a标签</h3><p>a:link 初始状态<br>a:hover 鼠标移上<br>a:active 鼠标点击时<br>a:visited 访问过后</p>
+<h3 id="垂直居中"><a href="#垂直居中" class="headerlink" title="垂直居中"></a>垂直居中</h3><p>display: inline-block;</p>
 <h3 id="清楚浮动"><a href="#清楚浮动" class="headerlink" title="清楚浮动"></a>清楚浮动</h3><p>.clearfix {<br>  overflow: auto;<br> /×兼容ie6×/<br>  zoom: 1;<br>}</p>
 <h3 id="内联块bug"><a href="#内联块bug" class="headerlink" title="内联块bug"></a>内联块bug</h3><p>  display: inline-block;<br>  vertical-align: top;</p>
-<h3 id="布局文字样式"><a href="#布局文字样式" class="headerlink" title="布局文字样式"></a>布局文字样式</h3><p>  padding: 1em;<br>  -moz-column-count: 3;<br>  -moz-column-gap: 1em;<br>  -webkit-column-count: 3;<br>  -webkit-column-gap: 1em;<br>  column-count: 3;<br>  column-gap: 1em;</p>
-<h3 id="设置打印样式"><a href="#设置打印样式" class="headerlink" title="设置打印样式"></a>设置打印样式</h3><link rel="stylesheet" href="print.css" media="print">
-@media print {
-  /* print style sheets go here */
-}
+<h3 id="布局文字样式"><a href="#布局文字样式" class="headerlink" title="布局文字样式"></a>布局文字样式</h3><p>  padding: 1em;<br>  -moz-column-count: 3;<br>  -moz-column-gap: 1em;<br>  -webkit-column-count: 3;<br>  -webkit-column-gap: 1em;<br>  column-count: 3;<br>  column-gap: 1em;<br>  文字诗文排版样式</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.text</span> &#123;</span><br><span class="line">  <span class="attribute">float</span>: right;</span><br><span class="line">  <span class="attribute">padding-right</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">padding-top</span>:<span class="number">150px</span> ;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">18px</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">30px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">350px</span>;</span><br><span class="line">  <span class="attribute">writing-mode</span>: tb-lr;</span><br><span class="line">  <span class="attribute">letter-spacing</span>:<span class="number">13px</span>;</span><br><span class="line">  <span class="comment">/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/</span></span><br><span class="line">  <span class="attribute">-webkit-writing-mode</span>: vertical-rl;</span><br><span class="line">  <span class="attribute">writing-mode</span>: vertical-rl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>@import url(print.css) print;</p>
+<h3 id="设置打印样式"><a href="#设置打印样式" class="headerlink" title="设置打印样式"></a>设置打印样式</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;link rel="stylesheet" href="print.css" media="print"&gt;</span><br><span class="line"><span class="keyword">@media</span> print &#123;</span><br><span class="line">  <span class="comment">/* print style sheets go here */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@import</span> url(print.css) print;</span><br></pre></td></tr></table></figure>
+
 <h3 id="强制同一行内显示所有文本不换行"><a href="#强制同一行内显示所有文本不换行" class="headerlink" title="强制同一行内显示所有文本不换行"></a>强制同一行内显示所有文本不换行</h3><p>让文字不换行，无论css宽度设置多少，所有文字都在一行显示。特别是标题列表，我们只想显示一行标题内容，而有时宽度有限标题文字多了width又有限，这个时候我们可以使用white-space样式让他一排显示不换行</p>
 <p>语法与结构</p>
 <p>1、white-space 语法： white-space: normal nowrap</p>
 <p>2、white-space参数 ： normal : 默认处理方法  nowrap： 强制在同一行内显示所有文字直到文本结束或者遇到br标签对象才能换行</p>
-<h3 id="css常用字体"><a href="#css常用字体" class="headerlink" title="css常用字体"></a>css常用字体</h3><p>宋体    SimSun</p>
-<p>黑体    SimHei</p>
-<p>微软雅黑    Microsoft?YaHei</p>
-<p>微软正黑体    Microsoft?JhengHei</p>
-<p>新宋体    NSimSun</p>
-<p>新细明体    PMingLiU</p>
-<p>细明体    MingLiU</p>
-<p>标楷体    DFKai-SB</p>
-<p>仿宋    FangSong</p>
-<p>楷体    KaiTi</p>
-<p>仿宋_GB2312    FangSong_GB2312</p>
-<p>楷体_GB2312    KaiTi_GB2312</p>
+<h3 id="css常用字体"><a href="#css常用字体" class="headerlink" title="css常用字体"></a>css常用字体</h3><p>宋体  SimSun<br>黑体  SimHei<br>微软雅黑  Microsoft?YaHei<br>微软正黑体  Microsoft?JhengHei<br>新宋体  NSimSun<br>新细明体  PMingLiU<br>细明体  MingLiU<br>标楷体  DFKai-SB<br>仿宋  FangSong<br>楷体  KaiTi<br>仿宋_GB2312 FangSong_GB2312<br>楷体_GB2312 KaiTi_GB2312</p>
 
       
     </div>
@@ -613,7 +613,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/web%E5%89%8D%E6%AE%B5%E6%A1%86%E6%9E%B6/" rel="tag"># web前段框架</a>
+            <a href="/tags/CSS/" rel="tag"># CSS</a>
           
         </div>
       
@@ -722,7 +722,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -733,7 +733,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -744,7 +744,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -799,7 +799,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置显示行数-2行-溢出隐藏加省略号"><span class="nav-number">1.</span> <span class="nav-text">设置显示行数 2行 溢出隐藏加省略号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置日期居右显示"><span class="nav-number">2.</span> <span class="nav-text">设置日期居右显示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设定盒子的边框不增加-盒子的宽高"><span class="nav-number">3.</span> <span class="nav-text">设定盒子的边框不增加 盒子的宽高</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#清楚浮动"><span class="nav-number">4.</span> <span class="nav-text">清楚浮动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内联块bug"><span class="nav-number">5.</span> <span class="nav-text">内联块bug</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#布局文字样式"><span class="nav-number">6.</span> <span class="nav-text">布局文字样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置打印样式"><span class="nav-number">7.</span> <span class="nav-text">设置打印样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#强制同一行内显示所有文本不换行"><span class="nav-number">8.</span> <span class="nav-text">强制同一行内显示所有文本不换行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css常用字体"><span class="nav-number">9.</span> <span class="nav-text">css常用字体</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#设定盒子的边框不增加盒子的宽高去除浏览器默认内外边框"><span class="nav-number">1.</span> <span class="nav-text">设定盒子的边框不增加盒子的宽高去除浏览器默认内外边框</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#清除浏览器默认样式自行定义防止不同浏览器不同样式"><span class="nav-number">2.</span> <span class="nav-text">清除浏览器默认样式自行定义防止不同浏览器不同样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义变量"><span class="nav-number">3.</span> <span class="nav-text">定义变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#javascript如何操作css变量"><span class="nav-number">4.</span> <span class="nav-text">javascript如何操作css变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置显示行数-2行-溢出隐藏加省略号"><span class="nav-number">5.</span> <span class="nav-text">设置显示行数 2行 溢出隐藏加省略号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置日期居右显示"><span class="nav-number">6.</span> <span class="nav-text">设置日期居右显示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#背景关联-文档比较长-文档向下滚动式-背景图像也会随之滚动"><span class="nav-number">7.</span> <span class="nav-text">背景关联 文档比较长 文档向下滚动式 背景图像也会随之滚动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#超链接-a标签"><span class="nav-number">8.</span> <span class="nav-text">超链接 a标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#垂直居中"><span class="nav-number">9.</span> <span class="nav-text">垂直居中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#清楚浮动"><span class="nav-number">10.</span> <span class="nav-text">清楚浮动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内联块bug"><span class="nav-number">11.</span> <span class="nav-text">内联块bug</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#布局文字样式"><span class="nav-number">12.</span> <span class="nav-text">布局文字样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置打印样式"><span class="nav-number">13.</span> <span class="nav-text">设置打印样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#强制同一行内显示所有文本不换行"><span class="nav-number">14.</span> <span class="nav-text">强制同一行内显示所有文本不换行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css常用字体"><span class="nav-number">15.</span> <span class="nav-text">css常用字体</span></a></li></ol></div>
             
 
           </div>
@@ -840,7 +840,7 @@
     
       <span class="post-meta-item-text">网站 字数总计&#58;</span>
     
-    <span title="网站 字数总计">13.4k</span>
+    <span title="网站 字数总计">14.9k</span>
   
 </div>
 

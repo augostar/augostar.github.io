@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>2019-9/package</title>
-    <url>/2019/12/20/2019-9/package/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
+    <title>Bower</title>
+    <url>/2019/12/25/2019-12/bower/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Bower 是用于 web 前端开发的包管理器。对于前端包管理方面的问题，它提供了一套通用、客观的解决方案。<br>它通过一个 API 暴露包之间的依赖模型，这样更利于使用更合适的构建工具。bower 没有系统级的依赖，在不同 app 之间也不互相依赖，依赖树是扁平的。<br>该工具帮助用户轻松安装css、javascipt、图像的相关包，并管理这些包之间的依赖</p>
+<h3 id="这是一个针对Web开发的包管理器"><a href="#这是一个针对Web开发的包管理器" class="headerlink" title="这是一个针对Web开发的包管理器"></a>这是一个针对Web开发的包管理器</h3><p>一个好用的Web包管理器<br>bower 安装模块名称<br>bowerinstall jquery</p>
+]]></content>
+      <tags>
+        <tag>web框架</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git</title>
+    <url>/2019/12/23/2019-12/git/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>git远程操作</p>
+<a id="more"></a>
+
+<h3 id="git-clone"><a href="#git-clone" class="headerlink" title="git clone"></a>git clone</h3><p>克隆远程仓库到本地<br>比如克隆jQuery</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;jquery&#x2F;jquery.git</span><br></pre></td></tr></table></figure>
+
+<h3 id="克隆远程仓库到指定目录下"><a href="#克隆远程仓库到指定目录下" class="headerlink" title="克隆远程仓库到指定目录下"></a>克隆远程仓库到指定目录下</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone &lt;版本库地址&gt; &lt;本地目录名&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="git-clone-支持多种协议"><a href="#git-clone-支持多种协议" class="headerlink" title="git clone 支持多种协议"></a>git clone 支持多种协议</h3><p>http[s] ssh git file ftp[s] rsync …</p>
+<h3 id="列出所有远程主机-查看远程主机的地址"><a href="#列出所有远程主机-查看远程主机的地址" class="headerlink" title="列出所有远程主机 查看远程主机的地址"></a>列出所有远程主机 查看远程主机的地址</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git remote</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
   </entry>
   <entry>
     <title>node_modules</title>
     <url>/2019/12/20/2019-9/node_modules/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="package-json-文件"><a href="#package-json-文件" class="headerlink" title="package.json 文件"></a>package.json 文件</h3><p>npm init 这个命令采用互动的方式 要求用户回答一些问题，然后在当前目录生成的package.json文件。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>package.json 文件</p>
+<p>npm init 这个命令采用互动的方式 要求用户回答一些问题，然后在当前目录生成的package.json文件。</p>
 <p>所以的问题之中只有项目名称 项目版本 是必须要填的 其余都是选填 有了package.json文件,直接使用    npm install命令 就会在目录（node_modules）中安装所需的模块</p>
 <a id="more"></a>
 
@@ -21,9 +45,8 @@
 <p>package.json可以没有，但是node_modules文件肯定有 如果没有一开始时是通过npm install moduleName 指令安装的依赖模块 </p>
 </li>
 </ul>
-<h3 id="node-modules-的创建"><a href="#node-modules-的创建" class="headerlink" title="node_modules 的创建"></a>node_modules 的创建</h3><p>1.用npm安装模块</p>
-<p>用npm安装模块有两种方式:本地安装和全局安装。如果你需要用Node.js的<code>require</code>来获取依赖，那么你需要的是本地安装，也就是默认的方式。如果你需要把它当做诸如<code>gruntCLI</code>这样的命令行工具，那就要用全局安装。</p>
-<h3 id="dependencies-和-devDependencies区别"><a href="#dependencies-和-devDependencies区别" class="headerlink" title="dependencies 和 devDependencies区别"></a>dependencies 和 devDependencies区别</h3><p>dependencies是什么呢？ 生产环境。<br>        devdependencies是什么呢？ 开发环境。</p>
+<h3 id="node-modules-的创建"><a href="#node-modules-的创建" class="headerlink" title="node_modules 的创建"></a>node_modules 的创建</h3><p>1.用npm安装模块<br>用npm安装模块有两种方式:本地安装和全局安装。如果你需要用Node.js的<code>require</code>来获取依赖，那么你需要的是本地安装，也就是默认的方式。如果你需要把它当做诸如<code>gruntCLI</code>这样的命令行工具，那就要用全局安装。</p>
+<h3 id="dependencies-和-devDependencies区别"><a href="#dependencies-和-devDependencies区别" class="headerlink" title="dependencies 和 devDependencies区别"></a>dependencies 和 devDependencies区别</h3><p>dependencies是什么呢？ 生产环境。<br>devdependencies是什么呢？ 开发环境。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install module-name -save 自动把模块和版本号添加到dependencies部分</span><br><span class="line">npm install module-name -save-dev 自动把模块和版本号添加到devdependencies部分</span><br></pre></td></tr></table></figure>
 
 <p>发布npm包的时候 本身dependencies下的模块会作为依赖一起被下载</p>
@@ -82,9 +105,24 @@
       </tags>
   </entry>
   <entry>
-    <title>图片懒加载</title>
+    <title>图片效果处理</title>
     <url>/2019/12/20/2019-9/images/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="优化前端访问速度-图片懒加载"><a href="#优化前端访问速度-图片懒加载" class="headerlink" title="优化前端访问速度 图片懒加载"></a>优化前端访问速度 图片懒加载</h3><a id="more"></a>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>图片显示为其自身的灰度版本<br>优化前端访问速度 图片懒加载</p>
+<a id="more"></a>
+
+<h3 id="html图片"><a href="#html图片" class="headerlink" title="html图片"></a>html图片</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- src规定显示图像的URL alt 规定图像无法显示时候替代的文本 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"URL"</span> <span class="attr">alt</span>=<span class="string">"value"</span> &gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*防止图片溢出盒子  */</span></span><br><span class="line"><span class="selector-tag">img</span>&#123;</span><br><span class="line">	<span class="attribute">max-width</span>:<span class="number">100%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="灰色"><a href="#灰色" class="headerlink" title="灰色"></a>灰色</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">-webkit-filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>); </span><br><span class="line">    <span class="comment">/* old safari */</span></span><br><span class="line">    <span class="attribute">filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>​    2.filter-1977</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">-webkit-filter</span>: <span class="selector-tag">sepia</span>(<span class="selector-class">.5</span>) <span class="selector-tag">hue-rotate</span>(<span class="selector-tag">-30deg</span>) <span class="selector-tag">saturate</span>(1<span class="selector-class">.4</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="克拉伦登"><a href="#克拉伦登" class="headerlink" title="克拉伦登"></a>克拉伦登</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">sepia</span>(<span class="selector-class">.15</span>) <span class="selector-tag">contrast</span>(1<span class="selector-class">.25</span>) <span class="selector-tag">brightness</span>(1<span class="selector-class">.25</span>) <span class="selector-tag">hue-rotate</span>(5<span class="selector-tag">deg</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="阿什比"><a href="#阿什比" class="headerlink" title="阿什比"></a>阿什比</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">webkit-filter</span>: <span class="selector-tag">sepia</span>(<span class="selector-class">.5</span>) <span class="selector-tag">contrast</span>(1<span class="selector-class">.2</span>) <span class="selector-tag">saturate</span>(1<span class="selector-class">.8</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="图片懒加载"><a href="#图片懒加载" class="headerlink" title="图片懒加载"></a>图片懒加载</h3><!-- more -->
 
 <p>代码</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 一开始没有滚动的时候，出现在视窗中的图片也会加载</span></span><br><span class="line">start();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当页面开始滚动的时候，遍历图片，如果图片出现在视窗中，就加载图片</span></span><br><span class="line"><span class="keyword">var</span> clock; <span class="comment">//函数节流</span></span><br><span class="line">$(<span class="built_in">window</span>).on(<span class="string">'scroll'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(clock) &#123;</span><br><span class="line">		clearTimeout(clock);</span><br><span class="line">	&#125;</span><br><span class="line">	clock = setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		start()</span><br><span class="line">	&#125;, <span class="number">200</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">start</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	$(<span class="string">'.container img'</span>).not(<span class="string">'[data-isLoading]'</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(isShow($(<span class="keyword">this</span>))) &#123;</span><br><span class="line">			loadImg($(<span class="keyword">this</span>));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断图片是否出现在视窗的函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isShow</span>(<span class="params">$node</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> $node.offset().top &lt;= $(<span class="built_in">window</span>).height() + $(<span class="built_in">window</span>).scrollTop();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 加载图片的函数，就是把自定义属性data-src 存储的真正的图片地址，赋值给src</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">loadImg</span>(<span class="params">$img</span>) </span>&#123;</span><br><span class="line">	$img.attr(<span class="string">'src'</span>, $img.attr(<span class="string">'data-src'</span>));</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 已经加载的图片，我给它设置一个属性，值为1，作为标识</span></span><br><span class="line">	<span class="comment">// 弄这个的初衷是因为，每次滚动的时候，所有的图片都会遍历一遍，这样有点浪费，所以做个标识，滚动的时候只遍历哪些还没有加载的图片</span></span><br><span class="line">	$img.attr(<span class="string">'data-isLoading'</span>, <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
@@ -98,7 +136,10 @@
   <entry>
     <title>webpack配置文件设置</title>
     <url>/2019/12/20/2019-12/webpack.config.js/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="Webpack是用于为浏览器构建JavaScript模块脚本的前端工具"><a href="#Webpack是用于为浏览器构建JavaScript模块脚本的前端工具" class="headerlink" title="Webpack是用于为浏览器构建JavaScript模块脚本的前端工具"></a>Webpack是用于为浏览器构建JavaScript模块脚本的前端工具</h3><p>全局安装 npm install -g webpack </p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Webpack是用于为浏览器构建JavaScript模块脚本的前端工具</p>
+<a id="more"></a>
+
+<p>全局安装 npm install -g webpack </p>
 <p>安装到项目内 npm install –save-dev webpack</p>
 <p>安装webpack脚手架 npm install  -D webpack webpack-cli</p>
 <p>安装webpack服务器 npm install  -g webpack-dev-server</p>
@@ -121,9 +162,101 @@
 ]]></content>
   </entry>
   <entry>
-    <title>2019-12/modules</title>
-    <url>/2019/12/20/2019-12/modules/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>了解前端杂文</p>
+    <title>2019-12/es6</title>
+    <url>/2019/12/20/2019-12/es6/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="node-js中exports和module-exports的区别"><a href="#node-js中exports和module-exports的区别" class="headerlink" title="node.js中exports和module.exports的区别"></a>node.js中exports和module.exports的区别</h3>
+        <div id="aplayer-UBNHdARF" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-UBNHdARF"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "她的睫毛",
+              author: "周杰伦",
+              url: "http://home.ustc.edu.cn/~mmmwhy/%d6%dc%bd%dc%c2%d7%20-%20%cb%fd%b5%c4%bd%de%c3%ab.mp3",
+              pic: "http://home.ustc.edu.cn/~mmmwhy/jay.jpg",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>   
+
+<p>module.exports对象是由模块系统创建的。在我们自己写模块的时候，需要在模块最后写好模块接口，声明这个模块对外暴露什么内容module.exports提供了暴露接口的方法。</p>
+<ol>
+<li><p>exports 使用方法</p>
+<p>exports.[function name] = [function name]</p>
+</li>
+<li><p>moudle.exports使用方法</p>
+<p>moudle.exports=[function name]</p>
+</li>
+</ol>
+<h3 id="二者的根本区别是"><a href="#二者的根本区别是" class="headerlink" title="二者的根本区别是"></a>二者的根本区别是</h3><p>exports 返回的是模块函数</p>
+<p>module.exports 返回的是模块对象本身，返回的是一个类</p>
+<p>使用上的区别是exports的方法可直接调用</p>
+<p>module.exports需要new对象之后才可以调用</p>
+<p>require<code>: node 和 es6 都支持的引入</code></p>
+<p>export / import<code>: 只有es6 支持的导出引入</code></p>
+<p>module.exports / exports`: 只有 node 支持的导出</p>
+<p><code>CommonJS</code>定义的模块分为: 模块标识(<code>module</code>)、模块定义(<code>exports</code>) 、模块引用(<code>require</code>)</p>
+<h3 id="export-和-export-default"><a href="#export-和-export-default" class="headerlink" title="export 和 export default"></a>export 和 export default</h3><p>export与export default均可用于导出常量、函数、文件、模块等</p>
+<p>在一个文件或模块中，export、import可以有多个，export default仅有一个</p>
+<p>通过export方式导出，在导入时要加{ }，export default则不需要</p>
+<p>export能直接导出变量表达式，export default不行。</p>
+<p><code>require</code>: node 和 es6 都支持的引入</p>
+<p><code>export / import</code> : 只有es6 支持的导出引入</p>
+<p>module.exports / exports`: 只有 node 支持的导出</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>2019-12/editorconfig</title>
+    <url>/2019/12/20/2019-12/editorconfig/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><hr>
+<h2 id="项目内的-editorcongfig文件"><a href="#项目内的-editorcongfig文件" class="headerlink" title="项目内的 .editorcongfig文件"></a>项目内的 .editorcongfig文件</h2><p>帮助开发人员在不同编辑器和ide之间定义和维护一致的编码样式 。<br>editorconfig项目由用于定义编码样式的文件格式和一组文本编译器插件组成，<br>这些插件使编辑器能够读取文件格式并遵循定义样式。editorconfig文件易于阅读并且版本控制系统配合使用。</p>
+<a id="more"></a>
+
+<p>不同的开发人员，不同的编辑器 有不同的编码风格，有不同的编码风格，而EditorConfig就是用来协同团队开发人员之间的代码的风格及样式规范化的一个工具，而.editorconfig正是它的默认配置文件。</p>
+<p><code>* editorconfig</code>为Python和JavaScript文件设置行尾和缩进样式的示例文件。</p>
+<h3 id="示例文件"><a href="#示例文件" class="headerlink" title="示例文件"></a>示例文件</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># editorconfig.org</span><br><span class="line"># 告诉插件这是跟文件 不用继续往上查找</span><br><span class="line">root &#x3D; true</span><br><span class="line"># 匹配全部文件</span><br><span class="line">[*]</span><br><span class="line"># 定义编码</span><br><span class="line">charset &#x3D; utf-8</span><br><span class="line"># 结尾换行符和 可以“lf”、“cr”、“crlf”</span><br><span class="line">end_of_line &#x3D; lf</span><br><span class="line"># 在文件结尾插入新行</span><br><span class="line">insert_final_newline &#x3D; true</span><br><span class="line"># 删除一行中的前后空格</span><br><span class="line">trim_trailing_whitespace &#x3D; true</span><br><span class="line">indent_style &#x3D; space</span><br><span class="line">indent_size &#x3D; 2</span><br><span class="line"># 匹配py结尾的文件</span><br><span class="line">[*.py]</span><br><span class="line"># 缩进字数</span><br><span class="line">indent_size &#x3D; 4</span><br><span class="line"># 缩进风格 可选“space”“tab”</span><br><span class="line"># indent_style&#x3D;space</span><br></pre></td></tr></table></figure>
+
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ol>
+<li>如果windows用户无法创建 .editorconfig文件则需要创建 editorconfig. 系统会自动重命名成 .editorconfig</li>
+<li>插件安装</li>
+<li>对应vscore 对应的插件名称<a href="https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig" target="_blank" rel="noopener">EditorConfig for VS Code</a>。</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>javascipt</title>
+    <url>/2019/12/20/2019-12/javascipt/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="html标签绑定事件方法"><a href="#html标签绑定事件方法" class="headerlink" title="html标签绑定事件方法"></a>html标签绑定事件方法</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"TEST"</span> <span class="attr">onclick</span>=<span class="string">"functionName(this);"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="元素的方法绑定事件"><a href="#元素的方法绑定事件" class="headerlink" title="元素的方法绑定事件"></a>元素的方法绑定事件</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'my-btn'</span>);</span><br><span class="line"></span><br><span class="line">btn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// some code …</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//删除事件</span></span><br><span class="line">btn.onclick=<span class="literal">null</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="addEventListener-和-removeEventListener-（DOM2级事件处理程序）"><a href="#addEventListener-和-removeEventListener-（DOM2级事件处理程序）" class="headerlink" title="addEventListener() 和 removeEventListener() （DOM2级事件处理程序）"></a>addEventListener() 和 removeEventListener() （DOM2级事件处理程序）</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">let</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'my-btn'</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handler</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// some code …</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">btn.addEventListener(<span class="string">'click'</span>, handler, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">btn.removeEventListener(<span class="string">'click'</span>, handler, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// true 在捕获阶段调用</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// false 在冒泡阶段调用</span></span><br></pre></td></tr></table></figure>
+
+<p>支持IE9+、FCOS</p>
+<h3 id="attachEvent-和-detacheEvent"><a href="#attachEvent-和-detacheEvent" class="headerlink" title="attachEvent() 和 detacheEvent()"></a>attachEvent() 和 detacheEvent()</h3><p>在attachEvent() 的匿名函数中 this===window</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">let</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'my-btn'</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handler</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// some code …</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">btn.attachEvent(<span class="string">'onclick'</span>, handler, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">btn.detachEvent(<span class="string">'onclick'</span>, handler, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+
+<p>支持IE、Opera</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>前端框架集合</title>
+    <url>/2019/12/06/2019-12/modules/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>前端所说的脚手架</p>
+<a id="more"></a>
+
+<p>了解前端杂文</p>
 <p>脚手架</p>
 <p>前端所说的脚手架 scaffold cli（Command Line Interface）</p>
 <p>npm bower grunt</p>
@@ -205,168 +338,8 @@
 <p>SVN</p>
 <p>react＋webpack＋redux+react-router+fetch+babel+eslint+mockjs**</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>2019-12/es6</title>
-    <url>/2019/12/20/2019-12/es6/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="node-js中exports和module-exports的区别"><a href="#node-js中exports和module-exports的区别" class="headerlink" title="node.js中exports和module.exports的区别"></a>node.js中exports和module.exports的区别</h3>
-        <div id="aplayer-fBSBURfa" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-fBSBURfa"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "她的睫毛",
-              author: "周杰伦",
-              url: "http://home.ustc.edu.cn/~mmmwhy/%d6%dc%bd%dc%c2%d7%20-%20%cb%fd%b5%c4%bd%de%c3%ab.mp3",
-              pic: "http://home.ustc.edu.cn/~mmmwhy/jay.jpg",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>   
-
-<p>module.exports对象是由模块系统创建的。在我们自己写模块的时候，需要在模块最后写好模块接口，声明这个模块对外暴露什么内容module.exports提供了暴露接口的方法。</p>
-<ol>
-<li><p>exports 使用方法</p>
-<p>exports.[function name] = [function name]</p>
-</li>
-<li><p>moudle.exports使用方法</p>
-<p>moudle.exports=[function name]</p>
-</li>
-</ol>
-<h3 id="二者的根本区别是"><a href="#二者的根本区别是" class="headerlink" title="二者的根本区别是"></a>二者的根本区别是</h3><p>exports 返回的是模块函数</p>
-<p>module.exports 返回的是模块对象本身，返回的是一个类</p>
-<p>使用上的区别是exports的方法可直接调用</p>
-<p>module.exports需要new对象之后才可以调用</p>
-<p>require<code>: node 和 es6 都支持的引入</code></p>
-<p>export / import<code>: 只有es6 支持的导出引入</code></p>
-<p>module.exports / exports`: 只有 node 支持的导出</p>
-<p><code>CommonJS</code>定义的模块分为: 模块标识(<code>module</code>)、模块定义(<code>exports</code>) 、模块引用(<code>require</code>)</p>
-<h3 id="export-和-export-default"><a href="#export-和-export-default" class="headerlink" title="export 和 export default"></a>export 和 export default</h3><p>export与export default均可用于导出常量、函数、文件、模块等</p>
-<p>在一个文件或模块中，export、import可以有多个，export default仅有一个</p>
-<p>通过export方式导出，在导入时要加{ }，export default则不需要</p>
-<p>export能直接导出变量表达式，export default不行。</p>
-<p><code>require</code>: node 和 es6 都支持的引入</p>
-<p><code>export / import</code> : 只有es6 支持的导出引入</p>
-<p>module.exports / exports`: 只有 node 支持的导出</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>2019-12/editorconfig</title>
-    <url>/2019/12/20/2019-12/editorconfig/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><hr>
-<p>项目内的 .editorcongfig文件</p>
-<hr>
-<h3 id="官网介绍editorcongfig"><a href="#官网介绍editorcongfig" class="headerlink" title="官网介绍editorcongfig"></a>官网介绍editorcongfig</h3><p>帮助开发人员在不同编辑器和ide之间定义和维护一致的编码样式 。editorconfig项目由用于定义编码样式的文件格式和一组文本编译器插件组成，这些插件使编辑器能够读取文件格式并遵循定义样式。editorconfig文件易于阅读并且版本控制系统配合使用。</p>
-<p>不同的开发人员，不同的编辑器 有不同的编码风格，有不同的编码风格，而EditorConfig就是用来协同团队开发人员之间的代码的风格及样式规范化的一个工具，而.editorconfig正是它的默认配置文件。</p>
-<p><code>* editorconfig</code>为Python和JavaScript文件设置行尾和缩进样式的示例文件。</p>
-<h3 id="示例文件"><a href="#示例文件" class="headerlink" title="示例文件"></a>示例文件</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># editorconfig.org</span><br><span class="line"># 告诉插件这是跟文件 不用继续往上查找</span><br><span class="line">root &#x3D; true</span><br><span class="line"># 匹配全部文件</span><br><span class="line">[*]</span><br><span class="line"># 定义编码</span><br><span class="line">charset &#x3D; utf-8</span><br><span class="line"># 结尾换行符和 可以“lf”、“cr”、“crlf”</span><br><span class="line">end_of_line &#x3D; lf</span><br><span class="line"># 在文件结尾插入新行</span><br><span class="line">insert_final_newline &#x3D; true</span><br><span class="line"># 删除一行中的前后空格</span><br><span class="line">trim_trailing_whitespace &#x3D; true</span><br><span class="line">indent_style &#x3D; space</span><br><span class="line">indent_size &#x3D; 2</span><br><span class="line"># 匹配py结尾的文件</span><br><span class="line">[*.py]</span><br><span class="line"># 缩进字数</span><br><span class="line">indent_size &#x3D; 4</span><br><span class="line"># 缩进风格 可选“space”“tab”</span><br><span class="line"># indent_style&#x3D;space</span><br></pre></td></tr></table></figure>
-
-<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ol>
-<li><p>如果windows用户无法创建 .editorconfig文件则需要创建 editorconfig. 系统会自动重命名成 .editorconfig</p>
-</li>
-<li><p>插件安装</p>
-</li>
-<li><p>对应vscore 对应的插件名称<a href="https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig" target="_blank" rel="noopener">EditorConfig for VS Code</a>。</p>
-</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
-    <title>2019-12/bower</title>
-    <url>/2019/12/20/2019-12/bower/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><hr>
-<p>bower 新建。bowerrc文件</p>
-<h3 id="这是一个针对Web开发的包管理器。"><a href="#这是一个针对Web开发的包管理器。" class="headerlink" title="这是一个针对Web开发的包管理器。"></a>这是一个针对Web开发的包管理器。</h3><p>该工具帮助用户轻松安装css、javascipt、图像的相关包，并管理这些包之间的依赖</p>
-<p> 一个好用的Web包管理器</p>
-<p>bower 安装模块名称</p>
-<p>bowerinstall jquery</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>2019-12/Untitled 2</title>
-    <url>/2019/12/20/2019-12/Untitled%202/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><hr>
-<p>title：javascipt<br>data：2019-11-6</p>
-<hr>
-<h3 id="html标签绑定事件方法"><a href="#html标签绑定事件方法" class="headerlink" title="html标签绑定事件方法"></a>html标签绑定事件方法</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"TEST"</span> <span class="attr">onclick</span>=<span class="string">"functionName(this);"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="元素的方法绑定事件"><a href="#元素的方法绑定事件" class="headerlink" title="元素的方法绑定事件"></a>元素的方法绑定事件</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'my-btn'</span>);</span><br><span class="line"></span><br><span class="line">btn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// some code …</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//删除事件</span></span><br><span class="line">btn.onclick=<span class="literal">null</span>;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="addEventListener-和-removeEventListener-（DOM2级事件处理程序）"><a href="#addEventListener-和-removeEventListener-（DOM2级事件处理程序）" class="headerlink" title="addEventListener() 和 removeEventListener() （DOM2级事件处理程序）"></a>addEventListener() 和 removeEventListener() （DOM2级事件处理程序）</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">let</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'my-btn'</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handler</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// some code …</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">btn.addEventListener(<span class="string">'click'</span>, handler, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">btn.removeEventListener(<span class="string">'click'</span>, handler, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// true 在捕获阶段调用</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// false 在冒泡阶段调用</span></span><br></pre></td></tr></table></figure>
-
-<p>支持IE9+、FCOS</p>
-<h3 id="attachEvent-和-detacheEvent"><a href="#attachEvent-和-detacheEvent" class="headerlink" title="attachEvent() 和 detacheEvent()"></a>attachEvent() 和 detacheEvent()</h3><p>在attachEvent() 的匿名函数中 this===window</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">let</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'my-btn'</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handler</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// some code …</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">btn.attachEvent(<span class="string">'onclick'</span>, handler, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">btn.detachEvent(<span class="string">'onclick'</span>, handler, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
-
-<p>支持IE、Opera</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>2019-12/Untitled 1</title>
-    <url>/2019/12/20/2019-12/Untitled%201/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><hr>
-<p>跨域脚本攻击xxs是最常见、危害最大的网页安全漏洞</p>
-<hr>
-<h3 id="为了防止它们，要采取很多编程措施，非常麻烦。很多人提出，能不能根本上解决问题，浏览器自动禁止外部注入恶意脚本？"><a href="#为了防止它们，要采取很多编程措施，非常麻烦。很多人提出，能不能根本上解决问题，浏览器自动禁止外部注入恶意脚本？" class="headerlink" title="为了防止它们，要采取很多编程措施，非常麻烦。很多人提出，能不能根本上解决问题，浏览器自动禁止外部注入恶意脚本？"></a>为了防止它们，要采取很多编程措施，非常麻烦。很多人提出，能不能根本上解决问题，浏览器自动禁止外部注入恶意脚本？</h3><p>这就是”网页安全政策”（Content Security Policy，缩写 CSP）的来历。本文详细介绍如何使用 CSP 防止 XSS 攻击。</p>
-<p>CSP 的实质就是白名单制度，开发者明确告诉客户端，哪些外部资源可以加载和执行，等同于提供白名单。它的实现和执行全部由浏览器完成，开发者只需提供配置。</p>
-<p>CSP 大大增强了网页的安全性。攻击者即使发现了漏洞，也没法注入脚本，除非还控制了一台列入了白名单的可信主机。</p>
-<p>两种方法可以启用 CSP。</p>
-<p>一种是通过 HTTP 头信息的<code>Content-Security-Policy</code>的字段。</p>
-<p>另一种是通过网页的<code>&lt;meta&gt;</code>标签。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Security-Policy"</span> <span class="attr">content</span>=<span class="string">"script-src 'self'; object-src 'none'; style-src cdn.example.org third-party.org; child-src https:"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>css中的图片效果处理</title>
-    <url>/2019/10/31/2019-9/cssimg/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="图片图片显示为其自身的灰度版本"><a href="#图片图片显示为其自身的灰度版本" class="headerlink" title="图片图片显示为其自身的灰度版本"></a>图片图片显示为其自身的灰度版本</h3><ol>
-<li>灰色</li>
-</ol>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">-webkit-filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>); </span><br><span class="line">    <span class="comment">/* old safari */</span></span><br><span class="line">    <span class="attribute">filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>​    2.filter-1977</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">-webkit-filter</span>: <span class="selector-tag">sepia</span>(<span class="selector-class">.5</span>) <span class="selector-tag">hue-rotate</span>(<span class="selector-tag">-30deg</span>) <span class="selector-tag">saturate</span>(1<span class="selector-class">.4</span>);</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>克拉伦登</li>
-</ol>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">sepia</span>(<span class="selector-class">.15</span>) <span class="selector-tag">contrast</span>(1<span class="selector-class">.25</span>) <span class="selector-tag">brightness</span>(1<span class="selector-class">.25</span>) <span class="selector-tag">hue-rotate</span>(5<span class="selector-tag">deg</span>);</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>阿什比</li>
-</ol>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">webkit-filter</span>: <span class="selector-tag">sepia</span>(<span class="selector-class">.5</span>) <span class="selector-tag">contrast</span>(1<span class="selector-class">.2</span>) <span class="selector-tag">saturate</span>(1<span class="selector-class">.8</span>);</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>css</category>
-      </categories>
       <tags>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>css中的mixin用法</title>
-    <url>/2019/10/30/2019-9/cssMixin/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="mixin是什么"><a href="#mixin是什么" class="headerlink" title="mixin是什么"></a>mixin是什么</h3><p>@mixin是一种简化代码的方法，能够提高代码的重复使用率。Mixins允许我们在项目中复用样式片段，可以传递参数这个特性使得它们非常灵活，强大。</p>
-<h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><p>mixin定义（使用@mixin定义）</p>
-]]></content>
-      <categories>
-        <category>css</category>
-      </categories>
-      <tags>
-        <tag>css</tag>
+        <tag>web框架</tag>
       </tags>
   </entry>
   <entry>
@@ -461,22 +434,17 @@ npm 安装</code></pre><p>​        npm install jshint -g</p>
       </tags>
   </entry>
   <entry>
-    <title>python pip  安装模块提示 failed  to create process</title>
-    <url>/2019/10/11/2019-9/pythonpip/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="python-pip-安装模块提示-failed-to-create-process"><a href="#python-pip-安装模块提示-failed-to-create-process" class="headerlink" title="python pip  安装模块提示 failed  to create process"></a>python pip  安装模块提示 failed  to create process</h3><p>原因：</p>
-<a id="more"></a>
-
-<p>python的目录名称或位置发生改变</p>
-<p>解决办法：</p>
-<p>1：找到python所在目录，打开scripts目录 ，修改python所在的目录 打开scripts目录，找到pip3-script.py文件</p>
-<p>2：找到pip-script.py文件 并打开，在第一行替换一下代码 修改成python.exe 路径</p>
-<p>pip list 正常显示安装的模块</p>
+    <title>webEnglish</title>
+    <url>/2019/10/11/2019-9/web/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="web"><a href="#web" class="headerlink" title="web"></a>web</h3><a id="more"></a>
+<p>Hyper Text Markup Language(超文本标记语言, 又称 HTML)<br>Cascading Style Sheets (层叠式样式表, 又称 CSS)<br>Document Object Model (文档对象模型, 又称 DOM)<br>JavaScript Programming Language (JavaScript编程语言, 又称: ECMAScript 6, ES6, JavaScript 2015)<br>Web API’s (Web应用程序接口, 又称 HTML5 API 或浏览器 API)<br>Hypertext Transfer Protocol (超文本传输协议, 又称 HTTP)<br>Uniform Resource Locator’s (统一资源定位符, 又称 URL)<br>JavaScript Object Notation (JavaScript对象表示, 又称 JSON)<br>Web Content Accessibility Guidelines (网页内容无障碍设计指南, 又称 WCAG) &amp; Accessible Rich Internet Applications (富Internet应用程序的无障碍设计, 又称 ARIA)</p>
+<p>Content Management System (内容管理系统, 又称 CMS)<br>Node.js<br>Cross-browser testing (跨浏览器测试)<br>Cross-platform testing (跨平台测试)<br>Unit Testing (单元测试)<br>Cross-device testing (跨设备测试)<br>Accessibility / WAI-ARIA (无障碍访问/无障碍富Internet应用程序)<br>Search Engine Optimization (搜索引擎优化, 又称 SEO)<br>Interaction or User Interface design (交互或用户设计)<br>User Experience (用户体验)<br>Usability (可用性/易用性)<br>E-commerce Systems (电子商务系统)<br>Portal Systems (门户系统)<br>Wireframing (框架)<br>CSS layout / Grids (CSS 布局/栅格系统)<br>DOM manipulation (e.g. jQuery) (DOM 操作)<br>Mobile Web Performance (移动Web性能)<br>Load Testing (载荷测试)<br>Performance Testing (性能测试)<br>Progressive Enhancement / Graceful Degradation (渐进增强/优雅降级)<br>Version Control (e.g. GIT) (版本控制)<br>MVC / MVVM / MV (MV 框架)<br>Functional Programming (函数式编程)<br>Data Formats (e.g. JSON, XML) (数据格式)<br>Data API’s (e.g Restful API) (数据API)<br>Web Font Embedding (Web字体嵌入)<br>Scalable Vector Graphics (可伸缩向量图形, 又称 SVG)<br>Regular Expressions (正则表达式)<br>Content Strategy (内容策略)<br>Microdata / Microformats (微数据/微格式)<br>Task Runners, Build Tools, Process Automation Tools (任务管道, 构建工具, 过程自动化工具)<br>Responsive Web Design (响应式设计)<br>Object Oriented Programming (面向对象编程)<br>Application Architecture (应用架构)<br>Modules (模块)<br>Dependency Managers (依赖关系管理)<br>Package Managers (包管理)<br>JavaScript Animation (JavaScript 动画)<br>CSS Animation (CSS 动画)<br>Charts / Graphs (图表/图形)<br>UI widgets (UI工具集)<br>Code Quality Testing (代码质量测试)<br>Code Coverage Testing (代码覆盖测试)<br>Code Complexity Analysis (代码复杂度测试)<br>Integration Testing (集成测试)<br>Command Line / CLI (命令行/命令行界面)<br>Templating Strategies (模板策略)<br>Templating Engines (模板引擎)<br>Single Page Applications (单页应用)<br>XHR Requests (aka AJAX) (XHR 请求, 又称 AJAX)<br>Web/Browser Security (Web/浏览器安全)<br>HTML Semantics (HTML 语义化)<br>Browser Developer Tools (浏览器开发者工具)</p>
 ]]></content>
       <categories>
-        <category>python</category>
+        <category>web</category>
       </categories>
       <tags>
-        <tag>python</tag>
+        <tag>web</tag>
       </tags>
   </entry>
   <entry>
@@ -508,24 +476,12 @@ npm 安装</code></pre><p>​        npm install jshint -g</p>
       </tags>
   </entry>
   <entry>
-    <title>webEnglish</title>
-    <url>/2019/10/11/2019-9/web/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="web"><a href="#web" class="headerlink" title="web"></a>web</h3><a id="more"></a>
-<p>Hyper Text Markup Language(超文本标记语言, 又称 HTML)<br>Cascading Style Sheets (层叠式样式表, 又称 CSS)<br>Document Object Model (文档对象模型, 又称 DOM)<br>JavaScript Programming Language (JavaScript编程语言, 又称: ECMAScript 6, ES6, JavaScript 2015)<br>Web API’s (Web应用程序接口, 又称 HTML5 API 或浏览器 API)<br>Hypertext Transfer Protocol (超文本传输协议, 又称 HTTP)<br>Uniform Resource Locator’s (统一资源定位符, 又称 URL)<br>JavaScript Object Notation (JavaScript对象表示, 又称 JSON)<br>Web Content Accessibility Guidelines (网页内容无障碍设计指南, 又称 WCAG) &amp; Accessible Rich Internet Applications (富Internet应用程序的无障碍设计, 又称 ARIA)</p>
-<p>Content Management System (内容管理系统, 又称 CMS)<br>Node.js<br>Cross-browser testing (跨浏览器测试)<br>Cross-platform testing (跨平台测试)<br>Unit Testing (单元测试)<br>Cross-device testing (跨设备测试)<br>Accessibility / WAI-ARIA (无障碍访问/无障碍富Internet应用程序)<br>Search Engine Optimization (搜索引擎优化, 又称 SEO)<br>Interaction or User Interface design (交互或用户设计)<br>User Experience (用户体验)<br>Usability (可用性/易用性)<br>E-commerce Systems (电子商务系统)<br>Portal Systems (门户系统)<br>Wireframing (框架)<br>CSS layout / Grids (CSS 布局/栅格系统)<br>DOM manipulation (e.g. jQuery) (DOM 操作)<br>Mobile Web Performance (移动Web性能)<br>Load Testing (载荷测试)<br>Performance Testing (性能测试)<br>Progressive Enhancement / Graceful Degradation (渐进增强/优雅降级)<br>Version Control (e.g. GIT) (版本控制)<br>MVC / MVVM / MV (MV 框架)<br>Functional Programming (函数式编程)<br>Data Formats (e.g. JSON, XML) (数据格式)<br>Data API’s (e.g Restful API) (数据API)<br>Web Font Embedding (Web字体嵌入)<br>Scalable Vector Graphics (可伸缩向量图形, 又称 SVG)<br>Regular Expressions (正则表达式)<br>Content Strategy (内容策略)<br>Microdata / Microformats (微数据/微格式)<br>Task Runners, Build Tools, Process Automation Tools (任务管道, 构建工具, 过程自动化工具)<br>Responsive Web Design (响应式设计)<br>Object Oriented Programming (面向对象编程)<br>Application Architecture (应用架构)<br>Modules (模块)<br>Dependency Managers (依赖关系管理)<br>Package Managers (包管理)<br>JavaScript Animation (JavaScript 动画)<br>CSS Animation (CSS 动画)<br>Charts / Graphs (图表/图形)<br>UI widgets (UI工具集)<br>Code Quality Testing (代码质量测试)<br>Code Coverage Testing (代码覆盖测试)<br>Code Complexity Analysis (代码复杂度测试)<br>Integration Testing (集成测试)<br>Command Line / CLI (命令行/命令行界面)<br>Templating Strategies (模板策略)<br>Templating Engines (模板引擎)<br>Single Page Applications (单页应用)<br>XHR Requests (aka AJAX) (XHR 请求, 又称 AJAX)<br>Web/Browser Security (Web/浏览器安全)<br>HTML Semantics (HTML 语义化)<br>Browser Developer Tools (浏览器开发者工具)</p>
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>babel</title>
-    <url>/2019/09/20/2019-9/frame/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="bable"><a href="#bable" class="headerlink" title="bable"></a>bable</h3><p>babel 是下一代的js语法编辑器</p>
-]]></content>
+    <url>/2019/09/20/2019-9/babel/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="bable"><a href="#bable" class="headerlink" title="bable"></a>bable</h3><p>Babel 是一个 JavaScript 编译器<br>Babel 是一个工具链，主要用于将 ECMAScript 2015+ 版本的代码转换为向后兼容的 JavaScript 语法，以便能够运行在当前和旧版本的浏览器或其他环境中。</p>
+<a id="more"></a>
+
+<h3 id="配置Babel"><a href="#配置Babel" class="headerlink" title="配置Babel"></a>配置Babel</h3><pre><code>配置文件babel.config.js文件可</code></pre>]]></content>
       <categories>
         <category>web前端</category>
       </categories>
@@ -549,12 +505,52 @@ npm 安装</code></pre><p>​        npm install jshint -g</p>
   <entry>
     <title>H5样式</title>
     <url>/2019/09/16/2019-6/htm5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="特殊标签"><a href="#特殊标签" class="headerlink" title="特殊标签"></a>特殊标签</h3><pre><code>&lt;abbr&gt; 定义英文缩写
-&lt;address&gt; 定义地址元素</code></pre><a id="more"></a>
-<h3 id="html-符号"><a href="#html-符号" class="headerlink" title="html 符号"></a>html 符号</h3><pre><code>&amp;lt;  &lt;
-&amp;gt;  &gt;
-&amp;amp; &amp; 
-&amp;nbsp;  空格</code></pre>]]></content>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>HTML5 是 W3C 与 WHATWG 合作的结果,WHATWG 指 Web Hypertext Application Technology Working Group。<br>WHATWG 致力于 web 表单和应用程序，而 W3C 专注于 XHTML 2.0。在 2006 年，双方决定进行合作，来创建一个新版本的 HTML。</p>
+<a id="more"></a>
+<p>HTML5 中的一些有趣的新特性：<br>    + 于绘画的 canvas 元素<br>    + 用于媒介回放的 video 和 audio 元素<br>    + 对本地离线存储的更好的支持<br>    + 新的特殊内容元素，比如 article、footer、header、nav、section<br>    + 新的表单控件，比如 calendar、date、time、email、url、search<br>HTML5声明 <!DOCTYPE html></p>
+<h3 id="兼容IE"><a href="#兼容IE" class="headerlink" title="兼容IE"></a>兼容IE</h3><!--[if lt IE 9]>
+    <script src="http://cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+<![endif]-->
+
+<h3 id="语义元素"><a href="#语义元素" class="headerlink" title="语义元素"></a>语义元素</h3><pre><code>&lt;abbr&gt;  定义英文缩写
+&lt;address&gt;   定义地址元素
+&lt;footer&gt;    定义文档页脚
+&lt;header&gt;    定义文档头部
+&lt;nav&gt;       定义导航栏
+&lt;aside&gt;     定义侧边栏内容
+..........
+删除部分标签如font frame</code></pre><h3 id="HTML5canvas"><a href="#HTML5canvas" class="headerlink" title="HTML5canvas"></a>HTML5canvas</h3><pre><code>HTML5&lt;canvas&gt;元素用于图形的绘制，通过脚本 (通常是JavaScript)来完成.
+&lt;canvas&gt; 标签只是图形容器，您必须使用脚本来绘制图形。
+你可以通过多种方法使用 canvas 绘制路径,盒、圆、字符以及添加图像</code></pre><h3 id="HTML5内联SVG"><a href="#HTML5内联SVG" class="headerlink" title="HTML5内联SVG"></a>HTML5内联SVG</h3><p>SVG 指可伸缩矢量图形 (Scalable Vector Graphics)<br>SVG 用于定义用于网络的基于矢量的图形<br>SVG 使用 XML 格式定义图形<br>SVG 图像在放大或改变尺寸的情况下其图形质量不会有损失<br>SVG 是万维网联盟的标准</p>
+<h3 id="SVG-与-Canvas两者间的区别"><a href="#SVG-与-Canvas两者间的区别" class="headerlink" title="SVG 与 Canvas两者间的区别"></a>SVG 与 Canvas两者间的区别</h3><p>SVG 是一种使用 XML 描述 2D 图形的语言。<br>Canvas 通过 JavaScript 来绘制 2D 图形。<br>SVG 基于 XML，这意味着 SVG DOM 中的每个元素都是可用的。您可以为某个元素附加 JavaScript 事件处理器。<br>在 SVG 中，每个被绘制的图形均被视为对象。如果 SVG 对象的属性发生变化，那么浏览器能够自动重现图形。<br>Canvas 是逐像素进行渲染的。在 canvas 中，一旦图形被绘制完成，它就不会继续得到浏览器的关注。如果其位置发生变化，那么整个场景也需要重新绘制，包括任何或许已被图形覆盖的对象。</p>
+<ul>
+<li><p>Canvas<br>依赖分辨率<br>不支持事件处理器<br>弱的文本渲染能力<br>能够以 .png 或 .jpg 格式保存结果图像<br>最适合图像密集型的游戏，其中的许多对象会被频繁重绘</p>
+</li>
+<li><p>SVG<br>不依赖分辨率<br>支持事件处理器<br>最适合带有大型渲染区域的应用程序（比如谷歌地图）<br>复杂度高会减慢渲染速度（任何过度使用 DOM 的应用都不快）<br>不适合游戏应用</p>
+</li>
+</ul>
+<h3 id="HTML5拖放"><a href="#HTML5拖放" class="headerlink" title="HTML5拖放"></a>HTML5拖放</h3><pre><code>拖放是一种常见的特性，即抓取对象以后拖到另一个位置。
+在 HTML5 中，拖放是标准的一部分，任何元素都能够拖放
+设置元素为可拖放 draggable=&quot;true&quot;
+定义可拖放的数据 ondragstart和setData()
+dataTransfer.setData()定义拖放的数据和值
+function drag(ev)
+{
+    ev.dataTransfer.setData(&quot;Text&quot;,ev.target.id);
+}
+放到何处 ondragover
+ondragover事件定义拖放的数据
+默认的无法将数据拖放到其他元素中如果需要设置允许放置，我们必须对元素默认方式
+这要通过调用ondragover事件的event.preventDefault()方法
+进行放置ondrop 
+当放置被拖动的数据会发生drop事件
+ondrop调用函数drop(event)
+function drop(e){
+    e.preventDefault();
+    var data=e.dataTransfer.getData(&quot;Text&quot;);
+    ev.target.appendChide(document.getElementById(data));
+}</code></pre><h3 id="定位用户的位置"><a href="#定位用户的位置" class="headerlink" title="定位用户的位置"></a>定位用户的位置</h3><p>HTML5 Geolocation API 用于获得用户的地理位置。<br>鉴于该特性可能侵犯用户的隐私，除非用户同意，否则用户位置信息是不可用的。</p>
+<pre><code><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> x=<span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getLocation</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (navigator.geolocation)</span><br><span class="line">    &#123;</span><br><span class="line">        navigator.geolocation.getCurrentPosition(showPosition);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        x.innerHTML=<span class="string">"该浏览器不支持获取地理位置。"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">showPosition</span>(<span class="params">position</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    x.innerHTML=<span class="string">"纬度: "</span> + position.coords.latitude +</span><br><span class="line">    <span class="string">"&lt;br&gt;经度: "</span> + position.coords.longitude;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></code></pre>]]></content>
       <categories>
         <category>html5</category>
       </categories>
@@ -565,20 +561,11 @@ npm 安装</code></pre><p>​        npm install jshint -g</p>
   <entry>
     <title>python入门</title>
     <url>/2019/09/01/2019-9/python/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="1、安装python"><a href="#1、安装python" class="headerlink" title="1、安装python"></a>1、安装python</h3><p>官网 <a href="https://www.python.org/" target="_blank" rel="noopener">https://www.python.org/</a></p>
-<p>地址：<a href="https://www.python.org/ftp/python/3.8.0/python-3.8.0b2-amd64.exe" target="_blank" rel="noopener">https://www.python.org/ftp/python/3.8.0/python-3.8.0b2-amd64.exe</a></p>
-<p>python -V</p>
-<p>查看python 版本</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="1、安装python"><a href="#1、安装python" class="headerlink" title="1、安装python"></a>1、安装python</h3><p>官网 <a href="https://www.python.org/" target="_blank" rel="noopener">https://www.python.org/</a><br>地址：<a href="https://www.python.org/ftp/python/3.8.0/python-3.8.0b2-amd64.exe" target="_blank" rel="noopener">https://www.python.org/ftp/python/3.8.0/python-3.8.0b2-amd64.exe</a><br>python -V<br>查看python 版本</p>
 <a id="more"></a>
 
-<h3 id="2、配置环境变量（path）"><a href="#2、配置环境变量（path）" class="headerlink" title="2、配置环境变量（path）"></a>2、配置环境变量（path）</h3><h3 id="3、-安装pip"><a href="#3、-安装pip" class="headerlink" title="3、 安装pip"></a>3、 安装pip</h3><p>pip 是 Python 包管理工具，该工具提供了对Python 包的查找、下载、安装、卸载的功能。</p>
-<p>pip 官网：<a href="https://pypi.org/project/pip/" target="_blank" rel="noopener">https://pypi.org/project/pip/</a></p>
-<p>pip 下载地址：<a href="https://files.pythonhosted.org/packages/8b/8a/1b2aadd922db1afe6bc107b03de41d6d37a28a5923383e60695fba24ae81/pip-19.2.1.tar.gz" target="_blank" rel="noopener">https://files.pythonhosted.org/packages/8b/8a/1b2aadd922db1afe6bc107b03de41d6d37a28a5923383e60695fba24ae81/pip-19.2.1.tar.gz</a></p>
-<p>git 地址 ：<a href="https://files.pythonhosted.org/packages/8b/8a/1b2aadd922db1afe6bc107b03de41d6d37a28a5923383e60695fba24ae81/pip-19.2.1.tar.gz" target="_blank" rel="noopener">https://files.pythonhosted.org/packages/8b/8a/1b2aadd922db1afe6bc107b03de41d6d37a28a5923383e60695fba24ae81/pip-19.2.1.tar.gz</a></p>
-<p>更新pip pip install –upgrade pip或者 python-m pip install–upgrade pip  报错选择：python -m pip install –upgrade pip</p>
-<p>os模块在python中属于内置模块，即不需要额外安装 os模块提供了非常丰富的方法来处理文件和目录</p>
-<p>测试 os模块</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">cmd = <span class="string">'ipconfig'</span></span><br><span class="line"></span><br><span class="line">retval = os.system(cmd)</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> (retval)</span><br></pre></td></tr></table></figure>
+<h3 id="2、配置环境变量（path）"><a href="#2、配置环境变量（path）" class="headerlink" title="2、配置环境变量（path）"></a>2、配置环境变量（path）</h3><h3 id="3、-安装pip"><a href="#3、-安装pip" class="headerlink" title="3、 安装pip"></a>3、 安装pip</h3><p>pip 是 Python 包管理工具，该工具提供了对Python 包的查找、下载、安装、卸载的功能。<br>pip 官网：<a href="https://pypi.org/project/pip/" target="_blank" rel="noopener">https://pypi.org/project/pip/</a><br>pip 下载地址：<a href="https://files.pythonhosted.org/packages/8b/8a/1b2aadd922db1afe6bc107b03de41d6d37a28a5923383e60695fba24ae81/pip-19.2.1.tar.gz" target="_blank" rel="noopener">https://files.pythonhosted.org/packages/8b/8a/1b2aadd922db1afe6bc107b03de41d6d37a28a5923383e60695fba24ae81/pip-19.2.1.tar.gz</a><br>git 地址 ：<a href="https://files.pythonhosted.org/packages/8b/8a/1b2aadd922db1afe6bc107b03de41d6d37a28a5923383e60695fba24ae81/pip-19.2.1.tar.gz" target="_blank" rel="noopener">https://files.pythonhosted.org/packages/8b/8a/1b2aadd922db1afe6bc107b03de41d6d37a28a5923383e60695fba24ae81/pip-19.2.1.tar.gz</a><br>更新pip pip install –upgrade pip或者 python-m pip install–upgrade pip  报错选择：python -m pip install –upgrade pip<br>os模块在python中属于内置模块，即不需要额外安装 os模块提供了非常丰富的方法来处理文件和目录<br>测试 os模块</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">cmd = <span class="string">'ipconfig'</span></span><br><span class="line"></span><br><span class="line">retval = os.system(cmd)</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> (retval)</span><br></pre></td></tr></table></figure>
 <p>requests的底层实现就是urllib </p>
 <p>requests在python2 和python3中通用，方法完全一样</p>
 <p>requests能够自动帮助我们解压(gzip压缩的等)网页内容</p>
@@ -613,31 +600,23 @@ print (baidu)
     <url>/2019/09/01/2019-6/hexo/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Hexo 是一个快速、简洁且高效的博客框架。<br>    Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。<br>    Hexo 使用</p>
 <a id="more"></a>
-<h3 id="如何使用hexo搭建自己的个人博客"><a href="#如何使用hexo搭建自己的个人博客" class="headerlink" title="如何使用hexo搭建自己的个人博客"></a>如何使用hexo搭建自己的个人博客</h3><p>1 安装</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="如何使用hexo搭建自己的个人博客"><a href="#如何使用hexo搭建自己的个人博客" class="headerlink" title="如何使用hexo搭建自己的个人博客"></a>如何使用hexo搭建自己的个人博客</h3><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"># 安装hexo</span><br><span class="line">npm install hexo-cli -g</span><br><span class="line"># 创建 创建项目文件</span><br><span class="line"><span class="built_in">mkdir</span> myblog</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line"># 初始化</span><br><span class="line">npm install</span><br><span class="line"># 开始服务</span><br><span class="line">hexo server</span><br><span class="line"># 命令简写</span><br><span class="line">hexo clean          #清除生成的文件</span><br><span class="line">hexo s              #本地启动</span><br><span class="line">hexo n "文章名称"    # 创建文章</span><br><span class="line">hexo g              # 生成静态文件</span><br><span class="line">hexo d              #上传至远程</span><br></pre></td></tr></table></figure>
 
-<p>安装Hexo插件<br> npm install –save hexo-generator-feed<br>hexo npm install hexo -g #-g表示全局安装, npm默认为当前项目安装<br>如果报错 npm install hexo –no-optional<br>mkdir 创建项目文件</p>
-<p>2 初始化一下<br>hexo i<br>hexo s  启动<br>hexo n “我的 第一篇文章”<br>md 文档</p>
-<p>3 部署在 github<br>    登陆github<br>    新建仓库<br>    必须是昵称.geihub.io<br>    npm install –save hexo-deployer-git<br>    配置 _config.yml<br>   type: git<br>        repo: 仓库地址<br>        branch:master<br>    部署命令 hexo d<br>    github账号 密码<br>        github.com/litten/hexo-theme-yilia<br>        git clone <a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia</a></p>
-<pre><code>hexo clean
-生成一下
-hexo g
-hexo s
-hexo d</code></pre><h3 id="文章顶置"><a href="#文章顶置" class="headerlink" title="文章顶置"></a>文章顶置</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm uninstall hexo-generator-index --save</span><br><span class="line">$ npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
-
-<p>文章中添加 top: true</p>
-<p>/themes/next/layout/_macro目录下的post.swig文件，定位到<div class="post-meta">标签下，插入如下代码：</p>
+<h3 id="用于git部署的"><a href="#用于git部署的" class="headerlink" title="用于git部署的"></a>用于git部署的</h3><pre><code>用于git部署的 hexo-deployer-git
+npm install hexo-deployer-git --save</code></pre><h3 id="用于创建RSS-hexo-generator-feed"><a href="#用于创建RSS-hexo-generator-feed" class="headerlink" title="用于创建RSS hexo-generator-feed"></a>用于创建RSS hexo-generator-feed</h3><pre><code>** RSS是某一站点用来和其它站点之间共享内容的一种简易方式，也叫聚合内容。**
+作用就将需要的内容集合在一起，方便浏览阅读
+npm install --save hexo-generator-feed</code></pre><h3 id="使用-Hexo-插件插入音乐-视频"><a href="#使用-Hexo-插件插入音乐-视频" class="headerlink" title="使用 Hexo 插件插入音乐/视频"></a>使用 Hexo 插件插入音乐/视频</h3><pre><code>** hexo-tag-aplayer：https://github.com/grzhan/hexo-tag-aplayer) **
+** hexo-tag-dplayer： https://github.com/NextMoe/hexo-tag-dplayer **</code></pre><h3 id="页面顶置"><a href="#页面顶置" class="headerlink" title="页面顶置"></a>页面顶置</h3><pre><code>安装hexo插件
+npm uninstall hexo-generator-index --save
+npm install hexo-generator-index-pin-top --save
+文章中添加 top: true
+文章顶置标签
+/themes/next/layout/_macro目录下的post.swig文件，定位到&lt;div class=&quot;post-meta&quot;&gt;标签下，插入如下代码：
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if post.top %&#125;</span><br><span class="line">    &lt;i class&#x3D;&quot;fa fa-thumb-tack&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">    &lt;font color&#x3D;green&gt;置顶&lt;&#x2F;font&gt;</span><br><span class="line">    &lt;span class&#x3D;&quot;post-meta-divider&quot;&gt;|&lt;&#x2F;span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+文章内容顶置
+修改 node_modules/hexo-generator-index/lib/generator.js 文件
 
-<h3 id="添加目录云、标签云页面"><a href="#添加目录云、标签云页面" class="headerlink" title="添加目录云、标签云页面"></a>添加目录云、标签云页面</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page &quot;tags&quot;</span><br><span class="line">hexo new page &quot;categories&quot;</span><br></pre></td></tr></table></figure>
-
-<p>文章顶置<br>修改 node_modules/hexo-generator-index/lib/generator.js 文件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">posts.data &#x3D; posts.data.sort(function(a, b) &#123;</span><br><span class="line">    if(a.top &amp;&amp; b.top) &#123; &#x2F;&#x2F; 两篇文章top都有定义</span><br><span class="line">        if(a.top &#x3D;&#x3D; b.top) return b.date - a.date; &#x2F;&#x2F; 若top值一样则按照文章日期降序排</span><br><span class="line">        else return b.top - a.top; &#x2F;&#x2F; 否则按照top值降序排</span><br><span class="line">    &#125;</span><br><span class="line">    else if(a.top &amp;&amp; !b.top) &#123; &#x2F;&#x2F; 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）</span><br><span class="line">        return -1;</span><br><span class="line">    &#125;</span><br><span class="line">    else if(!a.top &amp;&amp; b.top) &#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    else return b.date - a.date; &#x2F;&#x2F; 都没定义按照文章日期降序排</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>使用 Hexo 插件插入音乐/视频<br>两个好用的hexo插件：</p>
-<p><strong>hexo-tag-aplayer：<a href="https://github.com/grzhan/hexo-tag-aplayer" target="_blank" rel="noopener">https://github.com/grzhan/hexo-tag-aplayer</a>)</strong></p>
-<p><strong>hexo-tag-dplayer： <a href="https://github.com/NextMoe/hexo-tag-dplayer" target="_blank" rel="noopener">https://github.com/NextMoe/hexo-tag-dplayer</a></strong></p>
-]]></content>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">posts.data &#x3D; posts.data.sort(function(a, b) &#123;</span><br><span class="line">    if(a.top &amp;&amp; b.top) &#123; &#x2F;&#x2F; 两篇文章top都有定义</span><br><span class="line">        if(a.top &#x3D;&#x3D; b.top) return b.date - a.date; &#x2F;&#x2F; 若top值一样则按照文章日期降序排</span><br><span class="line">        else return b.top - a.top; &#x2F;&#x2F; 否则按照top值降序排</span><br><span class="line">    &#125;</span><br><span class="line">    else if(a.top &amp;&amp; !b.top) &#123; &#x2F;&#x2F; 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）</span><br><span class="line">        return -1;</span><br><span class="line">    &#125;</span><br><span class="line">    else if(!a.top &amp;&amp; b.top) &#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    else return b.date - a.date; &#x2F;&#x2F; 都没定义按照文章日期降序排</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></code></pre>]]></content>
       <categories>
         <category>hexo</category>
       </categories>
@@ -682,15 +661,17 @@ hexo d</code></pre><h3 id="文章顶置"><a href="#文章顶置" class="headerli
   <entry>
     <title>jquery</title>
     <url>/2019/07/10/2019-6/jQuery/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>jquery学习<br>$(“”).html(content) 改变被选元素的内容html<br>$(“”).append(content) 向被选元素的内部 HTML 追加内容<br>$(“”).prepend(content) 向被选元素内部HTML 预设(Prepend) 内容<br>$(“”).after(content) 在被选元素之后添加html<br>$(“”).before(content) 在被选元素之前添加HTML</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>jQuery 是一个高效、精简并且功能丰富的 JavaScript 工具库。它提供的 API 易于使用且兼容众多浏览器，这让诸如 HTML 文档遍历和操作、事件处理、动画和 Ajax 操作更加简单。如果你是一个 jQuery 新手，我们建议你先到jQuery 学习中心历练历练</p>
 <a id="more"></a>
 
-<p>js获取屏幕宽度</p>
-<p>网页可见区域宽： document.body.clientWidth<br>网页可见区域高： document.body.clientHeight<br>网页可见区域宽： document.body.offsetWidth (包括边线的宽)<br>网页可见区域高： document.body.offsetHeight (包括边线的高)<br>网页正文全文宽： document.body.scrollWidth<br>网页正文全文高： document.body.scrollHeight<br>网页被卷去的高： document.body.scrollTop<br>网页被卷去的左： document.body.scrollLeft<br>网页正文部分上： window.screenTop<br>网页正文部分左： window.screenLeft<br>屏幕分辨率的高： window.screen.height<br>屏幕分辨率的宽： window.screen.width<br>屏幕可用工作区高度： window.screen.availHeight<br>屏幕可用工作区宽度： window.screen.availWidth</p>
+<h3 id="jquery学习"><a href="#jquery学习" class="headerlink" title="jquery学习"></a>jquery学习</h3><p>$(“”).html()        改变被选元素的内容html<br>$(“”).add()         添加元素到匹配的元素集合<br>$(“”).append()      向被选元素的内部 HTML 追加内容<br>$(“”).prepend()     向被选元素内部HTML 预设(Prepend) 内容<br>$(“”).after()       在被选元素之后添加html<br>$(“”).before()      在被选元素之前添加HTML<br>$(“”).addClass()    为每个匹配的元素添加指定的样式类名<br>$(“”).after()       在匹配元素集合中的每个元素后面插入参数所指定的内容，作为其兄弟节点<br>$(“”).css()         获取匹配元素集合中的第一个元素的样式属性的值设置每个匹配元素的一个或多个CSS属性。<br>$(“”).eq()          减少匹配元素的集合为指定的索引的哪一个元素<br>$(“”).hide()<br>$(“”).hover()       将二个事件函数绑定到匹配元素上，分别当鼠标指针进入和离开元素时被执行。将一个单独事件函数绑定到匹配元素上，分别当鼠标指针进入和离开元素时被执行。<br>jQuery.ajax()       执行一个异步的HTTP（Ajax）的请求<br>$(“”).remove()      将匹配元素集合从DOM中删除。（注：同时移除元素上的事件及 jQuery 数据。）<br>$(“”).removeClass() 移除集合中每个匹配元素上一个，多个或全部样式</p>
+<p>jQuery  API  <a href="https://www.jquery123.com/" target="_blank" rel="noopener">https://www.jquery123.com/</a></p>
+<h3 id="js获取屏幕宽度"><a href="#js获取屏幕宽度" class="headerlink" title="js获取屏幕宽度"></a>js获取屏幕宽度</h3><p>网页可见区域宽： document.body.clientWidth<br>网页可见区域高： document.body.clientHeight<br>网页可见区域宽： document.body.offsetWidth (包括边线的宽)<br>网页可见区域高： document.body.offsetHeight (包括边线的高)<br>网页正文全文宽： document.body.scrollWidth<br>网页正文全文高： document.body.scrollHeight<br>网页被卷去的高： document.body.scrollTop<br>网页被卷去的左： document.body.scrollLeft<br>网页正文部分上： window.screenTop<br>网页正文部分左： window.screenLeft<br>屏幕分辨率的高： window.screen.height<br>屏幕分辨率的宽： window.screen.width<br>屏幕可用工作区高度： window.screen.availHeight<br>屏幕可用工作区宽度： window.screen.availWidth</p>
 <p>jquery获取屏幕宽度</p>
 <p>$(document).ready(function(){<br>alert($(window).height()); //浏览器当前窗口可视区域高度<br>alert($(document).height()); //浏览器当前窗口文档的高度<br>alert($(document.body).height());//浏览器当前窗口文档body的高度<br>alert($(document.body).outerHeight(true));//浏览器当前窗口文档body的总高度 包括border padding margin<br>alert($(window).width()); //浏览器当前窗口可视区域宽度<br>alert($(document).width());//浏览器当前窗口文档对象宽度<br>alert($(document.body).width());//浏览器当前窗口文档body的宽度<br>alert($(document.body).outerWidth(true));//浏览器当前窗口文档body的总宽度 包括border padding margin<br>})</p>
 <p>jquery 鼠标滚轮事件</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="string">'body'</span>).mousewheel(<span class="function"><span class="keyword">function</span>(<span class="params">event, delta</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> dir = delta &gt; <span class="number">0</span> ? <span class="string">'Up'</span> : <span class="string">'Down'</span>;</span><br><span class="line">    <span class="keyword">if</span> (dir == <span class="string">'Up'</span>) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'向上滚动'</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'向下滚动'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="string">'body'</span>).mousewheel(<span class="function"><span class="keyword">function</span>(<span class="params">event, delta</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> dir = delta &gt; <span class="number">0</span> ? <span class="string">'Up'</span> : <span class="string">'Down'</span>;</span><br><span class="line">    <span class="keyword">if</span> (dir == <span class="string">'Up'</span>) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'向上滚动'</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'向下滚动'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+]]></content>
       <categories>
         <category>web前段</category>
       </categories>
@@ -701,7 +682,9 @@ hexo d</code></pre><h3 id="文章顶置"><a href="#文章顶置" class="headerli
   <entry>
     <title>常用的网站地址</title>
     <url>/2019/07/08/2019-6/tool/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="常用的网站地址-忘记的时候可以看看"><a href="#常用的网站地址-忘记的时候可以看看" class="headerlink" title="常用的网站地址 忘记的时候可以看看"></a>常用的网站地址 忘记的时候可以看看</h3><a id="more"></a>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>常用的网站地址 忘记的时候可以看看</p>
+<a id="more"></a>
+
 <ol>
 <li><h3 id="前段常用框架"><a href="#前段常用框架" class="headerlink" title="前段常用框架"></a>前段常用框架</h3><ul>
 <li><p>Swiper常用于移动端网站的内容触摸滑动</p>
@@ -748,12 +731,10 @@ hexo d</code></pre><h3 id="文章顶置"><a href="#文章顶置" class="headerli
 <li><p>mui 最接近原生APP体验的高性能前端框架</p>
 <pre><code>+ 地址：http://dev.dcloud.net.cn/mui/</code></pre><ul>
 <li></li>
-<li><p>  ​        </p>
-</li>
 </ul>
 </li>
 </ul>
-<ol start="2">
+<ol>
 <li><h3 id="第三方工具"><a href="#第三方工具" class="headerlink" title="第三方工具"></a>第三方工具</h3><ul>
 <li>百度地图 <a href="http://lbsyun.baidu.com/" target="_blank" rel="noopener">http://lbsyun.baidu.com/</a></li>
 <li>fontawesome图标 <a href="http://www.fontawesome.com.cn/faicons/" target="_blank" rel="noopener">http://www.fontawesome.com.cn/faicons/</a></li>
@@ -856,7 +837,7 @@ hexo d</code></pre><h3 id="文章顶置"><a href="#文章顶置" class="headerli
 <a id="more"></a>
 
 <h3 id="AJAX是基于现有的Internet标准"><a href="#AJAX是基于现有的Internet标准" class="headerlink" title="AJAX是基于现有的Internet标准"></a>AJAX是基于现有的Internet标准</h3><p>XMLHttpRequest对象(异步的与服务器交换数据)<br>javaScript/DOM (信息显示/交互)<br>CSS(给数据定义样式)<br>XML/JSON(作为转换数据的格式)</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">h2</span>&gt;</span>使用AJAX修改文本内容<span class="tag">&lt;/<span class="name">h2</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">onclick</span>=<span class="string">"loadXMLDoc()"</span>&gt;</span>修改内容<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">		<span class="keyword">var</span> xmlhttp;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">if</span>(<span class="built_in">window</span>.XMLHttpRequest)&#123;</span></span><br><span class="line"><span class="actionscript">				<span class="comment">//IE7+,firefox,Chrome,Opera,Safari浏览器执行代码</span></span></span><br><span class="line"><span class="actionscript">			xmlhttp=<span class="keyword">new</span> XMLHttpRequest();</span></span><br><span class="line">		&#125;</span><br><span class="line"><span class="actionscript">		<span class="keyword">else</span>&#123;</span></span><br><span class="line"><span class="actionscript">			<span class="comment">//IE6,IE5浏览器执行代码</span></span></span><br><span class="line"><span class="actionscript">			xmlhttp=<span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</span></span><br><span class="line">		&#125;</span><br><span class="line"><span class="actionscript">		<span class="function"><span class="keyword">function</span> <span class="title">loadXMLDoc</span><span class="params">()</span></span>&#123;</span></span><br><span class="line"><span class="actionscript">		<span class="comment">//method请求的类型 GET/POST</span></span></span><br><span class="line"><span class="actionscript">		<span class="comment">//url 请求地址</span></span></span><br><span class="line"><span class="actionscript">		<span class="comment">// 是否异步 true异步 false 同步</span></span></span><br><span class="line"><span class="actionscript">			xmlhttp.open(<span class="string">"method"</span>,<span class="string">"url"</span>,<span class="literal">true</span>);</span></span><br><span class="line"><span class="actionscript">		<span class="comment">//send("string")请求发送到服务器</span></span></span><br><span class="line"><span class="actionscript">			xmlhttp.send(<span class="string">"string"</span>);</span></span><br><span class="line"><span class="actionscript">			<span class="comment">//注意只限制POST请求</span></span></span><br><span class="line"><span class="actionscript">			<span class="comment">//readyState 0 请求未初始化</span></span></span><br><span class="line"><span class="actionscript">					<span class="comment">//	 1 服务器建立连接</span></span></span><br><span class="line"><span class="actionscript">					<span class="comment">//   2 请求已接受</span></span></span><br><span class="line"><span class="actionscript">					<span class="comment">//   3 请求处理中</span></span></span><br><span class="line"><span class="actionscript">					<span class="comment">//   4 请求完成 且响应已就绪</span></span></span><br><span class="line"><span class="actionscript">					<span class="comment">// status 返回的状态码 200: "OK" 404: 未找到页面 500 后台出错</span></span></span><br><span class="line">			if(xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)&#123;</span><br><span class="line"><span class="actionscript">			<span class="comment">//可以编写加载效果</span></span></span><br><span class="line"><span class="actionscript">				<span class="comment">//responseText 获取字符串形式的响应数据</span></span></span><br><span class="line"><span class="actionscript">			<span class="comment">//responseXML 获取xml形式的数据</span></span></span><br><span class="line">			xmlhttp.responseText;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">h2</span>&gt;</span>使用AJAX修改文本内容<span class="tag">&lt;/<span class="name">h2</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">onclick</span>=<span class="string">"loadXMLDoc()"</span>&gt;</span>修改内容<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">		<span class="keyword">var</span> xmlhttp;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">if</span>(<span class="built_in">window</span>.XMLHttpRequest)&#123;</span></span><br><span class="line"><span class="actionscript">			<span class="comment">//IE7+,firefox,Chrome,Opera,Safari浏览器执行代码</span></span></span><br><span class="line"><span class="actionscript">			xmlhttp=<span class="keyword">new</span> XMLHttpRequest();</span></span><br><span class="line">		&#125;</span><br><span class="line"><span class="actionscript">		<span class="keyword">else</span>&#123;</span></span><br><span class="line"><span class="actionscript">			<span class="comment">//IE6,IE5浏览器执行代码</span></span></span><br><span class="line"><span class="actionscript">			xmlhttp=<span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</span></span><br><span class="line">		&#125;</span><br><span class="line"><span class="actionscript">		<span class="function"><span class="keyword">function</span> <span class="title">loadXMLDoc</span><span class="params">()</span></span>&#123;</span></span><br><span class="line"><span class="actionscript">		<span class="comment">//method请求的类型 GET/POST</span></span></span><br><span class="line"><span class="actionscript">		<span class="comment">//url 请求地址</span></span></span><br><span class="line"><span class="actionscript">		<span class="comment">// 是否异步 true异步 false 同步</span></span></span><br><span class="line"><span class="actionscript">			xmlhttp.open(<span class="string">"method"</span>,<span class="string">"url"</span>,<span class="literal">true</span>);</span></span><br><span class="line"><span class="actionscript">		<span class="comment">//send("string")请求发送到服务器</span></span></span><br><span class="line"><span class="actionscript">			xmlhttp.send(<span class="string">"string"</span>);</span></span><br><span class="line"><span class="actionscript">			<span class="comment">//注意只限制POST请求</span></span></span><br><span class="line"><span class="actionscript">			<span class="comment">//readyState 0 请求未初始化</span></span></span><br><span class="line"><span class="actionscript">					<span class="comment">//	 1 服务器建立连接</span></span></span><br><span class="line"><span class="actionscript">					<span class="comment">//   2 请求已接受</span></span></span><br><span class="line"><span class="actionscript">					<span class="comment">//   3 请求处理中</span></span></span><br><span class="line"><span class="actionscript">					<span class="comment">//   4 请求完成 且响应已就绪</span></span></span><br><span class="line"><span class="actionscript">					<span class="comment">// status 返回的状态码 200: "OK" 404: 未找到页面 500 后台出错</span></span></span><br><span class="line">			if(xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)&#123;</span><br><span class="line"><span class="actionscript">			<span class="comment">//可以编写加载效果</span></span></span><br><span class="line"><span class="actionscript">				<span class="comment">//responseText 获取字符串形式的响应数据</span></span></span><br><span class="line"><span class="actionscript">			<span class="comment">//responseXML 获取xml形式的数据</span></span></span><br><span class="line">			xmlhttp.responseText;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>web前段</category>
@@ -868,64 +849,100 @@ hexo d</code></pre><h3 id="文章顶置"><a href="#文章顶置" class="headerli
   <entry>
     <title>CSS样式</title>
     <url>/2019/06/20/2019-6/cssstyle/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="设置显示行数-2行-溢出隐藏加省略号"><a href="#设置显示行数-2行-溢出隐藏加省略号" class="headerlink" title="设置显示行数 2行 溢出隐藏加省略号"></a>设置显示行数 2行 溢出隐藏加省略号</h3><p>溢出隐藏<br>overflow: hidden;<br>显示省略号来代替被修剪的文本<br>text-overflow: ellipsis;<br>display: -webkit-box;<br>-webkit-line-clamp: 2;（行数）<br>-webkit-box-orient: vertical;</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>css一些常用的基本属性</p>
 <a id="more"></a>
+
+<h3 id="设定盒子的边框不增加盒子的宽高去除浏览器默认内外边框"><a href="#设定盒子的边框不增加盒子的宽高去除浏览器默认内外边框" class="headerlink" title="设定盒子的边框不增加盒子的宽高去除浏览器默认内外边框"></a>设定盒子的边框不增加盒子的宽高去除浏览器默认内外边框</h3><p>*{<br>  margin: 0;<br>  padding: 0;<br>  box-sizing: border-box;<br>  -webkit-box-sizing: border-box;<br>  -moz-box-sizing: border-box;<br>  box-sizing: border-box;</p>
+<p>}</p>
+<h3 id="清除浏览器默认样式自行定义防止不同浏览器不同样式"><a href="#清除浏览器默认样式自行定义防止不同浏览器不同样式" class="headerlink" title="清除浏览器默认样式自行定义防止不同浏览器不同样式"></a>清除浏览器默认样式自行定义防止不同浏览器不同样式</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">input</span>,<span class="selector-tag">button</span>,<span class="selector-tag">select</span>,<span class="selector-tag">textarea</span>&#123;</span><br><span class="line">  <span class="attribute">appearance</span>: none;</span><br><span class="line">  <span class="attribute">-webkit-appearance</span>: none;</span><br><span class="line">  <span class="attribute">-moz-appearance</span>: none;</span><br><span class="line">  <span class="attribute">outline</span>: none;</span><br><span class="line">  <span class="attribute">border</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="定义变量"><a href="#定义变量" class="headerlink" title="定义变量"></a>定义变量</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span>&#123;</span><br><span class="line">  <span class="attribute">--color</span>:red</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 使用变量 */</span></span><br><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>:<span class="built_in">var</span>(--color);</span><br><span class="line">  <span class="comment">/* 也可这样使用如果变量未定义就是用的二个参数 */</span></span><br><span class="line">  <span class="attribute">color</span>:<span class="built_in">var</span>(--color,#<span class="number">000</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 局部变量声明 */</span></span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">  <span class="attribute">--color</span>:red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">span</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>:<span class="built_in">var</span>(--color);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="javascript如何操作css变量"><a href="#javascript如何操作css变量" class="headerlink" title="javascript如何操作css变量"></a>javascript如何操作css变量</h3><p>操作全局变量<br>document.documentElement.style.setProperty(“–data_name”,”data_value”)<br>操作局部变量<br>document.querySelectorAll(selector)[0].style.setProperty(“–data_name”,”data_value”);</p>
+<h3 id="设置显示行数-2行-溢出隐藏加省略号"><a href="#设置显示行数-2行-溢出隐藏加省略号" class="headerlink" title="设置显示行数 2行 溢出隐藏加省略号"></a>设置显示行数 2行 溢出隐藏加省略号</h3><p>溢出隐藏<br>overflow: hidden;<br>显示省略号来代替被修剪的文本<br>text-overflow: ellipsis;<br>display: -webkit-box;<br>-webkit-line-clamp: 2;（行数）<br>-webkit-box-orient: vertical;</p>
+<!-- more -->
 
 <ul>
 <li><h3 id="设置日期居右显示"><a href="#设置日期居右显示" class="headerlink" title="设置日期居右显示"></a>设置日期居右显示</h3></li>
 </ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span>&#123;</span><br><span class="line">	<span class="attribute">positio</span>:relative</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span> <span class="selector-tag">span</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>:absolute;</span><br><span class="line">	<span class="attribute">right</span>:<span class="number">0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span>&#123;</span><br><span class="line">  <span class="attribute">positio</span>:relative</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span> <span class="selector-tag">span</span>&#123;</span><br><span class="line">  <span class="attribute">position</span>:absolute;</span><br><span class="line">  <span class="attribute">right</span>:<span class="number">0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>背景关联 文档比较长 文档向下滚动式 背景图像也会随之滚动<br>当文档滚动到超过图像的位置时 图像就会消失<br>可通过background-attachment属性防止这种滚动 可以声明图像对于可视区是固定的fixed<br>因此不会受到滚动的影响了<br>background-image:url(/i/eg_bg_02.gif);<br>background-repeat:no-repeat;<br>background-attachment:fixed</p>
-<p>超链接 a标签<br>a:link 初始状态<br>a:hover 鼠标移上<br>a:active 鼠标点击时<br>a:visited 访问过后</p>
-<p>垂直居中<br>display: inline-block;</p>
-<h3 id="设定盒子的边框不增加-盒子的宽高"><a href="#设定盒子的边框不增加-盒子的宽高" class="headerlink" title="设定盒子的边框不增加 盒子的宽高"></a>设定盒子的边框不增加 盒子的宽高</h3><ul>
-<li>{<br>-webkit-box-sizing: border-box;<br>   -moz-box-sizing: border-box;<pre><code>box-sizing: border-box;</code></pre>}</li>
-</ul>
+<h3 id="背景关联-文档比较长-文档向下滚动式-背景图像也会随之滚动"><a href="#背景关联-文档比较长-文档向下滚动式-背景图像也会随之滚动" class="headerlink" title="背景关联 文档比较长 文档向下滚动式 背景图像也会随之滚动"></a>背景关联 文档比较长 文档向下滚动式 背景图像也会随之滚动</h3><p>当文档滚动到超过图像的位置时 图像就会消失<br>可通过background-attachment属性防止这种滚动 可以声明图像对于可视区是固定的fixed<br>因此不会受到滚动的影响了<br>background-image:url(/i/eg_bg_02.gif);<br>background-repeat:no-repeat;<br>background-attachment:fixed</p>
+<h3 id="超链接-a标签"><a href="#超链接-a标签" class="headerlink" title="超链接 a标签"></a>超链接 a标签</h3><p>a:link 初始状态<br>a:hover 鼠标移上<br>a:active 鼠标点击时<br>a:visited 访问过后</p>
+<h3 id="垂直居中"><a href="#垂直居中" class="headerlink" title="垂直居中"></a>垂直居中</h3><p>display: inline-block;</p>
 <h3 id="清楚浮动"><a href="#清楚浮动" class="headerlink" title="清楚浮动"></a>清楚浮动</h3><p>.clearfix {<br>  overflow: auto;<br> /×兼容ie6×/<br>  zoom: 1;<br>}</p>
 <h3 id="内联块bug"><a href="#内联块bug" class="headerlink" title="内联块bug"></a>内联块bug</h3><p>  display: inline-block;<br>  vertical-align: top;</p>
-<h3 id="布局文字样式"><a href="#布局文字样式" class="headerlink" title="布局文字样式"></a>布局文字样式</h3><p>  padding: 1em;<br>  -moz-column-count: 3;<br>  -moz-column-gap: 1em;<br>  -webkit-column-count: 3;<br>  -webkit-column-gap: 1em;<br>  column-count: 3;<br>  column-gap: 1em;</p>
-<h3 id="设置打印样式"><a href="#设置打印样式" class="headerlink" title="设置打印样式"></a>设置打印样式</h3><link rel="stylesheet" href="print.css" media="print">
-@media print {
-  /* print style sheets go here */
-}
+<h3 id="布局文字样式"><a href="#布局文字样式" class="headerlink" title="布局文字样式"></a>布局文字样式</h3><p>  padding: 1em;<br>  -moz-column-count: 3;<br>  -moz-column-gap: 1em;<br>  -webkit-column-count: 3;<br>  -webkit-column-gap: 1em;<br>  column-count: 3;<br>  column-gap: 1em;<br>  文字诗文排版样式</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.text</span> &#123;</span><br><span class="line">  <span class="attribute">float</span>: right;</span><br><span class="line">  <span class="attribute">padding-right</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">padding-top</span>:<span class="number">150px</span> ;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">18px</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">30px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">350px</span>;</span><br><span class="line">  <span class="attribute">writing-mode</span>: tb-lr;</span><br><span class="line">  <span class="attribute">letter-spacing</span>:<span class="number">13px</span>;</span><br><span class="line">  <span class="comment">/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/</span></span><br><span class="line">  <span class="attribute">-webkit-writing-mode</span>: vertical-rl;</span><br><span class="line">  <span class="attribute">writing-mode</span>: vertical-rl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>@import url(print.css) print;</p>
+<h3 id="设置打印样式"><a href="#设置打印样式" class="headerlink" title="设置打印样式"></a>设置打印样式</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;link rel="stylesheet" href="print.css" media="print"&gt;</span><br><span class="line"><span class="keyword">@media</span> print &#123;</span><br><span class="line">  <span class="comment">/* print style sheets go here */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@import</span> url(print.css) print;</span><br></pre></td></tr></table></figure>
+
 <h3 id="强制同一行内显示所有文本不换行"><a href="#强制同一行内显示所有文本不换行" class="headerlink" title="强制同一行内显示所有文本不换行"></a>强制同一行内显示所有文本不换行</h3><p>让文字不换行，无论css宽度设置多少，所有文字都在一行显示。特别是标题列表，我们只想显示一行标题内容，而有时宽度有限标题文字多了width又有限，这个时候我们可以使用white-space样式让他一排显示不换行</p>
 <p>语法与结构</p>
 <p>1、white-space 语法： white-space: normal nowrap</p>
 <p>2、white-space参数 ： normal : 默认处理方法  nowrap： 强制在同一行内显示所有文字直到文本结束或者遇到br标签对象才能换行</p>
-<h3 id="css常用字体"><a href="#css常用字体" class="headerlink" title="css常用字体"></a>css常用字体</h3><p>宋体    SimSun</p>
-<p>黑体    SimHei</p>
-<p>微软雅黑    Microsoft?YaHei</p>
-<p>微软正黑体    Microsoft?JhengHei</p>
-<p>新宋体    NSimSun</p>
-<p>新细明体    PMingLiU</p>
-<p>细明体    MingLiU</p>
-<p>标楷体    DFKai-SB</p>
-<p>仿宋    FangSong</p>
-<p>楷体    KaiTi</p>
-<p>仿宋_GB2312    FangSong_GB2312</p>
-<p>楷体_GB2312    KaiTi_GB2312</p>
+<h3 id="css常用字体"><a href="#css常用字体" class="headerlink" title="css常用字体"></a>css常用字体</h3><p>宋体  SimSun<br>黑体  SimHei<br>微软雅黑  Microsoft?YaHei<br>微软正黑体  Microsoft?JhengHei<br>新宋体  NSimSun<br>新细明体  PMingLiU<br>细明体  MingLiU<br>标楷体  DFKai-SB<br>仿宋  FangSong<br>楷体  KaiTi<br>仿宋_GB2312 FangSong_GB2312<br>楷体_GB2312 KaiTi_GB2312</p>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSSBUG</title>
+    <url>/2019/06/20/2019-6/cssbug/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="BFC基本概念"><a href="#BFC基本概念" class="headerlink" title="BFC基本概念"></a>BFC基本概念</h3><p>BFC:块级格式化上下文</p>
+<p>BFC基本概念：BFC是CSS布局的一个概念，是一块独立的渲染区域，是一个环境，里面的元素不会影响到外部的元素。</p>
+<p>父级元素和兄弟元素边距重叠，重叠原则取最大值。空空元素的边距重叠是取margin与padding的最大值</p>
+<a id="more"></a>
+
+<p>1、根元素，即HTML元素（最大的一个BFC）</p>
+<p>2、就对定位元素 （position的值为absolute或fixed）</p>
+<p>3、行内块（display为inline-block）</p>
+<p>4、表格单元（display为table、table-cell、table-caption、inline-block等 HTML表格相关的属性）</p>
+<p>5、弹性盒（display为flex 或者inline-flex）</p>
+<p>6、默认值。内容不会被修剪，会呈现在元素框之外（overflow不为visible）</p>
+<p>可以让父级元素的高度包含子浮动元素，清除内部的浮动（原理：触发父div的BFC属性是下面的子div都处于父div的同一个BFC时，可以阻止margin重叠）</p>
+<h3 id="论iframe的优缺点"><a href="#论iframe的优缺点" class="headerlink" title="论iframe的优缺点"></a>论iframe的优缺点</h3><p>html5不再执行使用frame iframe只有src属性</p>
+<ol>
+<li>使用iframe的优缺点<ul>
+<li>优点<ol>
+<li>程序调入静态页面比较方便</li>
+<li>页面和程序分离<ul>
+<li>缺点</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>缺点<br> 1.iframe有不好之处 样式脚本需要额外链如 ，会增加请求。另外用js放盗链只防得了小偷，防不了大盗<br> 2.iframe好在能够把原先的网页全部原封不动显示下来,但是如果用在首页,是搜索引擎最讨厌的.那么你<br>的网站即使做的在好,也排不到好的名次! <ol start="3">
+<li>调用外部页面,需要额外调用css,给页面带来额外的请求次数;</li>
+<li>链接导航疑问。运用框架结构时，你必须保证正确配置所有的导航链接，如不然，会给访问者带来很大<br>的麻烦。比如被链接的页面出现在导航框架内，这种情况下访问者便被陷住了，因为此时他没有其他地点<br>可去。</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
 ]]></content>
       <categories>
         <category>css</category>
       </categories>
       <tags>
-        <tag>web前段框架</tag>
+        <tag>webBUG</tag>
       </tags>
   </entry>
   <entry>
     <title>bootstrap框架</title>
     <url>/2019/06/20/2019-6/bootstrap/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="复习Bootstrap"><a href="#复习Bootstrap" class="headerlink" title="复习Bootstrap"></a>复习Bootstrap</h3><p>选择Soucrce code 源码下载<br>Bootstrap是依赖于jquery 的</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>bootstrap 是HTML CSS和JS 框架 用于开发响应式布局、移动设备优先的 WEB 项目。</p>
 <a id="more"></a>
-<h3 id="导航-nav"><a href="#导航-nav" class="headerlink" title="导航 nav"></a>导航 nav</h3><ul>
+
+<h3 id="复习Bootstrap"><a href="#复习Bootstrap" class="headerlink" title="复习Bootstrap"></a>复习Bootstrap</h3><pre><code>选择Soucrce code 源码下载
+Bootstrap是依赖于jquery 的</code></pre><h3 id="导航-nav"><a href="#导航-nav" class="headerlink" title="导航 nav"></a>导航 nav</h3><ul>
 <li>.nav-fill 填满</li>
 <li>.nav-item 一项</li>
 <li>.nav-jusified 两端对齐的</li>
-<li>.nav-line</li>
-<li>.nav-pills</li>
 <li>.nav-tabs 选项卡</li>
 </ul>
 <h3 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h3><ul>
@@ -1032,48 +1049,6 @@ hexo d</code></pre><h3 id="文章顶置"><a href="#文章顶置" class="headerli
       </categories>
       <tags>
         <tag>web前段框架</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CSSBUG</title>
-    <url>/2019/06/20/2019-6/cssbug/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="BFC基本概念"><a href="#BFC基本概念" class="headerlink" title="BFC基本概念"></a>BFC基本概念</h3><p>BFC:块级格式化上下文</p>
-<p>BFC基本概念：BFC是CSS布局的一个概念，是一块独立的渲染区域，是一个环境，里面的元素不会影响到外部的元素。</p>
-<p>父级元素和兄弟元素边距重叠，重叠原则取最大值。空空元素的边距重叠是取margin与padding的最大值</p>
-<a id="more"></a>
-
-<p>1、根元素，即HTML元素（最大的一个BFC）</p>
-<p>2、就对定位元素 （position的值为absolute或fixed）</p>
-<p>3、行内块（display为inline-block）</p>
-<p>4、表格单元（display为table、table-cell、table-caption、inline-block等 HTML表格相关的属性）</p>
-<p>5、弹性盒（display为flex 或者inline-flex）</p>
-<p>6、默认值。内容不会被修剪，会呈现在元素框之外（overflow不为visible）</p>
-<p>可以让父级元素的高度包含子浮动元素，清除内部的浮动（原理：触发父div的BFC属性是下面的子div都处于父div的同一个BFC时，可以阻止margin重叠）</p>
-<h3 id="论iframe的优缺点"><a href="#论iframe的优缺点" class="headerlink" title="论iframe的优缺点"></a>论iframe的优缺点</h3><p>html5不再执行使用frame iframe只有src属性</p>
-<ol>
-<li>使用iframe的优缺点<ul>
-<li>优点<ol>
-<li>程序调入静态页面比较方便</li>
-<li>页面和程序分离<ul>
-<li>缺点</li>
-</ul>
-</li>
-</ol>
-</li>
-<li>缺点<br> 1.iframe有不好之处 样式脚本需要额外链如 ，会增加请求。另外用js放盗链只防得了小偷，防不了大盗<br> 2.iframe好在能够把原先的网页全部原封不动显示下来,但是如果用在首页,是搜索引擎最讨厌的.那么你<br>的网站即使做的在好,也排不到好的名次! <ol start="3">
-<li>调用外部页面,需要额外调用css,给页面带来额外的请求次数;</li>
-<li>链接导航疑问。运用框架结构时，你必须保证正确配置所有的导航链接，如不然，会给访问者带来很大<br>的麻烦。比如被链接的页面出现在导航框架内，这种情况下访问者便被陷住了，因为此时他没有其他地点<br>可去。</li>
-</ol>
-</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>css</category>
-      </categories>
-      <tags>
-        <tag>webBUG</tag>
       </tags>
   </entry>
   <entry>
@@ -1253,9 +1228,13 @@ hexo d</code></pre><h3 id="文章顶置"><a href="#文章顶置" class="headerli
   <entry>
     <title>swipt制作滑块</title>
     <url>/2019/01/19/2019-6/swiper/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="swiper编写滑块-点击改变滑块"><a href="#swiper编写滑块-点击改变滑块" class="headerlink" title="swiper编写滑块 点击改变滑块"></a>swiper编写滑块 点击改变滑块</h3><p>主要功能另个页面传递一个参数 根据这个参数来判断从第几个滑块开始<br>点击导航标题 选择指定滑块<br>滑动页面 显示上个或者下一个页面<br>其中的知识内容 swiper初始化 并使用    initialSlide指定初始显示的内容,<br>vue页面之间的传值 以及vue点击事件@click点击事件<br>css3布局 弹性盒子布局<br>废话不多说直接上代码 </p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Swiper是纯javascript打造的滑动特效插件，面向手机、平板电脑等移动终端。</p>
 <a id="more"></a>
 
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> mySwiper = <span class="keyword">new</span> Swiper(<span class="string">'.swiper-container'</span>, &#123;</span><br><span class="line">  autoplay: <span class="literal">true</span>,<span class="comment">//可选选项，自动滑动</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//如果你初始化时没有定义Swiper实例，后面也可以通过Swiper的HTML元素来获取该实例</span></span><br><span class="line"><span class="keyword">new</span> Swiper(<span class="string">'.swiper-container'</span>)</span><br><span class="line"><span class="keyword">var</span> mySwiper = <span class="built_in">document</span>.querySelector(<span class="string">'.swiper-container'</span>).swiper</span><br><span class="line">mySwiper.slideNext();</span><br></pre></td></tr></table></figure>
+
+<h3 id="swiper编写滑块-点击改变滑块"><a href="#swiper编写滑块-点击改变滑块" class="headerlink" title="swiper编写滑块 点击改变滑块"></a>swiper编写滑块 点击改变滑块</h3><p>主要功能另个页面传递一个参数 根据这个参数来判断从第几个滑块开始<br>点击导航标题 选择指定滑块<br>滑动页面 显示上个或者下一个页面<br>其中的知识内容 swiper初始化 并使用<br>initialSlide指定初始显示的内容,<br>vue页面之间的传值 以及vue点击事件@click点击事件<br>css3布局 弹性盒子布局<br>废话不多说直接上代码</p>
+<p>以下是vue实现的页面跳转同时传递参数 利用swiper实现支付页面信息展示</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 要跳转的页面 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"user"</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 点击事件通过点击来确定跳转后的页面显示指定swiper索引 --&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"goParam(0)"</span>&gt;</span>全部<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"goParam(1)"</span>&gt;</span>待支付<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"goParam(2)"</span>&gt;</span>待使用<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"goParam(3)"</span>&gt;</span>退款<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="actionscript">  name: <span class="string">"user"</span>,</span></span><br><span class="line">  data() &#123;</span><br><span class="line"><span class="actionscript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="handlebars"><span class="xml">      <span class="comment">&lt;!-- 定义要传递的参数 --&gt;</span></span></span></span><br><span class="line">      indexs:0</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,methods:&#123;</span><br><span class="line"><span class="handlebars"><span class="xml">    <span class="comment">&lt;!-- 跳转的函数 传递参数 --&gt;</span></span></span></span><br><span class="line"><span class="actionscript">    goParam:<span class="function"><span class="keyword">function</span><span class="params">(i)</span></span>&#123;</span></span><br><span class="line"><span class="actionscript">      <span class="keyword">this</span>.$router.push(&#123;path:<span class="string">'order'</span>,name:<span class="string">"order"</span>,params:&#123;</span></span><br><span class="line">        key:i,</span><br><span class="line">      &#125;&#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 滑块页面 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"order"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"header"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> @<span class="attr">click</span>=<span class="string">"fun3"</span>&gt;</span>返回<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span>标题<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span>分类<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tab"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- 点击切换 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"(item,index) in list"</span> <span class="attr">:key</span>=<span class="string">"index"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> @<span class="attr">click</span>=<span class="string">"fun2(index)"</span> <span class="attr">:class</span>=<span class="string">"indexs==index?btn:''"</span>&gt;</span>&#123;&#123;item&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 定义swiper --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"swiper-container"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"swiper-wrapper"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"swiper-slide"</span>&gt;</span>Slide 1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"swiper-slide"</span>&gt;</span>Slide 2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"swiper-slide"</span>&gt;</span>Slide 3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"swiper-slide"</span>&gt;</span>Slide 4<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"swiper-pagination"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="actionscript">  name: <span class="string">"order"</span>,</span></span><br><span class="line">  data() &#123;</span><br><span class="line"><span class="actionscript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="handlebars"><span class="xml">      <span class="comment">&lt;!-- 定义参数 indexs通过indexs判定要加下边框的索引 --&gt;</span></span></span></span><br><span class="line">      indexs: 0,</span><br><span class="line"><span class="handlebars"><span class="xml">      <span class="comment">&lt;!-- 定义要class属性的名称 --&gt;</span></span></span></span><br><span class="line"><span class="actionscript">      btn: <span class="string">"btn"</span>,</span></span><br><span class="line"><span class="handlebars"><span class="xml">      <span class="comment">&lt;!-- 定义swiper变量 方便再次使用  --&gt;</span></span></span></span><br><span class="line"><span class="actionscript">      swipers: <span class="string">""</span>,</span></span><br><span class="line"><span class="actionscript">      list: [<span class="string">"全部"</span>, <span class="string">"待支付"</span>, <span class="string">"待使用"</span>, <span class="string">"退款"</span>],</span></span><br><span class="line"><span class="handlebars"><span class="xml">      <span class="comment">&lt;!-- 用于判定是否是第一次渲染 --&gt;</span></span></span></span><br><span class="line"><span class="actionscript">      flg: <span class="literal">true</span></span></span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line"><span class="actionscript">  mounted: <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="handlebars"><span class="xml">    <span class="comment">&lt;!-- 初始化值 传递的值是否未定义 --&gt;</span></span></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">if</span> (<span class="keyword">this</span>.$route.params.key != <span class="literal">undefined</span>) &#123;</span></span><br><span class="line"><span class="actionscript">      <span class="keyword">this</span>.indexs = <span class="keyword">this</span>.$route.params.key;</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="actionscript">    <span class="keyword">this</span>.flg = <span class="literal">false</span>;</span></span><br><span class="line"><span class="handlebars"><span class="xml">    <span class="comment">&lt;!-- 初始化滑块 --&gt;</span></span></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">this</span>.fun();</span></span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    fun() &#123;</span><br><span class="line"><span class="actionscript">      <span class="keyword">var</span> _this = <span class="keyword">this</span>;</span></span><br><span class="line"><span class="handlebars"><span class="xml">      <span class="comment">&lt;!-- 初始化swiper并指定到指定位置 --&gt;</span></span></span></span><br><span class="line"><span class="actionscript">      <span class="keyword">var</span> swiper = <span class="keyword">new</span> Swiper(<span class="string">".swiper-container"</span>, &#123;</span></span><br><span class="line">        initialSlide: _this.indexs,</span><br><span class="line">        on: &#123;</span><br><span class="line"><span class="actionscript">          slideChangeTransitionEnd: <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">            <span class="keyword">if</span> (_this.flg == <span class="literal">true</span>) &#123;</span></span><br><span class="line">              _this.indexs = swiper.activeIndex;</span><br><span class="line">            &#125;</span><br><span class="line"><span class="actionscript">            _this.flg = <span class="literal">true</span>;</span></span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line"><span class="actionscript">      <span class="keyword">this</span>.swipers = swiper;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    fun2(i) &#123;</span><br><span class="line"><span class="handlebars"><span class="xml">        <span class="comment">&lt;!-- 点击切换 --&gt;</span></span></span></span><br><span class="line"><span class="actionscript">      <span class="keyword">this</span>.swipers.slideTo(i, <span class="number">1000</span>, <span class="literal">false</span>);</span></span><br><span class="line"><span class="actionscript">      <span class="keyword">this</span>.indexs = i;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    fun3() &#123;</span><br><span class="line"><span class="handlebars"><span class="xml">      <span class="comment">&lt;!-- 返回 --&gt;</span></span></span></span><br><span class="line"><span class="actionscript">      <span class="keyword">this</span>.$router.push(&#123;</span></span><br><span class="line"><span class="actionscript">        path: <span class="string">"/"</span>,</span></span><br><span class="line"><span class="actionscript">        name: <span class="string">"user"</span></span></span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 样式 弹性盒子布局--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span></span><br><span class="line"><span class="css"><span class="selector-class">.header</span> &#123;</span></span><br><span class="line">  display: flex;</span><br><span class="line">  justify-content: space-between;</span><br><span class="line">  box-sizing: border-box;</span><br><span class="line"><span class="css">  <span class="selector-tag">padding</span>: 0 0<span class="selector-class">.3rem</span>;</span></span><br><span class="line"><span class="css">  <span class="selector-tag">height</span>: 0<span class="selector-class">.8rem</span>;</span></span><br><span class="line"><span class="css">  <span class="selector-tag">line-height</span>: 0<span class="selector-class">.8rem</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="css"><span class="selector-class">.tab</span> &#123;</span></span><br><span class="line">  width: 100%;</span><br><span class="line">&#125;</span><br><span class="line"><span class="css"><span class="selector-class">.tab</span> &gt; <span class="selector-tag">ul</span> &#123;</span></span><br><span class="line">  width: 100%;</span><br><span class="line">  display: flex;</span><br><span class="line">  list-style: none;</span><br><span class="line">  justify-content: space-around;</span><br><span class="line"><span class="css">  <span class="selector-tag">line-height</span>: 0<span class="selector-class">.6rem</span>;</span></span><br><span class="line"><span class="css">  <span class="selector-tag">border-bottom</span>: 0<span class="selector-class">.03rem</span> <span class="selector-tag">solid</span> <span class="selector-id">#c0c0c0</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="css"><span class="selector-class">.tab</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span> &#123;</span></span><br><span class="line">  text-align: center;</span><br><span class="line">  width: 1rem;</span><br><span class="line">&#125;</span><br><span class="line"><span class="css"><span class="selector-class">.btn</span> &#123;</span></span><br><span class="line"><span class="css">  <span class="selector-tag">border-bottom</span>: 0<span class="selector-class">.03rem</span> <span class="selector-tag">solid</span> <span class="selector-id">#0066cc</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="css"><span class="selector-class">.swiper-slide</span> &#123;</span></span><br><span class="line">  width: 100%;</span><br><span class="line">  height: 5rem;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>

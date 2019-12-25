@@ -127,14 +127,14 @@
 
 
 
-<meta name="description" content="优化前端访问速度 图片懒加载">
+<meta name="description" content="图片显示为其自身的灰度版本优化前端访问速度 图片懒加载">
 <meta property="og:type" content="article">
-<meta property="og:title" content="图片懒加载">
+<meta property="og:title" content="图片效果处理">
 <meta property="og:url" content="https://m.atyit.com/2019/12/20/2019-9/images/index.html">
 <meta property="og:site_name" content="Augo">
-<meta property="og:description" content="优化前端访问速度 图片懒加载">
+<meta property="og:description" content="图片显示为其自身的灰度版本优化前端访问速度 图片懒加载">
 <meta property="article:published_time" content="2019-12-20T02:37:01.100Z">
-<meta property="article:modified_time" content="2019-12-20T02:37:01.101Z">
+<meta property="article:modified_time" content="2019-12-25T07:15:22.906Z">
 <meta property="article:author" content="Augo">
 <meta property="article:tag" content="web前段">
 <meta name="twitter:card" content="summary">
@@ -171,7 +171,7 @@
 
 
 
-  <title>图片懒加载 | Augo</title>
+  <title>图片效果处理 | Augo</title>
   
 
 
@@ -404,11 +404,17 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">图片懒加载</h1>
+          <h1 class="post-title" itemprop="name headline">图片效果处理</h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+             
+            <i class="fa fa-thumb-tack"></i>
+            <font color=7D26CD>置顶</font>
+            <span class="post-meta-divider">|</span>
+          
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -466,7 +472,7 @@
 
           
           
-             <span id="/2019/12/20/2019-9/images/" class="leancloud_visitors" data-flag-title="图片懒加载">
+             <span id="/2019/12/20/2019-9/images/" class="leancloud_visitors" data-flag-title="图片效果处理">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -491,7 +497,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  268
+                  392
                 </span>
               
 
@@ -528,7 +534,22 @@
       
 
       
-        <h3 id="优化前端访问速度-图片懒加载"><a href="#优化前端访问速度-图片懒加载" class="headerlink" title="优化前端访问速度 图片懒加载"></a>优化前端访问速度 图片懒加载</h3><a id="more"></a>
+        <p>图片显示为其自身的灰度版本<br>优化前端访问速度 图片懒加载</p>
+<a id="more"></a>
+
+<h3 id="html图片"><a href="#html图片" class="headerlink" title="html图片"></a>html图片</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- src规定显示图像的URL alt 规定图像无法显示时候替代的文本 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"URL"</span> <span class="attr">alt</span>=<span class="string">"value"</span> &gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*防止图片溢出盒子  */</span></span><br><span class="line"><span class="selector-tag">img</span>&#123;</span><br><span class="line">	<span class="attribute">max-width</span>:<span class="number">100%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="灰色"><a href="#灰色" class="headerlink" title="灰色"></a>灰色</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">-webkit-filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>); </span><br><span class="line">    <span class="comment">/* old safari */</span></span><br><span class="line">    <span class="attribute">filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>​    2.filter-1977</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">-webkit-filter</span>: <span class="selector-tag">sepia</span>(<span class="selector-class">.5</span>) <span class="selector-tag">hue-rotate</span>(<span class="selector-tag">-30deg</span>) <span class="selector-tag">saturate</span>(1<span class="selector-class">.4</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="克拉伦登"><a href="#克拉伦登" class="headerlink" title="克拉伦登"></a>克拉伦登</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">filter</span>: <span class="selector-tag">sepia</span>(<span class="selector-class">.15</span>) <span class="selector-tag">contrast</span>(1<span class="selector-class">.25</span>) <span class="selector-tag">brightness</span>(1<span class="selector-class">.25</span>) <span class="selector-tag">hue-rotate</span>(5<span class="selector-tag">deg</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="阿什比"><a href="#阿什比" class="headerlink" title="阿什比"></a>阿什比</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">webkit-filter</span>: <span class="selector-tag">sepia</span>(<span class="selector-class">.5</span>) <span class="selector-tag">contrast</span>(1<span class="selector-class">.2</span>) <span class="selector-tag">saturate</span>(1<span class="selector-class">.8</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="图片懒加载"><a href="#图片懒加载" class="headerlink" title="图片懒加载"></a>图片懒加载</h3><!-- more -->
 
 <p>代码</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 一开始没有滚动的时候，出现在视窗中的图片也会加载</span></span><br><span class="line">start();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当页面开始滚动的时候，遍历图片，如果图片出现在视窗中，就加载图片</span></span><br><span class="line"><span class="keyword">var</span> clock; <span class="comment">//函数节流</span></span><br><span class="line">$(<span class="built_in">window</span>).on(<span class="string">'scroll'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(clock) &#123;</span><br><span class="line">		clearTimeout(clock);</span><br><span class="line">	&#125;</span><br><span class="line">	clock = setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		start()</span><br><span class="line">	&#125;, <span class="number">200</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">start</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	$(<span class="string">'.container img'</span>).not(<span class="string">'[data-isLoading]'</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(isShow($(<span class="keyword">this</span>))) &#123;</span><br><span class="line">			loadImg($(<span class="keyword">this</span>));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断图片是否出现在视窗的函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isShow</span>(<span class="params">$node</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> $node.offset().top &lt;= $(<span class="built_in">window</span>).height() + $(<span class="built_in">window</span>).scrollTop();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 加载图片的函数，就是把自定义属性data-src 存储的真正的图片地址，赋值给src</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">loadImg</span>(<span class="params">$img</span>) </span>&#123;</span><br><span class="line">	$img.attr(<span class="string">'src'</span>, $img.attr(<span class="string">'data-src'</span>));</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 已经加载的图片，我给它设置一个属性，值为1，作为标识</span></span><br><span class="line">	<span class="comment">// 弄这个的初衷是因为，每次滚动的时候，所有的图片都会遍历一遍，这样有点浪费，所以做个标识，滚动的时候只遍历哪些还没有加载的图片</span></span><br><span class="line">	$img.attr(<span class="string">'data-isLoading'</span>, <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -686,7 +707,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -697,7 +718,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -708,7 +729,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -763,7 +784,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#优化前端访问速度-图片懒加载"><span class="nav-number">1.</span> <span class="nav-text">优化前端访问速度 图片懒加载</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#html图片"><span class="nav-number">1.</span> <span class="nav-text">html图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#灰色"><span class="nav-number">2.</span> <span class="nav-text">灰色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#克拉伦登"><span class="nav-number">3.</span> <span class="nav-text">克拉伦登</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阿什比"><span class="nav-number">4.</span> <span class="nav-text">阿什比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片懒加载"><span class="nav-number">5.</span> <span class="nav-text">图片懒加载</span></a></li></ol></div>
             
 
           </div>
@@ -804,7 +825,7 @@
     
       <span class="post-meta-item-text">网站 字数总计&#58;</span>
     
-    <span title="网站 字数总计">13.4k</span>
+    <span title="网站 字数总计">14.9k</span>
   
 </div>
 

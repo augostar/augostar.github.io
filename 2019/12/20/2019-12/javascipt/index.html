@@ -127,12 +127,14 @@
 
 
 
+<meta name="description" content="html标签绑定事件方法&lt;input type&#x3D;&quot;button&quot; value&#x3D;&quot;TEST&quot; onclick&#x3D;&quot;functionName(this);&quot; &#x2F;&gt;    元素的方法绑定事件let btn &#x3D; document.getElementById(&#39;my-btn&#39;);btn.onclick &#x3D; function() &amp;#123;  &#x2F;&#x2F; some code …&amp;#125;&#x2F;&#x2F;删除事件">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2019-9&#x2F;package">
-<meta property="og:url" content="https://m.atyit.com/2019/12/20/2019-9/package/index.html">
+<meta property="og:title" content="javascipt">
+<meta property="og:url" content="https://m.atyit.com/2019/12/20/2019-12/javascipt/index.html">
 <meta property="og:site_name" content="Augo">
-<meta property="article:published_time" content="2019-12-20T02:37:01.107Z">
-<meta property="article:modified_time" content="2019-12-20T02:37:01.107Z">
+<meta property="og:description" content="html标签绑定事件方法&lt;input type&#x3D;&quot;button&quot; value&#x3D;&quot;TEST&quot; onclick&#x3D;&quot;functionName(this);&quot; &#x2F;&gt;    元素的方法绑定事件let btn &#x3D; document.getElementById(&#39;my-btn&#39;);btn.onclick &#x3D; function() &amp;#123;  &#x2F;&#x2F; some code …&amp;#125;&#x2F;&#x2F;删除事件">
+<meta property="article:published_time" content="2019-12-20T02:37:01.021Z">
+<meta property="article:modified_time" content="2019-12-25T07:35:03.920Z">
 <meta property="article:author" content="Augo">
 <meta name="twitter:card" content="summary">
 
@@ -168,7 +170,7 @@
 
 
 
-  <title>2019-9/package | Augo</title>
+  <title>javascipt | Augo</title>
   
 
 
@@ -384,7 +386,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://m.atyit.com/2019/12/20/2019-9/package/">
+    <link itemprop="mainEntityOfPage" href="https://m.atyit.com/2019/12/20/2019-12/javascipt/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Augo">
@@ -401,11 +403,13 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">2019-9/package</h1>
+          <h1 class="post-title" itemprop="name headline">javascipt</h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+             
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -432,8 +436,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/12/20/2019-9/package/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/12/20/2019-9/package/" itemprop="commentCount"></span>
+                <a href="/2019/12/20/2019-12/javascipt/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/12/20/2019-12/javascipt/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -441,7 +445,7 @@
 
           
           
-             <span id="/2019/12/20/2019-9/package/" class="leancloud_visitors" data-flag-title="2019-9/package">
+             <span id="/2019/12/20/2019-12/javascipt/" class="leancloud_visitors" data-flag-title="javascipt">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -466,7 +470,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  140
                 </span>
               
 
@@ -503,7 +507,22 @@
       
 
       
-        
+        <h3 id="html标签绑定事件方法"><a href="#html标签绑定事件方法" class="headerlink" title="html标签绑定事件方法"></a>html标签绑定事件方法</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"TEST"</span> <span class="attr">onclick</span>=<span class="string">"functionName(this);"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="元素的方法绑定事件"><a href="#元素的方法绑定事件" class="headerlink" title="元素的方法绑定事件"></a>元素的方法绑定事件</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'my-btn'</span>);</span><br><span class="line"></span><br><span class="line">btn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// some code …</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//删除事件</span></span><br><span class="line">btn.onclick=<span class="literal">null</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="addEventListener-和-removeEventListener-（DOM2级事件处理程序）"><a href="#addEventListener-和-removeEventListener-（DOM2级事件处理程序）" class="headerlink" title="addEventListener() 和 removeEventListener() （DOM2级事件处理程序）"></a>addEventListener() 和 removeEventListener() （DOM2级事件处理程序）</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">let</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'my-btn'</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handler</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// some code …</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">btn.addEventListener(<span class="string">'click'</span>, handler, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">btn.removeEventListener(<span class="string">'click'</span>, handler, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// true 在捕获阶段调用</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// false 在冒泡阶段调用</span></span><br></pre></td></tr></table></figure>
+
+<p>支持IE9+、FCOS</p>
+<h3 id="attachEvent-和-detacheEvent"><a href="#attachEvent-和-detacheEvent" class="headerlink" title="attachEvent() 和 detacheEvent()"></a>attachEvent() 和 detacheEvent()</h3><p>在attachEvent() 的匿名函数中 this===window</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">let</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'my-btn'</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handler</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// some code …</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">btn.attachEvent(<span class="string">'onclick'</span>, handler, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">btn.detachEvent(<span class="string">'onclick'</span>, handler, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+
+<p>支持IE、Opera</p>
+
       
     </div>
     
@@ -556,8 +575,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/12/20/2019-9/node_modules/" rel="next" title="node_modules">
-                <i class="fa fa-chevron-left"></i> node_modules
+              <a href="/2019/12/06/2019-12/modules/" rel="next" title="前端框架集合">
+                <i class="fa fa-chevron-left"></i> 前端框架集合
               </a>
             
           </div>
@@ -565,6 +584,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/20/2019-12/editorconfig/" rel="prev" title="2019-12/editorconfig">
+                2019-12/editorconfig <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -619,8 +642,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -639,7 +671,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -650,7 +682,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -661,7 +693,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -707,6 +739,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#html标签绑定事件方法"><span class="nav-number">1.</span> <span class="nav-text">html标签绑定事件方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#元素的方法绑定事件"><span class="nav-number">2.</span> <span class="nav-text">元素的方法绑定事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#addEventListener-和-removeEventListener-（DOM2级事件处理程序）"><span class="nav-number">3.</span> <span class="nav-text">addEventListener() 和 removeEventListener() （DOM2级事件处理程序）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#attachEvent-和-detacheEvent"><span class="nav-number">4.</span> <span class="nav-text">attachEvent() 和 detacheEvent()</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -741,7 +789,7 @@
     
       <span class="post-meta-item-text">网站 字数总计&#58;</span>
     
-    <span title="网站 字数总计">13.4k</span>
+    <span title="网站 字数总计">14.9k</span>
   
 </div>
 

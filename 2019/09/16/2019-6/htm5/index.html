@@ -127,14 +127,14 @@
 
 
 
-<meta name="description" content="特殊标签&lt;abbr&gt; 定义英文缩写 &lt;address&gt; 定义地址元素">
+<meta name="description" content="HTML5 是 W3C 与 WHATWG 合作的结果,WHATWG 指 Web Hypertext Application Technology Working Group。WHATWG 致力于 web 表单和应用程序，而 W3C 专注于 XHTML 2.0。在 2006 年，双方决定进行合作，来创建一个新版本的 HTML。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="H5样式">
 <meta property="og:url" content="https://m.atyit.com/2019/09/16/2019-6/htm5/index.html">
 <meta property="og:site_name" content="Augo">
-<meta property="og:description" content="特殊标签&lt;abbr&gt; 定义英文缩写 &lt;address&gt; 定义地址元素">
+<meta property="og:description" content="HTML5 是 W3C 与 WHATWG 合作的结果,WHATWG 指 Web Hypertext Application Technology Working Group。WHATWG 致力于 web 表单和应用程序，而 W3C 专注于 XHTML 2.0。在 2006 年，双方决定进行合作，来创建一个新版本的 HTML。">
 <meta property="article:published_time" content="2019-09-15T16:00:00.000Z">
-<meta property="article:modified_time" content="2019-12-20T02:37:01.075Z">
+<meta property="article:modified_time" content="2019-12-25T03:44:20.373Z">
 <meta property="article:author" content="Augo">
 <meta property="article:tag" content="html5">
 <meta name="twitter:card" content="summary">
@@ -409,6 +409,8 @@
 
         <div class="post-meta">
           <span class="post-time">
+             
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -491,7 +493,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  38
+                  976
                 </span>
               
 
@@ -507,7 +509,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  3
                 </span>
               
             </div>
@@ -528,12 +530,52 @@
       
 
       
-        <h3 id="特殊标签"><a href="#特殊标签" class="headerlink" title="特殊标签"></a>特殊标签</h3><pre><code>&lt;abbr&gt; 定义英文缩写
-&lt;address&gt; 定义地址元素</code></pre><a id="more"></a>
-<h3 id="html-符号"><a href="#html-符号" class="headerlink" title="html 符号"></a>html 符号</h3><pre><code>&amp;lt;  &lt;
-&amp;gt;  &gt;
-&amp;amp; &amp; 
-&amp;nbsp;  空格</code></pre>
+        <p>HTML5 是 W3C 与 WHATWG 合作的结果,WHATWG 指 Web Hypertext Application Technology Working Group。<br>WHATWG 致力于 web 表单和应用程序，而 W3C 专注于 XHTML 2.0。在 2006 年，双方决定进行合作，来创建一个新版本的 HTML。</p>
+<a id="more"></a>
+<p>HTML5 中的一些有趣的新特性：<br>    + 于绘画的 canvas 元素<br>    + 用于媒介回放的 video 和 audio 元素<br>    + 对本地离线存储的更好的支持<br>    + 新的特殊内容元素，比如 article、footer、header、nav、section<br>    + 新的表单控件，比如 calendar、date、time、email、url、search<br>HTML5声明 <!DOCTYPE html></p>
+<h3 id="兼容IE"><a href="#兼容IE" class="headerlink" title="兼容IE"></a>兼容IE</h3><!--[if lt IE 9]>
+    <script src="http://cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+<![endif]-->
+
+<h3 id="语义元素"><a href="#语义元素" class="headerlink" title="语义元素"></a>语义元素</h3><pre><code>&lt;abbr&gt;  定义英文缩写
+&lt;address&gt;   定义地址元素
+&lt;footer&gt;    定义文档页脚
+&lt;header&gt;    定义文档头部
+&lt;nav&gt;       定义导航栏
+&lt;aside&gt;     定义侧边栏内容
+..........
+删除部分标签如font frame</code></pre><h3 id="HTML5canvas"><a href="#HTML5canvas" class="headerlink" title="HTML5canvas"></a>HTML5canvas</h3><pre><code>HTML5&lt;canvas&gt;元素用于图形的绘制，通过脚本 (通常是JavaScript)来完成.
+&lt;canvas&gt; 标签只是图形容器，您必须使用脚本来绘制图形。
+你可以通过多种方法使用 canvas 绘制路径,盒、圆、字符以及添加图像</code></pre><h3 id="HTML5内联SVG"><a href="#HTML5内联SVG" class="headerlink" title="HTML5内联SVG"></a>HTML5内联SVG</h3><p>SVG 指可伸缩矢量图形 (Scalable Vector Graphics)<br>SVG 用于定义用于网络的基于矢量的图形<br>SVG 使用 XML 格式定义图形<br>SVG 图像在放大或改变尺寸的情况下其图形质量不会有损失<br>SVG 是万维网联盟的标准</p>
+<h3 id="SVG-与-Canvas两者间的区别"><a href="#SVG-与-Canvas两者间的区别" class="headerlink" title="SVG 与 Canvas两者间的区别"></a>SVG 与 Canvas两者间的区别</h3><p>SVG 是一种使用 XML 描述 2D 图形的语言。<br>Canvas 通过 JavaScript 来绘制 2D 图形。<br>SVG 基于 XML，这意味着 SVG DOM 中的每个元素都是可用的。您可以为某个元素附加 JavaScript 事件处理器。<br>在 SVG 中，每个被绘制的图形均被视为对象。如果 SVG 对象的属性发生变化，那么浏览器能够自动重现图形。<br>Canvas 是逐像素进行渲染的。在 canvas 中，一旦图形被绘制完成，它就不会继续得到浏览器的关注。如果其位置发生变化，那么整个场景也需要重新绘制，包括任何或许已被图形覆盖的对象。</p>
+<ul>
+<li><p>Canvas<br>依赖分辨率<br>不支持事件处理器<br>弱的文本渲染能力<br>能够以 .png 或 .jpg 格式保存结果图像<br>最适合图像密集型的游戏，其中的许多对象会被频繁重绘</p>
+</li>
+<li><p>SVG<br>不依赖分辨率<br>支持事件处理器<br>最适合带有大型渲染区域的应用程序（比如谷歌地图）<br>复杂度高会减慢渲染速度（任何过度使用 DOM 的应用都不快）<br>不适合游戏应用</p>
+</li>
+</ul>
+<h3 id="HTML5拖放"><a href="#HTML5拖放" class="headerlink" title="HTML5拖放"></a>HTML5拖放</h3><pre><code>拖放是一种常见的特性，即抓取对象以后拖到另一个位置。
+在 HTML5 中，拖放是标准的一部分，任何元素都能够拖放
+设置元素为可拖放 draggable=&quot;true&quot;
+定义可拖放的数据 ondragstart和setData()
+dataTransfer.setData()定义拖放的数据和值
+function drag(ev)
+{
+    ev.dataTransfer.setData(&quot;Text&quot;,ev.target.id);
+}
+放到何处 ondragover
+ondragover事件定义拖放的数据
+默认的无法将数据拖放到其他元素中如果需要设置允许放置，我们必须对元素默认方式
+这要通过调用ondragover事件的event.preventDefault()方法
+进行放置ondrop 
+当放置被拖动的数据会发生drop事件
+ondrop调用函数drop(event)
+function drop(e){
+    e.preventDefault();
+    var data=e.dataTransfer.getData(&quot;Text&quot;);
+    ev.target.appendChide(document.getElementById(data));
+}</code></pre><h3 id="定位用户的位置"><a href="#定位用户的位置" class="headerlink" title="定位用户的位置"></a>定位用户的位置</h3><p>HTML5 Geolocation API 用于获得用户的地理位置。<br>鉴于该特性可能侵犯用户的隐私，除非用户同意，否则用户位置信息是不可用的。</p>
+<pre><code><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> x=<span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getLocation</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (navigator.geolocation)</span><br><span class="line">    &#123;</span><br><span class="line">        navigator.geolocation.getCurrentPosition(showPosition);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        x.innerHTML=<span class="string">"该浏览器不支持获取地理位置。"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">showPosition</span>(<span class="params">position</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    x.innerHTML=<span class="string">"纬度: "</span> + position.coords.latitude +</span><br><span class="line">    <span class="string">"&lt;br&gt;经度: "</span> + position.coords.longitude;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></code></pre>
       
     </div>
     
@@ -602,8 +644,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/09/20/2019-9/fake_useragent/" rel="prev" title="爬虫 fake_useragent 随机请求头">
-                爬虫 fake_useragent 随机请求头 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/09/20/2019-9/babel/" rel="prev" title="babel">
+                babel <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -688,7 +730,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -699,7 +741,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -710,7 +752,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -765,7 +807,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#特殊标签"><span class="nav-number">1.</span> <span class="nav-text">特殊标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#html-符号"><span class="nav-number">2.</span> <span class="nav-text">html 符号</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#兼容IE"><span class="nav-number">1.</span> <span class="nav-text">兼容IE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语义元素"><span class="nav-number">2.</span> <span class="nav-text">语义元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML5canvas"><span class="nav-number">3.</span> <span class="nav-text">HTML5canvas</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML5内联SVG"><span class="nav-number">4.</span> <span class="nav-text">HTML5内联SVG</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SVG-与-Canvas两者间的区别"><span class="nav-number">5.</span> <span class="nav-text">SVG 与 Canvas两者间的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML5拖放"><span class="nav-number">6.</span> <span class="nav-text">HTML5拖放</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定位用户的位置"><span class="nav-number">7.</span> <span class="nav-text">定位用户的位置</span></a></li></ol></div>
             
 
           </div>
@@ -806,7 +848,7 @@
     
       <span class="post-meta-item-text">网站 字数总计&#58;</span>
     
-    <span title="网站 字数总计">13.4k</span>
+    <span title="网站 字数总计">14.9k</span>
   
 </div>
 

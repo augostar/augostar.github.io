@@ -127,14 +127,14 @@
 
 
 
-<meta name="description" content="项目内的 .editorcongfig文件  官网介绍editorcongfig帮助开发人员在不同编辑器和ide之间定义和维护一致的编码样式 。editorconfig项目由用于定义编码样式的文件格式和一组文本编译器插件组成，这些插件使编辑器能够读取文件格式并遵循定义样式。editorconfig文件易于阅读并且版本控制系统配合使用。 不同的开发人员，不同的编辑器 有不同的编码风格，有不同的编码">
+<meta name="description" content="项目内的 .editorcongfig文件帮助开发人员在不同编辑器和ide之间定义和维护一致的编码样式 。editorconfig项目由用于定义编码样式的文件格式和一组文本编译器插件组成，这些插件使编辑器能够读取文件格式并遵循定义样式。editorconfig文件易于阅读并且版本控制系统配合使用。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2019-12&#x2F;editorconfig">
 <meta property="og:url" content="https://m.atyit.com/2019/12/20/2019-12/editorconfig/index.html">
 <meta property="og:site_name" content="Augo">
-<meta property="og:description" content="项目内的 .editorcongfig文件  官网介绍editorcongfig帮助开发人员在不同编辑器和ide之间定义和维护一致的编码样式 。editorconfig项目由用于定义编码样式的文件格式和一组文本编译器插件组成，这些插件使编辑器能够读取文件格式并遵循定义样式。editorconfig文件易于阅读并且版本控制系统配合使用。 不同的开发人员，不同的编辑器 有不同的编码风格，有不同的编码">
+<meta property="og:description" content="项目内的 .editorcongfig文件帮助开发人员在不同编辑器和ide之间定义和维护一致的编码样式 。editorconfig项目由用于定义编码样式的文件格式和一组文本编译器插件组成，这些插件使编辑器能够读取文件格式并遵循定义样式。editorconfig文件易于阅读并且版本控制系统配合使用。">
 <meta property="article:published_time" content="2019-12-20T02:37:01.025Z">
-<meta property="article:modified_time" content="2019-12-20T02:37:01.025Z">
+<meta property="article:modified_time" content="2019-12-25T07:32:52.047Z">
 <meta property="article:author" content="Augo">
 <meta name="twitter:card" content="summary">
 
@@ -408,6 +408,8 @@
 
         <div class="post-meta">
           <span class="post-time">
+             
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -468,7 +470,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  363
+                  358
                 </span>
               
 
@@ -506,20 +508,17 @@
 
       
         <hr>
-<p>项目内的 .editorcongfig文件</p>
-<hr>
-<h3 id="官网介绍editorcongfig"><a href="#官网介绍editorcongfig" class="headerlink" title="官网介绍editorcongfig"></a>官网介绍editorcongfig</h3><p>帮助开发人员在不同编辑器和ide之间定义和维护一致的编码样式 。editorconfig项目由用于定义编码样式的文件格式和一组文本编译器插件组成，这些插件使编辑器能够读取文件格式并遵循定义样式。editorconfig文件易于阅读并且版本控制系统配合使用。</p>
+<h2 id="项目内的-editorcongfig文件"><a href="#项目内的-editorcongfig文件" class="headerlink" title="项目内的 .editorcongfig文件"></a>项目内的 .editorcongfig文件</h2><p>帮助开发人员在不同编辑器和ide之间定义和维护一致的编码样式 。<br>editorconfig项目由用于定义编码样式的文件格式和一组文本编译器插件组成，<br>这些插件使编辑器能够读取文件格式并遵循定义样式。editorconfig文件易于阅读并且版本控制系统配合使用。</p>
+<a id="more"></a>
+
 <p>不同的开发人员，不同的编辑器 有不同的编码风格，有不同的编码风格，而EditorConfig就是用来协同团队开发人员之间的代码的风格及样式规范化的一个工具，而.editorconfig正是它的默认配置文件。</p>
 <p><code>* editorconfig</code>为Python和JavaScript文件设置行尾和缩进样式的示例文件。</p>
 <h3 id="示例文件"><a href="#示例文件" class="headerlink" title="示例文件"></a>示例文件</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># editorconfig.org</span><br><span class="line"># 告诉插件这是跟文件 不用继续往上查找</span><br><span class="line">root &#x3D; true</span><br><span class="line"># 匹配全部文件</span><br><span class="line">[*]</span><br><span class="line"># 定义编码</span><br><span class="line">charset &#x3D; utf-8</span><br><span class="line"># 结尾换行符和 可以“lf”、“cr”、“crlf”</span><br><span class="line">end_of_line &#x3D; lf</span><br><span class="line"># 在文件结尾插入新行</span><br><span class="line">insert_final_newline &#x3D; true</span><br><span class="line"># 删除一行中的前后空格</span><br><span class="line">trim_trailing_whitespace &#x3D; true</span><br><span class="line">indent_style &#x3D; space</span><br><span class="line">indent_size &#x3D; 2</span><br><span class="line"># 匹配py结尾的文件</span><br><span class="line">[*.py]</span><br><span class="line"># 缩进字数</span><br><span class="line">indent_size &#x3D; 4</span><br><span class="line"># 缩进风格 可选“space”“tab”</span><br><span class="line"># indent_style&#x3D;space</span><br></pre></td></tr></table></figure>
 
 <h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ol>
-<li><p>如果windows用户无法创建 .editorconfig文件则需要创建 editorconfig. 系统会自动重命名成 .editorconfig</p>
-</li>
-<li><p>插件安装</p>
-</li>
-<li><p>对应vscore 对应的插件名称<a href="https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig" target="_blank" rel="noopener">EditorConfig for VS Code</a>。</p>
-</li>
+<li>如果windows用户无法创建 .editorconfig文件则需要创建 editorconfig. 系统会自动重命名成 .editorconfig</li>
+<li>插件安装</li>
+<li>对应vscore 对应的插件名称<a href="https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig" target="_blank" rel="noopener">EditorConfig for VS Code</a>。</li>
 </ol>
 
       
@@ -574,8 +573,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/12/20/2019-12/bower/" rel="next" title="2019-12/bower">
-                <i class="fa fa-chevron-left"></i> 2019-12/bower
+              <a href="/2019/12/20/2019-12/javascipt/" rel="next" title="javascipt">
+                <i class="fa fa-chevron-left"></i> javascipt
               </a>
             
           </div>
@@ -670,7 +669,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -681,7 +680,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -692,7 +691,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -747,7 +746,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#官网介绍editorcongfig"><span class="nav-number">1.</span> <span class="nav-text">官网介绍editorcongfig</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#示例文件"><span class="nav-number">2.</span> <span class="nav-text">示例文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意事项"><span class="nav-number">3.</span> <span class="nav-text">注意事项</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#项目内的-editorcongfig文件"><span class="nav-number">1.</span> <span class="nav-text">项目内的 .editorcongfig文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#示例文件"><span class="nav-number">1.1.</span> <span class="nav-text">示例文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意事项"><span class="nav-number">1.2.</span> <span class="nav-text">注意事项</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -788,7 +787,7 @@
     
       <span class="post-meta-item-text">网站 字数总计&#58;</span>
     
-    <span title="网站 字数总计">13.4k</span>
+    <span title="网站 字数总计">14.9k</span>
   
 </div>
 

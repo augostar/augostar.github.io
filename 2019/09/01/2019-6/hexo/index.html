@@ -134,7 +134,7 @@
 <meta property="og:site_name" content="Augo">
 <meta property="og:description" content="Hexo 是一个快速、简洁且高效的博客框架。    Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。    Hexo 使用">
 <meta property="article:published_time" content="2019-08-31T16:00:00.000Z">
-<meta property="article:modified_time" content="2019-12-23T08:00:35.343Z">
+<meta property="article:modified_time" content="2019-12-25T03:05:42.842Z">
 <meta property="article:author" content="Augo">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
@@ -409,6 +409,12 @@
 
         <div class="post-meta">
           <span class="post-time">
+             
+            <i class="fa fa-thumb-tack"></i>
+            <font color=7D26CD>置顶</font>
+            <span class="post-meta-divider">|</span>
+          
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -491,7 +497,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  557
+                  552
                 </span>
               
 
@@ -530,31 +536,23 @@
       
         <p>Hexo 是一个快速、简洁且高效的博客框架。<br>    Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。<br>    Hexo 使用</p>
 <a id="more"></a>
-<h3 id="如何使用hexo搭建自己的个人博客"><a href="#如何使用hexo搭建自己的个人博客" class="headerlink" title="如何使用hexo搭建自己的个人博客"></a>如何使用hexo搭建自己的个人博客</h3><p>1 安装</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="如何使用hexo搭建自己的个人博客"><a href="#如何使用hexo搭建自己的个人博客" class="headerlink" title="如何使用hexo搭建自己的个人博客"></a>如何使用hexo搭建自己的个人博客</h3><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"># 安装hexo</span><br><span class="line">npm install hexo-cli -g</span><br><span class="line"># 创建 创建项目文件</span><br><span class="line"><span class="built_in">mkdir</span> myblog</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line"># 初始化</span><br><span class="line">npm install</span><br><span class="line"># 开始服务</span><br><span class="line">hexo server</span><br><span class="line"># 命令简写</span><br><span class="line">hexo clean          #清除生成的文件</span><br><span class="line">hexo s              #本地启动</span><br><span class="line">hexo n "文章名称"    # 创建文章</span><br><span class="line">hexo g              # 生成静态文件</span><br><span class="line">hexo d              #上传至远程</span><br></pre></td></tr></table></figure>
 
-<p>安装Hexo插件<br> npm install –save hexo-generator-feed<br>hexo npm install hexo -g #-g表示全局安装, npm默认为当前项目安装<br>如果报错 npm install hexo –no-optional<br>mkdir 创建项目文件</p>
-<p>2 初始化一下<br>hexo i<br>hexo s  启动<br>hexo n “我的 第一篇文章”<br>md 文档</p>
-<p>3 部署在 github<br>    登陆github<br>    新建仓库<br>    必须是昵称.geihub.io<br>    npm install –save hexo-deployer-git<br>    配置 _config.yml<br>   type: git<br>        repo: 仓库地址<br>        branch:master<br>    部署命令 hexo d<br>    github账号 密码<br>        github.com/litten/hexo-theme-yilia<br>        git clone <a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia</a></p>
-<pre><code>hexo clean
-生成一下
-hexo g
-hexo s
-hexo d</code></pre><h3 id="文章顶置"><a href="#文章顶置" class="headerlink" title="文章顶置"></a>文章顶置</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm uninstall hexo-generator-index --save</span><br><span class="line">$ npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
-
-<p>文章中添加 top: true</p>
-<p>/themes/next/layout/_macro目录下的post.swig文件，定位到<div class="post-meta">标签下，插入如下代码：</p>
+<h3 id="用于git部署的"><a href="#用于git部署的" class="headerlink" title="用于git部署的"></a>用于git部署的</h3><pre><code>用于git部署的 hexo-deployer-git
+npm install hexo-deployer-git --save</code></pre><h3 id="用于创建RSS-hexo-generator-feed"><a href="#用于创建RSS-hexo-generator-feed" class="headerlink" title="用于创建RSS hexo-generator-feed"></a>用于创建RSS hexo-generator-feed</h3><pre><code>** RSS是某一站点用来和其它站点之间共享内容的一种简易方式，也叫聚合内容。**
+作用就将需要的内容集合在一起，方便浏览阅读
+npm install --save hexo-generator-feed</code></pre><h3 id="使用-Hexo-插件插入音乐-视频"><a href="#使用-Hexo-插件插入音乐-视频" class="headerlink" title="使用 Hexo 插件插入音乐/视频"></a>使用 Hexo 插件插入音乐/视频</h3><pre><code>** hexo-tag-aplayer：https://github.com/grzhan/hexo-tag-aplayer) **
+** hexo-tag-dplayer： https://github.com/NextMoe/hexo-tag-dplayer **</code></pre><h3 id="页面顶置"><a href="#页面顶置" class="headerlink" title="页面顶置"></a>页面顶置</h3><pre><code>安装hexo插件
+npm uninstall hexo-generator-index --save
+npm install hexo-generator-index-pin-top --save
+文章中添加 top: true
+文章顶置标签
+/themes/next/layout/_macro目录下的post.swig文件，定位到&lt;div class=&quot;post-meta&quot;&gt;标签下，插入如下代码：
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if post.top %&#125;</span><br><span class="line">    &lt;i class&#x3D;&quot;fa fa-thumb-tack&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">    &lt;font color&#x3D;green&gt;置顶&lt;&#x2F;font&gt;</span><br><span class="line">    &lt;span class&#x3D;&quot;post-meta-divider&quot;&gt;|&lt;&#x2F;span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+文章内容顶置
+修改 node_modules/hexo-generator-index/lib/generator.js 文件
 
-<h3 id="添加目录云、标签云页面"><a href="#添加目录云、标签云页面" class="headerlink" title="添加目录云、标签云页面"></a>添加目录云、标签云页面</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page &quot;tags&quot;</span><br><span class="line">hexo new page &quot;categories&quot;</span><br></pre></td></tr></table></figure>
-
-<p>文章顶置<br>修改 node_modules/hexo-generator-index/lib/generator.js 文件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">posts.data &#x3D; posts.data.sort(function(a, b) &#123;</span><br><span class="line">    if(a.top &amp;&amp; b.top) &#123; &#x2F;&#x2F; 两篇文章top都有定义</span><br><span class="line">        if(a.top &#x3D;&#x3D; b.top) return b.date - a.date; &#x2F;&#x2F; 若top值一样则按照文章日期降序排</span><br><span class="line">        else return b.top - a.top; &#x2F;&#x2F; 否则按照top值降序排</span><br><span class="line">    &#125;</span><br><span class="line">    else if(a.top &amp;&amp; !b.top) &#123; &#x2F;&#x2F; 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）</span><br><span class="line">        return -1;</span><br><span class="line">    &#125;</span><br><span class="line">    else if(!a.top &amp;&amp; b.top) &#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    else return b.date - a.date; &#x2F;&#x2F; 都没定义按照文章日期降序排</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>使用 Hexo 插件插入音乐/视频<br>两个好用的hexo插件：</p>
-<p><strong>hexo-tag-aplayer：<a href="https://github.com/grzhan/hexo-tag-aplayer" target="_blank" rel="noopener">https://github.com/grzhan/hexo-tag-aplayer</a>)</strong></p>
-<p><strong>hexo-tag-dplayer： <a href="https://github.com/NextMoe/hexo-tag-dplayer" target="_blank" rel="noopener">https://github.com/NextMoe/hexo-tag-dplayer</a></strong></p>
-
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">posts.data &#x3D; posts.data.sort(function(a, b) &#123;</span><br><span class="line">    if(a.top &amp;&amp; b.top) &#123; &#x2F;&#x2F; 两篇文章top都有定义</span><br><span class="line">        if(a.top &#x3D;&#x3D; b.top) return b.date - a.date; &#x2F;&#x2F; 若top值一样则按照文章日期降序排</span><br><span class="line">        else return b.top - a.top; &#x2F;&#x2F; 否则按照top值降序排</span><br><span class="line">    &#125;</span><br><span class="line">    else if(a.top &amp;&amp; !b.top) &#123; &#x2F;&#x2F; 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）</span><br><span class="line">        return -1;</span><br><span class="line">    &#125;</span><br><span class="line">    else if(!a.top &amp;&amp; b.top) &#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    else return b.date - a.date; &#x2F;&#x2F; 都没定义按照文章日期降序排</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></code></pre>
       
     </div>
     
@@ -613,8 +611,8 @@ hexo d</code></pre><h3 id="文章顶置"><a href="#文章顶置" class="headerli
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/09/01/2019-9/React/" rel="next" title="React应用">
-                <i class="fa fa-chevron-left"></i> React应用
+              <a href="/2019/07/10/2019-6/jQuery/" rel="next" title="jquery">
+                <i class="fa fa-chevron-left"></i> jquery
               </a>
             
           </div>
@@ -623,8 +621,8 @@ hexo d</code></pre><h3 id="文章顶置"><a href="#文章顶置" class="headerli
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/09/01/2019-9/python/" rel="prev" title="python入门">
-                python入门 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/09/01/2019-9/React/" rel="prev" title="React应用">
+                React应用 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -709,7 +707,7 @@ hexo d</code></pre><h3 id="文章顶置"><a href="#文章顶置" class="headerli
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -720,7 +718,7 @@ hexo d</code></pre><h3 id="文章顶置"><a href="#文章顶置" class="headerli
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -731,7 +729,7 @@ hexo d</code></pre><h3 id="文章顶置"><a href="#文章顶置" class="headerli
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -786,7 +784,7 @@ hexo d</code></pre><h3 id="文章顶置"><a href="#文章顶置" class="headerli
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#如何使用hexo搭建自己的个人博客"><span class="nav-number">1.</span> <span class="nav-text">如何使用hexo搭建自己的个人博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章顶置"><span class="nav-number">2.</span> <span class="nav-text">文章顶置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加目录云、标签云页面"><span class="nav-number">3.</span> <span class="nav-text">添加目录云、标签云页面</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#如何使用hexo搭建自己的个人博客"><span class="nav-number">1.</span> <span class="nav-text">如何使用hexo搭建自己的个人博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用于git部署的"><span class="nav-number">3.</span> <span class="nav-text">用于git部署的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用于创建RSS-hexo-generator-feed"><span class="nav-number">4.</span> <span class="nav-text">用于创建RSS hexo-generator-feed</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-Hexo-插件插入音乐-视频"><span class="nav-number">5.</span> <span class="nav-text">使用 Hexo 插件插入音乐&#x2F;视频</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页面顶置"><span class="nav-number">6.</span> <span class="nav-text">页面顶置</span></a></li></ol></div>
             
 
           </div>
@@ -827,7 +825,7 @@ hexo d</code></pre><h3 id="文章顶置"><a href="#文章顶置" class="headerli
     
       <span class="post-meta-item-text">网站 字数总计&#58;</span>
     
-    <span title="网站 字数总计">13.4k</span>
+    <span title="网站 字数总计">14.9k</span>
   
 </div>
 
