@@ -287,12 +287,12 @@ jsapi_ticket=sM4AOVdWfPE4DxkXGEs8VMCPGGVi4C3VM0P37wVUCFvkVAy_90u5h9nbSlYy3-Sl-Hh
     <title>2019-12/es6</title>
     <url>/2019/12/20/2019-12/es6/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="node-js中exports和module-exports的区别"><a href="#node-js中exports和module-exports的区别" class="headerlink" title="node.js中exports和module.exports的区别"></a>node.js中exports和module.exports的区别</h3>
-        <div id="aplayer-fRFkKgAw" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-UMfQopSN" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-fRFkKgAw"),
+            element: document.getElementById("aplayer-UMfQopSN"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -539,16 +539,27 @@ npm 安装</code></pre><p>​        npm install jshint -g</p>
 <p>github地址： <a href="https://github.com/augostar/" target="_blank" rel="noopener">https://github.com/augostar/</a></p>
 <p>coding地址: <a href="https://aungo.coding.net/user" target="_blank" rel="noopener">https://aungo.coding.net/user</a></p>
 <p>个人注册域名：</p>
-<pre><code>1. atyit.com
- 2. strugglelove.xyz</code></pre><ul>
-<li><p>vue 旅游手机web<br>主要使用vue搭建前台页面 编写组件 组件之间的传值<br>v-if条件渲染<br>v-for循环渲染</p>
+<pre><code>1. atyit.com</code></pre><ol start="2">
+<li>strugglelove.xyz</li>
+</ol>
+<ul>
+<li><p>返利网网页页面</p>
+<p>项目地址：<a href="https://gitee.com/augo/fanliwang.git" target="_blank" rel="noopener">https://gitee.com/augo/fanliwang.git</a></p>
+<p>主要功能：页面布局 ， 增强用户体验  ， 轮播图<br>主要技术：HTML5  HTML页面布局  JAVASCRIPT  CSS3   swiper框架技术</p>
 </li>
-<li><p>返利网网页页面<br>主要功能：页面布局 ， 增强用户体验  ， 轮播图<br>主要技术：HTML5  HTML页面布局  JAVASCRIPT  CSS3   swiper框架技术</p>
+<li><p>JAVAWEB商城网站项目</p>
+<p>项目地址：<a href="https://gitee.com/augo/javaweb.git" target="_blank" rel="noopener">https://gitee.com/augo/javaweb.git</a></p>
 </li>
-<li><p>JAVAWEB商城网站项目<br>主要功能：添加商品信息 ， 修改商品信息 ， 添加商品类型 ， 修改商品类型 ，用户登录 ， 管理员登录 ， 用户注册 ， 错误页的跳转 ， 管理员修改密码 ， 添加购物车<br>主要技术：JAVA ，JAVA JDBC桥连接数据库 ，SQL Server数据库 ， HTML  ， CSS  ， JAVASCRIPT<br>编程环境：My Eclipse 8.6  Apache Tomcat 6.0   Microsoft SQL Server 2008 </p>
+</ul>
+<p>主要功能：添加商品信息 ， 修改商品信息 ， 添加商品类型 ， 修改商品类型 ，用户登录 ， 管理员登录 ， 用户注册 ， 错误页的跳转 ， 管理员修改密码 ， 添加购物车<br>  主要技术：JAVA ，JAVA JDBC桥连接数据库 ，SQL Server数据库 ， HTML  ， CSS  ， JAVASCRIPT<br>  编程环境：My Eclipse 8.6  Apache Tomcat 6.0   Microsoft SQL Server 2008 </p>
+<ul>
+<li><p>node +mysql</p>
+<p>主要功能：添加信息 ， 修改信息  ，用户登录 ， 管理员登录</p>
 </li>
-<li><p>个人博客地址</p>
-</li>
+</ul>
+<p><a href="https://gitee.com/augo/mynode" target="_blank" rel="noopener">https://gitee.com/augo/mynode</a></p>
+<ul>
+<li>个人博客地址</li>
 </ul>
 <p><a href="https://m.atyit.com/">https://m.atyit.com/</a></p>
 <h3 id="自我介绍-Self-introduction"><a href="#自我介绍-Self-introduction" class="headerlink" title="自我介绍 Self introduction."></a>自我介绍 Self introduction.</h3><p>衷心感谢您抽出宝贵时间审阅我的简历。另外我今天应聘的岗位是web全栈开发工程师。所学专业是计算机应用技术，平时业余时间喜欢通过逛博客和论坛来了解前端的前沿信息。我擅长flex页面布局。写过静态网页，当然也有移动端的，我相信我进入贵公司也可以快速的上手。<br>　　，我牢固地掌握了HTML，CSS ，JavaScript 的基础知识，并使用它们 ，另外还熟练Office办公软件，对各种网页的书写也体会深刻，并在各种实践中获得了必须的实际运用的能力。业余时间我还广泛阅读计算机方面的文章，扩展了知识面。另外我是一个很好相处的人，喜欢帮助他人，有一颗善良的心。</p>
@@ -559,20 +570,6 @@ npm 安装</code></pre><p>​        npm install jshint -g</p>
       </categories>
       <tags>
         <tag>个人简历</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>webEnglish</title>
-    <url>/2019/10/11/2019-9/web/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="web"><a href="#web" class="headerlink" title="web"></a>web</h3><a id="more"></a>
-<p>Hyper Text Markup Language(超文本标记语言, 又称 HTML)<br>Cascading Style Sheets (层叠式样式表, 又称 CSS)<br>Document Object Model (文档对象模型, 又称 DOM)<br>JavaScript Programming Language (JavaScript编程语言, 又称: ECMAScript 6, ES6, JavaScript 2015)<br>Web API’s (Web应用程序接口, 又称 HTML5 API 或浏览器 API)<br>Hypertext Transfer Protocol (超文本传输协议, 又称 HTTP)<br>Uniform Resource Locator’s (统一资源定位符, 又称 URL)<br>JavaScript Object Notation (JavaScript对象表示, 又称 JSON)<br>Web Content Accessibility Guidelines (网页内容无障碍设计指南, 又称 WCAG) &amp; Accessible Rich Internet Applications (富Internet应用程序的无障碍设计, 又称 ARIA)</p>
-<p>Content Management System (内容管理系统, 又称 CMS)<br>Node.js<br>Cross-browser testing (跨浏览器测试)<br>Cross-platform testing (跨平台测试)<br>Unit Testing (单元测试)<br>Cross-device testing (跨设备测试)<br>Accessibility / WAI-ARIA (无障碍访问/无障碍富Internet应用程序)<br>Search Engine Optimization (搜索引擎优化, 又称 SEO)<br>Interaction or User Interface design (交互或用户设计)<br>User Experience (用户体验)<br>Usability (可用性/易用性)<br>E-commerce Systems (电子商务系统)<br>Portal Systems (门户系统)<br>Wireframing (框架)<br>CSS layout / Grids (CSS 布局/栅格系统)<br>DOM manipulation (e.g. jQuery) (DOM 操作)<br>Mobile Web Performance (移动Web性能)<br>Load Testing (载荷测试)<br>Performance Testing (性能测试)<br>Progressive Enhancement / Graceful Degradation (渐进增强/优雅降级)<br>Version Control (e.g. GIT) (版本控制)<br>MVC / MVVM / MV (MV 框架)<br>Functional Programming (函数式编程)<br>Data Formats (e.g. JSON, XML) (数据格式)<br>Data API’s (e.g Restful API) (数据API)<br>Web Font Embedding (Web字体嵌入)<br>Scalable Vector Graphics (可伸缩向量图形, 又称 SVG)<br>Regular Expressions (正则表达式)<br>Content Strategy (内容策略)<br>Microdata / Microformats (微数据/微格式)<br>Task Runners, Build Tools, Process Automation Tools (任务管道, 构建工具, 过程自动化工具)<br>Responsive Web Design (响应式设计)<br>Object Oriented Programming (面向对象编程)<br>Application Architecture (应用架构)<br>Modules (模块)<br>Dependency Managers (依赖关系管理)<br>Package Managers (包管理)<br>JavaScript Animation (JavaScript 动画)<br>CSS Animation (CSS 动画)<br>Charts / Graphs (图表/图形)<br>UI widgets (UI工具集)<br>Code Quality Testing (代码质量测试)<br>Code Coverage Testing (代码覆盖测试)<br>Code Complexity Analysis (代码复杂度测试)<br>Integration Testing (集成测试)<br>Command Line / CLI (命令行/命令行界面)<br>Templating Strategies (模板策略)<br>Templating Engines (模板引擎)<br>Single Page Applications (单页应用)<br>XHR Requests (aka AJAX) (XHR 请求, 又称 AJAX)<br>Web/Browser Security (Web/浏览器安全)<br>HTML Semantics (HTML 语义化)<br>Browser Developer Tools (浏览器开发者工具)</p>
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
       </tags>
   </entry>
   <entry>
@@ -595,6 +592,20 @@ npm 安装</code></pre><p>​        npm install jshint -g</p>
 
 
 
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>webEnglish</title>
+    <url>/2019/10/11/2019-9/web/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="web"><a href="#web" class="headerlink" title="web"></a>web</h3><a id="more"></a>
+<p>Hyper Text Markup Language(超文本标记语言, 又称 HTML)<br>Cascading Style Sheets (层叠式样式表, 又称 CSS)<br>Document Object Model (文档对象模型, 又称 DOM)<br>JavaScript Programming Language (JavaScript编程语言, 又称: ECMAScript 6, ES6, JavaScript 2015)<br>Web API’s (Web应用程序接口, 又称 HTML5 API 或浏览器 API)<br>Hypertext Transfer Protocol (超文本传输协议, 又称 HTTP)<br>Uniform Resource Locator’s (统一资源定位符, 又称 URL)<br>JavaScript Object Notation (JavaScript对象表示, 又称 JSON)<br>Web Content Accessibility Guidelines (网页内容无障碍设计指南, 又称 WCAG) &amp; Accessible Rich Internet Applications (富Internet应用程序的无障碍设计, 又称 ARIA)</p>
+<p>Content Management System (内容管理系统, 又称 CMS)<br>Node.js<br>Cross-browser testing (跨浏览器测试)<br>Cross-platform testing (跨平台测试)<br>Unit Testing (单元测试)<br>Cross-device testing (跨设备测试)<br>Accessibility / WAI-ARIA (无障碍访问/无障碍富Internet应用程序)<br>Search Engine Optimization (搜索引擎优化, 又称 SEO)<br>Interaction or User Interface design (交互或用户设计)<br>User Experience (用户体验)<br>Usability (可用性/易用性)<br>E-commerce Systems (电子商务系统)<br>Portal Systems (门户系统)<br>Wireframing (框架)<br>CSS layout / Grids (CSS 布局/栅格系统)<br>DOM manipulation (e.g. jQuery) (DOM 操作)<br>Mobile Web Performance (移动Web性能)<br>Load Testing (载荷测试)<br>Performance Testing (性能测试)<br>Progressive Enhancement / Graceful Degradation (渐进增强/优雅降级)<br>Version Control (e.g. GIT) (版本控制)<br>MVC / MVVM / MV (MV 框架)<br>Functional Programming (函数式编程)<br>Data Formats (e.g. JSON, XML) (数据格式)<br>Data API’s (e.g Restful API) (数据API)<br>Web Font Embedding (Web字体嵌入)<br>Scalable Vector Graphics (可伸缩向量图形, 又称 SVG)<br>Regular Expressions (正则表达式)<br>Content Strategy (内容策略)<br>Microdata / Microformats (微数据/微格式)<br>Task Runners, Build Tools, Process Automation Tools (任务管道, 构建工具, 过程自动化工具)<br>Responsive Web Design (响应式设计)<br>Object Oriented Programming (面向对象编程)<br>Application Architecture (应用架构)<br>Modules (模块)<br>Dependency Managers (依赖关系管理)<br>Package Managers (包管理)<br>JavaScript Animation (JavaScript 动画)<br>CSS Animation (CSS 动画)<br>Charts / Graphs (图表/图形)<br>UI widgets (UI工具集)<br>Code Quality Testing (代码质量测试)<br>Code Coverage Testing (代码覆盖测试)<br>Code Complexity Analysis (代码复杂度测试)<br>Integration Testing (集成测试)<br>Command Line / CLI (命令行/命令行界面)<br>Templating Strategies (模板策略)<br>Templating Engines (模板引擎)<br>Single Page Applications (单页应用)<br>XHR Requests (aka AJAX) (XHR 请求, 又称 AJAX)<br>Web/Browser Security (Web/浏览器安全)<br>HTML Semantics (HTML 语义化)<br>Browser Developer Tools (浏览器开发者工具)</p>
 ]]></content>
       <categories>
         <category>web</category>
