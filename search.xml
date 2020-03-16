@@ -65,9 +65,9 @@
   <entry>
     <title>2020-3/vueweb</title>
     <url>/2020/03/11/2020-3/vueweb/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><hr>
-<hr>
-<p>vue3.0创建前端项目</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>vue3.0创建前端项目</p>
+<p>npm配置国内镜像提升速度</p>
+<p>npm config get registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></p>
 <p>npm install -g @vue/cli-init</p>
 <p>vue init webpack myproject</p>
 <p>### 配置参数</p>
@@ -287,12 +287,12 @@ jsapi_ticket=sM4AOVdWfPE4DxkXGEs8VMCPGGVi4C3VM0P37wVUCFvkVAy_90u5h9nbSlYy3-Sl-Hh
     <title>2019-12/es6</title>
     <url>/2019/12/20/2019-12/es6/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="node-js中exports和module-exports的区别"><a href="#node-js中exports和module-exports的区别" class="headerlink" title="node.js中exports和module.exports的区别"></a>node.js中exports和module.exports的区别</h3>
-        <div id="aplayer-UMfQopSN" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-VvZhgSmN" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-UMfQopSN"),
+            element: document.getElementById("aplayer-VvZhgSmN"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -573,6 +573,20 @@ npm 安装</code></pre><p>​        npm install jshint -g</p>
       </tags>
   </entry>
   <entry>
+    <title>webEnglish</title>
+    <url>/2019/10/11/2019-9/web/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="web"><a href="#web" class="headerlink" title="web"></a>web</h3><a id="more"></a>
+<p>Hyper Text Markup Language(超文本标记语言, 又称 HTML)<br>Cascading Style Sheets (层叠式样式表, 又称 CSS)<br>Document Object Model (文档对象模型, 又称 DOM)<br>JavaScript Programming Language (JavaScript编程语言, 又称: ECMAScript 6, ES6, JavaScript 2015)<br>Web API’s (Web应用程序接口, 又称 HTML5 API 或浏览器 API)<br>Hypertext Transfer Protocol (超文本传输协议, 又称 HTTP)<br>Uniform Resource Locator’s (统一资源定位符, 又称 URL)<br>JavaScript Object Notation (JavaScript对象表示, 又称 JSON)<br>Web Content Accessibility Guidelines (网页内容无障碍设计指南, 又称 WCAG) &amp; Accessible Rich Internet Applications (富Internet应用程序的无障碍设计, 又称 ARIA)</p>
+<p>Content Management System (内容管理系统, 又称 CMS)<br>Node.js<br>Cross-browser testing (跨浏览器测试)<br>Cross-platform testing (跨平台测试)<br>Unit Testing (单元测试)<br>Cross-device testing (跨设备测试)<br>Accessibility / WAI-ARIA (无障碍访问/无障碍富Internet应用程序)<br>Search Engine Optimization (搜索引擎优化, 又称 SEO)<br>Interaction or User Interface design (交互或用户设计)<br>User Experience (用户体验)<br>Usability (可用性/易用性)<br>E-commerce Systems (电子商务系统)<br>Portal Systems (门户系统)<br>Wireframing (框架)<br>CSS layout / Grids (CSS 布局/栅格系统)<br>DOM manipulation (e.g. jQuery) (DOM 操作)<br>Mobile Web Performance (移动Web性能)<br>Load Testing (载荷测试)<br>Performance Testing (性能测试)<br>Progressive Enhancement / Graceful Degradation (渐进增强/优雅降级)<br>Version Control (e.g. GIT) (版本控制)<br>MVC / MVVM / MV (MV 框架)<br>Functional Programming (函数式编程)<br>Data Formats (e.g. JSON, XML) (数据格式)<br>Data API’s (e.g Restful API) (数据API)<br>Web Font Embedding (Web字体嵌入)<br>Scalable Vector Graphics (可伸缩向量图形, 又称 SVG)<br>Regular Expressions (正则表达式)<br>Content Strategy (内容策略)<br>Microdata / Microformats (微数据/微格式)<br>Task Runners, Build Tools, Process Automation Tools (任务管道, 构建工具, 过程自动化工具)<br>Responsive Web Design (响应式设计)<br>Object Oriented Programming (面向对象编程)<br>Application Architecture (应用架构)<br>Modules (模块)<br>Dependency Managers (依赖关系管理)<br>Package Managers (包管理)<br>JavaScript Animation (JavaScript 动画)<br>CSS Animation (CSS 动画)<br>Charts / Graphs (图表/图形)<br>UI widgets (UI工具集)<br>Code Quality Testing (代码质量测试)<br>Code Coverage Testing (代码覆盖测试)<br>Code Complexity Analysis (代码复杂度测试)<br>Integration Testing (集成测试)<br>Command Line / CLI (命令行/命令行界面)<br>Templating Strategies (模板策略)<br>Templating Engines (模板引擎)<br>Single Page Applications (单页应用)<br>XHR Requests (aka AJAX) (XHR 请求, 又称 AJAX)<br>Web/Browser Security (Web/浏览器安全)<br>HTML Semantics (HTML 语义化)<br>Browser Developer Tools (浏览器开发者工具)</p>
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>webpack配置文件设置</title>
     <url>/2019/10/11/2019-9/webpack.config.js/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Webpack是用于为浏览器构建JavaScript模块脚本的前端工具</p>
@@ -601,17 +615,16 @@ npm 安装</code></pre><p>​        npm install jshint -g</p>
       </tags>
   </entry>
   <entry>
-    <title>webEnglish</title>
-    <url>/2019/10/11/2019-9/web/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="web"><a href="#web" class="headerlink" title="web"></a>web</h3><a id="more"></a>
-<p>Hyper Text Markup Language(超文本标记语言, 又称 HTML)<br>Cascading Style Sheets (层叠式样式表, 又称 CSS)<br>Document Object Model (文档对象模型, 又称 DOM)<br>JavaScript Programming Language (JavaScript编程语言, 又称: ECMAScript 6, ES6, JavaScript 2015)<br>Web API’s (Web应用程序接口, 又称 HTML5 API 或浏览器 API)<br>Hypertext Transfer Protocol (超文本传输协议, 又称 HTTP)<br>Uniform Resource Locator’s (统一资源定位符, 又称 URL)<br>JavaScript Object Notation (JavaScript对象表示, 又称 JSON)<br>Web Content Accessibility Guidelines (网页内容无障碍设计指南, 又称 WCAG) &amp; Accessible Rich Internet Applications (富Internet应用程序的无障碍设计, 又称 ARIA)</p>
-<p>Content Management System (内容管理系统, 又称 CMS)<br>Node.js<br>Cross-browser testing (跨浏览器测试)<br>Cross-platform testing (跨平台测试)<br>Unit Testing (单元测试)<br>Cross-device testing (跨设备测试)<br>Accessibility / WAI-ARIA (无障碍访问/无障碍富Internet应用程序)<br>Search Engine Optimization (搜索引擎优化, 又称 SEO)<br>Interaction or User Interface design (交互或用户设计)<br>User Experience (用户体验)<br>Usability (可用性/易用性)<br>E-commerce Systems (电子商务系统)<br>Portal Systems (门户系统)<br>Wireframing (框架)<br>CSS layout / Grids (CSS 布局/栅格系统)<br>DOM manipulation (e.g. jQuery) (DOM 操作)<br>Mobile Web Performance (移动Web性能)<br>Load Testing (载荷测试)<br>Performance Testing (性能测试)<br>Progressive Enhancement / Graceful Degradation (渐进增强/优雅降级)<br>Version Control (e.g. GIT) (版本控制)<br>MVC / MVVM / MV (MV 框架)<br>Functional Programming (函数式编程)<br>Data Formats (e.g. JSON, XML) (数据格式)<br>Data API’s (e.g Restful API) (数据API)<br>Web Font Embedding (Web字体嵌入)<br>Scalable Vector Graphics (可伸缩向量图形, 又称 SVG)<br>Regular Expressions (正则表达式)<br>Content Strategy (内容策略)<br>Microdata / Microformats (微数据/微格式)<br>Task Runners, Build Tools, Process Automation Tools (任务管道, 构建工具, 过程自动化工具)<br>Responsive Web Design (响应式设计)<br>Object Oriented Programming (面向对象编程)<br>Application Architecture (应用架构)<br>Modules (模块)<br>Dependency Managers (依赖关系管理)<br>Package Managers (包管理)<br>JavaScript Animation (JavaScript 动画)<br>CSS Animation (CSS 动画)<br>Charts / Graphs (图表/图形)<br>UI widgets (UI工具集)<br>Code Quality Testing (代码质量测试)<br>Code Coverage Testing (代码覆盖测试)<br>Code Complexity Analysis (代码复杂度测试)<br>Integration Testing (集成测试)<br>Command Line / CLI (命令行/命令行界面)<br>Templating Strategies (模板策略)<br>Templating Engines (模板引擎)<br>Single Page Applications (单页应用)<br>XHR Requests (aka AJAX) (XHR 请求, 又称 AJAX)<br>Web/Browser Security (Web/浏览器安全)<br>HTML Semantics (HTML 语义化)<br>Browser Developer Tools (浏览器开发者工具)</p>
-]]></content>
+    <title>爬虫 fake_useragent 随机请求头</title>
+    <url>/2019/09/20/2019-9/fake_useragent/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>1、安装</p>
+<p>在cmd命令行中进行安装，pip install fake_useragent<br>from fake_useragent import UserAgent<br>for i in range(5):<br>    print(UserAgent().random)</p>
+<a id="more"></a>]]></content>
       <categories>
-        <category>web</category>
+        <category>python</category>
       </categories>
       <tags>
-        <tag>web</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -626,19 +639,6 @@ npm 安装</code></pre><p>​        npm install jshint -g</p>
       </categories>
       <tags>
         <tag>web前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>爬虫 fake_useragent 随机请求头</title>
-    <url>/2019/09/20/2019-9/fake_useragent/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>1、安装</p>
-<p>在cmd命令行中进行安装，pip install fake_useragent<br>from fake_useragent import UserAgent<br>for i in range(5):<br>    print(UserAgent().random)</p>
-<a id="more"></a>]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -698,40 +698,32 @@ function drop(e){
       </tags>
   </entry>
   <entry>
-    <title>python入门</title>
-    <url>/2019/09/01/2019-9/python/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="1、安装python"><a href="#1、安装python" class="headerlink" title="1、安装python"></a>1、安装python</h3><p>官网 <a href="https://www.python.org/" target="_blank" rel="noopener">https://www.python.org/</a><br>地址：<a href="https://www.python.org/ftp/python/3.8.0/python-3.8.0b2-amd64.exe" target="_blank" rel="noopener">https://www.python.org/ftp/python/3.8.0/python-3.8.0b2-amd64.exe</a><br>python -V<br>查看python 版本</p>
+    <title>hexo创建个人博客</title>
+    <url>/2019/09/01/2019-6/hexo/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Hexo 是一个快速、简洁且高效的博客框架。<br>    Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。<br>    Hexo 使用</p>
 <a id="more"></a>
+<h3 id="如何使用hexo搭建自己的个人博客"><a href="#如何使用hexo搭建自己的个人博客" class="headerlink" title="如何使用hexo搭建自己的个人博客"></a>如何使用hexo搭建自己的个人博客</h3><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"># 安装hexo</span><br><span class="line">npm install hexo-cli -g</span><br><span class="line"># 创建 创建项目文件</span><br><span class="line"><span class="built_in">mkdir</span> myblog</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line"># 初始化</span><br><span class="line">npm install</span><br><span class="line"># 开始服务</span><br><span class="line">hexo server</span><br><span class="line"># 命令简写</span><br><span class="line">hexo clean          #清除生成的文件</span><br><span class="line">hexo s              #本地启动</span><br><span class="line">hexo n "文章名称"    # 创建文章</span><br><span class="line">hexo g              # 生成静态文件</span><br><span class="line">hexo d              #上传至远程</span><br></pre></td></tr></table></figure>
 
-<h3 id="2、配置环境变量（path）"><a href="#2、配置环境变量（path）" class="headerlink" title="2、配置环境变量（path）"></a>2、配置环境变量（path）</h3><h3 id="3、-安装pip"><a href="#3、-安装pip" class="headerlink" title="3、 安装pip"></a>3、 安装pip</h3><p>pip 是 Python 包管理工具，该工具提供了对Python 包的查找、下载、安装、卸载的功能。<br>pip 官网：<a href="https://pypi.org/project/pip/" target="_blank" rel="noopener">https://pypi.org/project/pip/</a><br>pip 下载地址：<a href="https://files.pythonhosted.org/packages/8b/8a/1b2aadd922db1afe6bc107b03de41d6d37a28a5923383e60695fba24ae81/pip-19.2.1.tar.gz" target="_blank" rel="noopener">https://files.pythonhosted.org/packages/8b/8a/1b2aadd922db1afe6bc107b03de41d6d37a28a5923383e60695fba24ae81/pip-19.2.1.tar.gz</a><br>git 地址 ：<a href="https://files.pythonhosted.org/packages/8b/8a/1b2aadd922db1afe6bc107b03de41d6d37a28a5923383e60695fba24ae81/pip-19.2.1.tar.gz" target="_blank" rel="noopener">https://files.pythonhosted.org/packages/8b/8a/1b2aadd922db1afe6bc107b03de41d6d37a28a5923383e60695fba24ae81/pip-19.2.1.tar.gz</a><br>更新pip pip install –upgrade pip或者 python-m pip install–upgrade pip  报错选择：python -m pip install –upgrade pip<br>os模块在python中属于内置模块，即不需要额外安装 os模块提供了非常丰富的方法来处理文件和目录<br>测试 os模块</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">cmd = <span class="string">'ipconfig'</span></span><br><span class="line"></span><br><span class="line">retval = os.system(cmd)</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> (retval)</span><br></pre></td></tr></table></figure>
-<p>requests的底层实现就是urllib </p>
-<p>requests在python2 和python3中通用，方法完全一样</p>
-<p>requests能够自动帮助我们解压(gzip压缩的等)网页内容</p>
-<p>安装requests模块: pip install requests</p>
-<p>测试 requests</p>
-<pre><code>import requests
+<h3 id="用于git部署的"><a href="#用于git部署的" class="headerlink" title="用于git部署的"></a>用于git部署的</h3><pre><code>用于git部署的 hexo-deployer-git
+npm install hexo-deployer-git --save</code></pre><h3 id="用于创建RSS-hexo-generator-feed"><a href="#用于创建RSS-hexo-generator-feed" class="headerlink" title="用于创建RSS hexo-generator-feed"></a>用于创建RSS hexo-generator-feed</h3><pre><code>** RSS是某一站点用来和其它站点之间共享内容的一种简易方式，也叫聚合内容。**
+作用就将需要的内容集合在一起，方便浏览阅读
+npm install --save hexo-generator-feed</code></pre><h3 id="使用-Hexo-插件插入音乐-视频"><a href="#使用-Hexo-插件插入音乐-视频" class="headerlink" title="使用 Hexo 插件插入音乐/视频"></a>使用 Hexo 插件插入音乐/视频</h3><pre><code>** hexo-tag-aplayer：https://github.com/grzhan/hexo-tag-aplayer) **
+** hexo-tag-dplayer： https://github.com/NextMoe/hexo-tag-dplayer **</code></pre><h3 id="页面顶置"><a href="#页面顶置" class="headerlink" title="页面顶置"></a>页面顶置</h3><pre><code>安装hexo插件
+npm uninstall hexo-generator-index --save
+npm install hexo-generator-index-pin-top --save
+文章中添加 top: true
+文章顶置标签
+/themes/next/layout/_macro目录下的post.swig文件，定位到&lt;div class=&quot;post-meta&quot;&gt;标签下，插入如下代码：
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if post.top %&#125;</span><br><span class="line">    &lt;i class&#x3D;&quot;fa fa-thumb-tack&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">    &lt;font color&#x3D;green&gt;置顶&lt;&#x2F;font&gt;</span><br><span class="line">    &lt;span class&#x3D;&quot;post-meta-divider&quot;&gt;|&lt;&#x2F;span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+文章内容顶置
+修改 node_modules/hexo-generator-index/lib/generator.js 文件
 
-headers = {
-    # 设置用户代理头(为狼披上羊皮)
-    &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36&quot;,
-}
-
-baidu = requests.get(&quot;http://www.baidu.com/&quot;, headers=headers).status_code
-
-print (baidu)        
-
-#输出结果200  
-</code></pre><p>1、Traceback (most recent call last):<br>  File “<stdin>“, line 1, in <module><br>AttributeError: module ‘requests’ has no attribute ‘get’</p>
-<p>错误原因 文件名称 与导入模块同名了</p>
-<p>pip list 列出所有安装的python已经安装的模块</p>
-<p>安装 lxml lxml是个非常有用的python库，它可以灵活高效地解析xml，与BeautifulSoup、requests结合，是编写爬虫的标准姿势<br>    打开cmd，输入pip install lxml。</p>
-]]></content>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">posts.data &#x3D; posts.data.sort(function(a, b) &#123;</span><br><span class="line">    if(a.top &amp;&amp; b.top) &#123; &#x2F;&#x2F; 两篇文章top都有定义</span><br><span class="line">        if(a.top &#x3D;&#x3D; b.top) return b.date - a.date; &#x2F;&#x2F; 若top值一样则按照文章日期降序排</span><br><span class="line">        else return b.top - a.top; &#x2F;&#x2F; 否则按照top值降序排</span><br><span class="line">    &#125;</span><br><span class="line">    else if(a.top &amp;&amp; !b.top) &#123; &#x2F;&#x2F; 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）</span><br><span class="line">        return -1;</span><br><span class="line">    &#125;</span><br><span class="line">    else if(!a.top &amp;&amp; b.top) &#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    else return b.date - a.date; &#x2F;&#x2F; 都没定义按照文章日期降序排</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></code></pre>]]></content>
       <categories>
-        <category>python</category>
+        <category>hexo</category>
       </categories>
       <tags>
-        <tag>python</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -769,32 +761,40 @@ print (baidu)
       </tags>
   </entry>
   <entry>
-    <title>hexo创建个人博客</title>
-    <url>/2019/09/01/2019-6/hexo/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Hexo 是一个快速、简洁且高效的博客框架。<br>    Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。<br>    Hexo 使用</p>
+    <title>python入门</title>
+    <url>/2019/09/01/2019-9/python/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="1、安装python"><a href="#1、安装python" class="headerlink" title="1、安装python"></a>1、安装python</h3><p>官网 <a href="https://www.python.org/" target="_blank" rel="noopener">https://www.python.org/</a><br>地址：<a href="https://www.python.org/ftp/python/3.8.0/python-3.8.0b2-amd64.exe" target="_blank" rel="noopener">https://www.python.org/ftp/python/3.8.0/python-3.8.0b2-amd64.exe</a><br>python -V<br>查看python 版本</p>
 <a id="more"></a>
-<h3 id="如何使用hexo搭建自己的个人博客"><a href="#如何使用hexo搭建自己的个人博客" class="headerlink" title="如何使用hexo搭建自己的个人博客"></a>如何使用hexo搭建自己的个人博客</h3><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"># 安装hexo</span><br><span class="line">npm install hexo-cli -g</span><br><span class="line"># 创建 创建项目文件</span><br><span class="line"><span class="built_in">mkdir</span> myblog</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line"># 初始化</span><br><span class="line">npm install</span><br><span class="line"># 开始服务</span><br><span class="line">hexo server</span><br><span class="line"># 命令简写</span><br><span class="line">hexo clean          #清除生成的文件</span><br><span class="line">hexo s              #本地启动</span><br><span class="line">hexo n "文章名称"    # 创建文章</span><br><span class="line">hexo g              # 生成静态文件</span><br><span class="line">hexo d              #上传至远程</span><br></pre></td></tr></table></figure>
 
-<h3 id="用于git部署的"><a href="#用于git部署的" class="headerlink" title="用于git部署的"></a>用于git部署的</h3><pre><code>用于git部署的 hexo-deployer-git
-npm install hexo-deployer-git --save</code></pre><h3 id="用于创建RSS-hexo-generator-feed"><a href="#用于创建RSS-hexo-generator-feed" class="headerlink" title="用于创建RSS hexo-generator-feed"></a>用于创建RSS hexo-generator-feed</h3><pre><code>** RSS是某一站点用来和其它站点之间共享内容的一种简易方式，也叫聚合内容。**
-作用就将需要的内容集合在一起，方便浏览阅读
-npm install --save hexo-generator-feed</code></pre><h3 id="使用-Hexo-插件插入音乐-视频"><a href="#使用-Hexo-插件插入音乐-视频" class="headerlink" title="使用 Hexo 插件插入音乐/视频"></a>使用 Hexo 插件插入音乐/视频</h3><pre><code>** hexo-tag-aplayer：https://github.com/grzhan/hexo-tag-aplayer) **
-** hexo-tag-dplayer： https://github.com/NextMoe/hexo-tag-dplayer **</code></pre><h3 id="页面顶置"><a href="#页面顶置" class="headerlink" title="页面顶置"></a>页面顶置</h3><pre><code>安装hexo插件
-npm uninstall hexo-generator-index --save
-npm install hexo-generator-index-pin-top --save
-文章中添加 top: true
-文章顶置标签
-/themes/next/layout/_macro目录下的post.swig文件，定位到&lt;div class=&quot;post-meta&quot;&gt;标签下，插入如下代码：
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if post.top %&#125;</span><br><span class="line">    &lt;i class&#x3D;&quot;fa fa-thumb-tack&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">    &lt;font color&#x3D;green&gt;置顶&lt;&#x2F;font&gt;</span><br><span class="line">    &lt;span class&#x3D;&quot;post-meta-divider&quot;&gt;|&lt;&#x2F;span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-文章内容顶置
-修改 node_modules/hexo-generator-index/lib/generator.js 文件
+<h3 id="2、配置环境变量（path）"><a href="#2、配置环境变量（path）" class="headerlink" title="2、配置环境变量（path）"></a>2、配置环境变量（path）</h3><h3 id="3、-安装pip"><a href="#3、-安装pip" class="headerlink" title="3、 安装pip"></a>3、 安装pip</h3><p>pip 是 Python 包管理工具，该工具提供了对Python 包的查找、下载、安装、卸载的功能。<br>pip 官网：<a href="https://pypi.org/project/pip/" target="_blank" rel="noopener">https://pypi.org/project/pip/</a><br>pip 下载地址：<a href="https://files.pythonhosted.org/packages/8b/8a/1b2aadd922db1afe6bc107b03de41d6d37a28a5923383e60695fba24ae81/pip-19.2.1.tar.gz" target="_blank" rel="noopener">https://files.pythonhosted.org/packages/8b/8a/1b2aadd922db1afe6bc107b03de41d6d37a28a5923383e60695fba24ae81/pip-19.2.1.tar.gz</a><br>git 地址 ：<a href="https://files.pythonhosted.org/packages/8b/8a/1b2aadd922db1afe6bc107b03de41d6d37a28a5923383e60695fba24ae81/pip-19.2.1.tar.gz" target="_blank" rel="noopener">https://files.pythonhosted.org/packages/8b/8a/1b2aadd922db1afe6bc107b03de41d6d37a28a5923383e60695fba24ae81/pip-19.2.1.tar.gz</a><br>更新pip pip install –upgrade pip或者 python-m pip install–upgrade pip  报错选择：python -m pip install –upgrade pip<br>os模块在python中属于内置模块，即不需要额外安装 os模块提供了非常丰富的方法来处理文件和目录<br>测试 os模块</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">cmd = <span class="string">'ipconfig'</span></span><br><span class="line"></span><br><span class="line">retval = os.system(cmd)</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> (retval)</span><br></pre></td></tr></table></figure>
+<p>requests的底层实现就是urllib </p>
+<p>requests在python2 和python3中通用，方法完全一样</p>
+<p>requests能够自动帮助我们解压(gzip压缩的等)网页内容</p>
+<p>安装requests模块: pip install requests</p>
+<p>测试 requests</p>
+<pre><code>import requests
 
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">posts.data &#x3D; posts.data.sort(function(a, b) &#123;</span><br><span class="line">    if(a.top &amp;&amp; b.top) &#123; &#x2F;&#x2F; 两篇文章top都有定义</span><br><span class="line">        if(a.top &#x3D;&#x3D; b.top) return b.date - a.date; &#x2F;&#x2F; 若top值一样则按照文章日期降序排</span><br><span class="line">        else return b.top - a.top; &#x2F;&#x2F; 否则按照top值降序排</span><br><span class="line">    &#125;</span><br><span class="line">    else if(a.top &amp;&amp; !b.top) &#123; &#x2F;&#x2F; 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）</span><br><span class="line">        return -1;</span><br><span class="line">    &#125;</span><br><span class="line">    else if(!a.top &amp;&amp; b.top) &#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    else return b.date - a.date; &#x2F;&#x2F; 都没定义按照文章日期降序排</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></code></pre>]]></content>
+headers = {
+    # 设置用户代理头(为狼披上羊皮)
+    &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36&quot;,
+}
+
+baidu = requests.get(&quot;http://www.baidu.com/&quot;, headers=headers).status_code
+
+print (baidu)        
+
+#输出结果200  
+</code></pre><p>1、Traceback (most recent call last):<br>  File “<stdin>“, line 1, in <module><br>AttributeError: module ‘requests’ has no attribute ‘get’</p>
+<p>错误原因 文件名称 与导入模块同名了</p>
+<p>pip list 列出所有安装的python已经安装的模块</p>
+<p>安装 lxml lxml是个非常有用的python库，它可以灵活高效地解析xml，与BeautifulSoup、requests结合，是编写爬虫的标准姿势<br>    打开cmd，输入pip install lxml。</p>
+]]></content>
       <categories>
-        <category>hexo</category>
+        <category>python</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -1027,92 +1027,6 @@ npm install hexo-generator-index-pin-top --save
       </tags>
   </entry>
   <entry>
-    <title>CSS样式</title>
-    <url>/2019/06/20/2019-6/cssstyle/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>css一些常用的基本属性</p>
-<a id="more"></a>
-
-<h3 id="设定盒子的边框不增加盒子的宽高去除浏览器默认内外边框"><a href="#设定盒子的边框不增加盒子的宽高去除浏览器默认内外边框" class="headerlink" title="设定盒子的边框不增加盒子的宽高去除浏览器默认内外边框"></a>设定盒子的边框不增加盒子的宽高去除浏览器默认内外边框</h3><p>*{<br>  margin: 0;<br>  padding: 0;<br>  box-sizing: border-box;<br>  -webkit-box-sizing: border-box;<br>  -moz-box-sizing: border-box;<br>  box-sizing: border-box;</p>
-<p>}</p>
-<h3 id="清除浏览器默认样式自行定义防止不同浏览器不同样式"><a href="#清除浏览器默认样式自行定义防止不同浏览器不同样式" class="headerlink" title="清除浏览器默认样式自行定义防止不同浏览器不同样式"></a>清除浏览器默认样式自行定义防止不同浏览器不同样式</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">input</span>,<span class="selector-tag">button</span>,<span class="selector-tag">select</span>,<span class="selector-tag">textarea</span>&#123;</span><br><span class="line">  <span class="attribute">appearance</span>: none;</span><br><span class="line">  <span class="attribute">-webkit-appearance</span>: none;</span><br><span class="line">  <span class="attribute">-moz-appearance</span>: none;</span><br><span class="line">  <span class="attribute">outline</span>: none;</span><br><span class="line">  <span class="attribute">border</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="定义变量"><a href="#定义变量" class="headerlink" title="定义变量"></a>定义变量</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span>&#123;</span><br><span class="line">  <span class="attribute">--color</span>:red</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 使用变量 */</span></span><br><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>:<span class="built_in">var</span>(--color);</span><br><span class="line">  <span class="comment">/* 也可这样使用如果变量未定义就是用的二个参数 */</span></span><br><span class="line">  <span class="attribute">color</span>:<span class="built_in">var</span>(--color,#<span class="number">000</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 局部变量声明 */</span></span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">  <span class="attribute">--color</span>:red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">span</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>:<span class="built_in">var</span>(--color);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="javascript如何操作css变量"><a href="#javascript如何操作css变量" class="headerlink" title="javascript如何操作css变量"></a>javascript如何操作css变量</h3><p>操作全局变量<br>document.documentElement.style.setProperty(“–data_name”,”data_value”)<br>操作局部变量<br>document.querySelectorAll(selector)[0].style.setProperty(“–data_name”,”data_value”);</p>
-<h3 id="设置显示行数-2行-溢出隐藏加省略号"><a href="#设置显示行数-2行-溢出隐藏加省略号" class="headerlink" title="设置显示行数 2行 溢出隐藏加省略号"></a>设置显示行数 2行 溢出隐藏加省略号</h3><p>溢出隐藏<br>overflow: hidden;<br>显示省略号来代替被修剪的文本<br>text-overflow: ellipsis;<br>display: -webkit-box;<br>-webkit-line-clamp: 2;（行数）<br>-webkit-box-orient: vertical;</p>
-<!-- more -->
-
-<ul>
-<li><h3 id="设置日期居右显示"><a href="#设置日期居右显示" class="headerlink" title="设置日期居右显示"></a>设置日期居右显示</h3></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span>&#123;</span><br><span class="line">  <span class="attribute">positio</span>:relative</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span> <span class="selector-tag">span</span>&#123;</span><br><span class="line">  <span class="attribute">position</span>:absolute;</span><br><span class="line">  <span class="attribute">right</span>:<span class="number">0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="背景关联-文档比较长-文档向下滚动式-背景图像也会随之滚动"><a href="#背景关联-文档比较长-文档向下滚动式-背景图像也会随之滚动" class="headerlink" title="背景关联 文档比较长 文档向下滚动式 背景图像也会随之滚动"></a>背景关联 文档比较长 文档向下滚动式 背景图像也会随之滚动</h3><p>当文档滚动到超过图像的位置时 图像就会消失<br>可通过background-attachment属性防止这种滚动 可以声明图像对于可视区是固定的fixed<br>因此不会受到滚动的影响了<br>background-image:url(/i/eg_bg_02.gif);<br>background-repeat:no-repeat;<br>background-attachment:fixed</p>
-<h3 id="超链接-a标签"><a href="#超链接-a标签" class="headerlink" title="超链接 a标签"></a>超链接 a标签</h3><p>a:link 初始状态<br>a:hover 鼠标移上<br>a:active 鼠标点击时<br>a:visited 访问过后</p>
-<h3 id="垂直居中"><a href="#垂直居中" class="headerlink" title="垂直居中"></a>垂直居中</h3><p>display: inline-block;</p>
-<h3 id="清楚浮动"><a href="#清楚浮动" class="headerlink" title="清楚浮动"></a>清楚浮动</h3><p>.clearfix {<br>  overflow: auto;<br> /×兼容ie6×/<br>  zoom: 1;<br>}</p>
-<h3 id="内联块bug"><a href="#内联块bug" class="headerlink" title="内联块bug"></a>内联块bug</h3><p>  display: inline-block;<br>  vertical-align: top;</p>
-<h3 id="布局文字样式"><a href="#布局文字样式" class="headerlink" title="布局文字样式"></a>布局文字样式</h3><p>  padding: 1em;<br>  -moz-column-count: 3;<br>  -moz-column-gap: 1em;<br>  -webkit-column-count: 3;<br>  -webkit-column-gap: 1em;<br>  column-count: 3;<br>  column-gap: 1em;<br>  文字诗文排版样式</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.text</span> &#123;</span><br><span class="line">  <span class="attribute">float</span>: right;</span><br><span class="line">  <span class="attribute">padding-right</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">padding-top</span>:<span class="number">150px</span> ;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">18px</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">30px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">350px</span>;</span><br><span class="line">  <span class="attribute">writing-mode</span>: tb-lr;</span><br><span class="line">  <span class="attribute">letter-spacing</span>:<span class="number">13px</span>;</span><br><span class="line">  <span class="comment">/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/</span></span><br><span class="line">  <span class="attribute">-webkit-writing-mode</span>: vertical-rl;</span><br><span class="line">  <span class="attribute">writing-mode</span>: vertical-rl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="设置打印样式"><a href="#设置打印样式" class="headerlink" title="设置打印样式"></a>设置打印样式</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;link rel="stylesheet" href="print.css" media="print"&gt;</span><br><span class="line"><span class="keyword">@media</span> print &#123;</span><br><span class="line">  <span class="comment">/* print style sheets go here */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@import</span> url(print.css) print;</span><br></pre></td></tr></table></figure>
-
-<h3 id="强制同一行内显示所有文本不换行"><a href="#强制同一行内显示所有文本不换行" class="headerlink" title="强制同一行内显示所有文本不换行"></a>强制同一行内显示所有文本不换行</h3><p>让文字不换行，无论css宽度设置多少，所有文字都在一行显示。特别是标题列表，我们只想显示一行标题内容，而有时宽度有限标题文字多了width又有限，这个时候我们可以使用white-space样式让他一排显示不换行</p>
-<p>语法与结构</p>
-<p>1、white-space 语法： white-space: normal nowrap</p>
-<p>2、white-space参数 ： normal : 默认处理方法  nowrap： 强制在同一行内显示所有文字直到文本结束或者遇到br标签对象才能换行</p>
-<h3 id="css常用字体"><a href="#css常用字体" class="headerlink" title="css常用字体"></a>css常用字体</h3><p>宋体  SimSun<br>黑体  SimHei<br>微软雅黑  Microsoft?YaHei<br>微软正黑体  Microsoft?JhengHei<br>新宋体  NSimSun<br>新细明体  PMingLiU<br>细明体  MingLiU<br>标楷体  DFKai-SB<br>仿宋  FangSong<br>楷体  KaiTi<br>仿宋_GB2312 FangSong_GB2312<br>楷体_GB2312 KaiTi_GB2312</p>
-]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CSSBUG</title>
-    <url>/2019/06/20/2019-6/cssbug/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="BFC基本概念"><a href="#BFC基本概念" class="headerlink" title="BFC基本概念"></a>BFC基本概念</h3><p>BFC:块级格式化上下文</p>
-<p>BFC基本概念：BFC是CSS布局的一个概念，是一块独立的渲染区域，是一个环境，里面的元素不会影响到外部的元素。</p>
-<p>父级元素和兄弟元素边距重叠，重叠原则取最大值。空空元素的边距重叠是取margin与padding的最大值</p>
-<a id="more"></a>
-
-<p>1、根元素，即HTML元素（最大的一个BFC）</p>
-<p>2、就对定位元素 （position的值为absolute或fixed）</p>
-<p>3、行内块（display为inline-block）</p>
-<p>4、表格单元（display为table、table-cell、table-caption、inline-block等 HTML表格相关的属性）</p>
-<p>5、弹性盒（display为flex 或者inline-flex）</p>
-<p>6、默认值。内容不会被修剪，会呈现在元素框之外（overflow不为visible）</p>
-<p>可以让父级元素的高度包含子浮动元素，清除内部的浮动（原理：触发父div的BFC属性是下面的子div都处于父div的同一个BFC时，可以阻止margin重叠）</p>
-<h3 id="论iframe的优缺点"><a href="#论iframe的优缺点" class="headerlink" title="论iframe的优缺点"></a>论iframe的优缺点</h3><p>html5不再执行使用frame iframe只有src属性</p>
-<ol>
-<li>使用iframe的优缺点<ul>
-<li>优点<ol>
-<li>程序调入静态页面比较方便</li>
-<li>页面和程序分离<ul>
-<li>缺点</li>
-</ul>
-</li>
-</ol>
-</li>
-<li>缺点<br> 1.iframe有不好之处 样式脚本需要额外链如 ，会增加请求。另外用js放盗链只防得了小偷，防不了大盗<br> 2.iframe好在能够把原先的网页全部原封不动显示下来,但是如果用在首页,是搜索引擎最讨厌的.那么你<br>的网站即使做的在好,也排不到好的名次! <ol start="3">
-<li>调用外部页面,需要额外调用css,给页面带来额外的请求次数;</li>
-<li>链接导航疑问。运用框架结构时，你必须保证正确配置所有的导航链接，如不然，会给访问者带来很大<br>的麻烦。比如被链接的页面出现在导航框架内，这种情况下访问者便被陷住了，因为此时他没有其他地点<br>可去。</li>
-</ol>
-</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>css</category>
-      </categories>
-      <tags>
-        <tag>webBUG</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>bootstrap框架</title>
     <url>/2019/06/20/2019-6/bootstrap/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>bootstrap 是HTML CSS和JS 框架 用于开发响应式布局、移动设备优先的 WEB 项目。</p>
@@ -1229,6 +1143,92 @@ Bootstrap是依赖于jquery 的</code></pre><h3 id="导航-nav"><a href="#导航
       </categories>
       <tags>
         <tag>web前段框架</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSS样式</title>
+    <url>/2019/06/20/2019-6/cssstyle/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>css一些常用的基本属性</p>
+<a id="more"></a>
+
+<h3 id="设定盒子的边框不增加盒子的宽高去除浏览器默认内外边框"><a href="#设定盒子的边框不增加盒子的宽高去除浏览器默认内外边框" class="headerlink" title="设定盒子的边框不增加盒子的宽高去除浏览器默认内外边框"></a>设定盒子的边框不增加盒子的宽高去除浏览器默认内外边框</h3><p>*{<br>  margin: 0;<br>  padding: 0;<br>  box-sizing: border-box;<br>  -webkit-box-sizing: border-box;<br>  -moz-box-sizing: border-box;<br>  box-sizing: border-box;</p>
+<p>}</p>
+<h3 id="清除浏览器默认样式自行定义防止不同浏览器不同样式"><a href="#清除浏览器默认样式自行定义防止不同浏览器不同样式" class="headerlink" title="清除浏览器默认样式自行定义防止不同浏览器不同样式"></a>清除浏览器默认样式自行定义防止不同浏览器不同样式</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">input</span>,<span class="selector-tag">button</span>,<span class="selector-tag">select</span>,<span class="selector-tag">textarea</span>&#123;</span><br><span class="line">  <span class="attribute">appearance</span>: none;</span><br><span class="line">  <span class="attribute">-webkit-appearance</span>: none;</span><br><span class="line">  <span class="attribute">-moz-appearance</span>: none;</span><br><span class="line">  <span class="attribute">outline</span>: none;</span><br><span class="line">  <span class="attribute">border</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="定义变量"><a href="#定义变量" class="headerlink" title="定义变量"></a>定义变量</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span>&#123;</span><br><span class="line">  <span class="attribute">--color</span>:red</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 使用变量 */</span></span><br><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>:<span class="built_in">var</span>(--color);</span><br><span class="line">  <span class="comment">/* 也可这样使用如果变量未定义就是用的二个参数 */</span></span><br><span class="line">  <span class="attribute">color</span>:<span class="built_in">var</span>(--color,#<span class="number">000</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 局部变量声明 */</span></span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">  <span class="attribute">--color</span>:red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">span</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>:<span class="built_in">var</span>(--color);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="javascript如何操作css变量"><a href="#javascript如何操作css变量" class="headerlink" title="javascript如何操作css变量"></a>javascript如何操作css变量</h3><p>操作全局变量<br>document.documentElement.style.setProperty(“–data_name”,”data_value”)<br>操作局部变量<br>document.querySelectorAll(selector)[0].style.setProperty(“–data_name”,”data_value”);</p>
+<h3 id="设置显示行数-2行-溢出隐藏加省略号"><a href="#设置显示行数-2行-溢出隐藏加省略号" class="headerlink" title="设置显示行数 2行 溢出隐藏加省略号"></a>设置显示行数 2行 溢出隐藏加省略号</h3><p>溢出隐藏<br>overflow: hidden;<br>显示省略号来代替被修剪的文本<br>text-overflow: ellipsis;<br>display: -webkit-box;<br>-webkit-line-clamp: 2;（行数）<br>-webkit-box-orient: vertical;</p>
+<!-- more -->
+
+<ul>
+<li><h3 id="设置日期居右显示"><a href="#设置日期居右显示" class="headerlink" title="设置日期居右显示"></a>设置日期居右显示</h3></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span>&#123;</span><br><span class="line">  <span class="attribute">positio</span>:relative</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span> <span class="selector-tag">span</span>&#123;</span><br><span class="line">  <span class="attribute">position</span>:absolute;</span><br><span class="line">  <span class="attribute">right</span>:<span class="number">0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="背景关联-文档比较长-文档向下滚动式-背景图像也会随之滚动"><a href="#背景关联-文档比较长-文档向下滚动式-背景图像也会随之滚动" class="headerlink" title="背景关联 文档比较长 文档向下滚动式 背景图像也会随之滚动"></a>背景关联 文档比较长 文档向下滚动式 背景图像也会随之滚动</h3><p>当文档滚动到超过图像的位置时 图像就会消失<br>可通过background-attachment属性防止这种滚动 可以声明图像对于可视区是固定的fixed<br>因此不会受到滚动的影响了<br>background-image:url(/i/eg_bg_02.gif);<br>background-repeat:no-repeat;<br>background-attachment:fixed</p>
+<h3 id="超链接-a标签"><a href="#超链接-a标签" class="headerlink" title="超链接 a标签"></a>超链接 a标签</h3><p>a:link 初始状态<br>a:hover 鼠标移上<br>a:active 鼠标点击时<br>a:visited 访问过后</p>
+<h3 id="垂直居中"><a href="#垂直居中" class="headerlink" title="垂直居中"></a>垂直居中</h3><p>display: inline-block;</p>
+<h3 id="清楚浮动"><a href="#清楚浮动" class="headerlink" title="清楚浮动"></a>清楚浮动</h3><p>.clearfix {<br>  overflow: auto;<br> /×兼容ie6×/<br>  zoom: 1;<br>}</p>
+<h3 id="内联块bug"><a href="#内联块bug" class="headerlink" title="内联块bug"></a>内联块bug</h3><p>  display: inline-block;<br>  vertical-align: top;</p>
+<h3 id="布局文字样式"><a href="#布局文字样式" class="headerlink" title="布局文字样式"></a>布局文字样式</h3><p>  padding: 1em;<br>  -moz-column-count: 3;<br>  -moz-column-gap: 1em;<br>  -webkit-column-count: 3;<br>  -webkit-column-gap: 1em;<br>  column-count: 3;<br>  column-gap: 1em;<br>  文字诗文排版样式</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.text</span> &#123;</span><br><span class="line">  <span class="attribute">float</span>: right;</span><br><span class="line">  <span class="attribute">padding-right</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">padding-top</span>:<span class="number">150px</span> ;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">18px</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">30px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">350px</span>;</span><br><span class="line">  <span class="attribute">writing-mode</span>: tb-lr;</span><br><span class="line">  <span class="attribute">letter-spacing</span>:<span class="number">13px</span>;</span><br><span class="line">  <span class="comment">/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/</span></span><br><span class="line">  <span class="attribute">-webkit-writing-mode</span>: vertical-rl;</span><br><span class="line">  <span class="attribute">writing-mode</span>: vertical-rl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置打印样式"><a href="#设置打印样式" class="headerlink" title="设置打印样式"></a>设置打印样式</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;link rel="stylesheet" href="print.css" media="print"&gt;</span><br><span class="line"><span class="keyword">@media</span> print &#123;</span><br><span class="line">  <span class="comment">/* print style sheets go here */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@import</span> url(print.css) print;</span><br></pre></td></tr></table></figure>
+
+<h3 id="强制同一行内显示所有文本不换行"><a href="#强制同一行内显示所有文本不换行" class="headerlink" title="强制同一行内显示所有文本不换行"></a>强制同一行内显示所有文本不换行</h3><p>让文字不换行，无论css宽度设置多少，所有文字都在一行显示。特别是标题列表，我们只想显示一行标题内容，而有时宽度有限标题文字多了width又有限，这个时候我们可以使用white-space样式让他一排显示不换行</p>
+<p>语法与结构</p>
+<p>1、white-space 语法： white-space: normal nowrap</p>
+<p>2、white-space参数 ： normal : 默认处理方法  nowrap： 强制在同一行内显示所有文字直到文本结束或者遇到br标签对象才能换行</p>
+<h3 id="css常用字体"><a href="#css常用字体" class="headerlink" title="css常用字体"></a>css常用字体</h3><p>宋体  SimSun<br>黑体  SimHei<br>微软雅黑  Microsoft?YaHei<br>微软正黑体  Microsoft?JhengHei<br>新宋体  NSimSun<br>新细明体  PMingLiU<br>细明体  MingLiU<br>标楷体  DFKai-SB<br>仿宋  FangSong<br>楷体  KaiTi<br>仿宋_GB2312 FangSong_GB2312<br>楷体_GB2312 KaiTi_GB2312</p>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSSBUG</title>
+    <url>/2019/06/20/2019-6/cssbug/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="BFC基本概念"><a href="#BFC基本概念" class="headerlink" title="BFC基本概念"></a>BFC基本概念</h3><p>BFC:块级格式化上下文</p>
+<p>BFC基本概念：BFC是CSS布局的一个概念，是一块独立的渲染区域，是一个环境，里面的元素不会影响到外部的元素。</p>
+<p>父级元素和兄弟元素边距重叠，重叠原则取最大值。空空元素的边距重叠是取margin与padding的最大值</p>
+<a id="more"></a>
+
+<p>1、根元素，即HTML元素（最大的一个BFC）</p>
+<p>2、就对定位元素 （position的值为absolute或fixed）</p>
+<p>3、行内块（display为inline-block）</p>
+<p>4、表格单元（display为table、table-cell、table-caption、inline-block等 HTML表格相关的属性）</p>
+<p>5、弹性盒（display为flex 或者inline-flex）</p>
+<p>6、默认值。内容不会被修剪，会呈现在元素框之外（overflow不为visible）</p>
+<p>可以让父级元素的高度包含子浮动元素，清除内部的浮动（原理：触发父div的BFC属性是下面的子div都处于父div的同一个BFC时，可以阻止margin重叠）</p>
+<h3 id="论iframe的优缺点"><a href="#论iframe的优缺点" class="headerlink" title="论iframe的优缺点"></a>论iframe的优缺点</h3><p>html5不再执行使用frame iframe只有src属性</p>
+<ol>
+<li>使用iframe的优缺点<ul>
+<li>优点<ol>
+<li>程序调入静态页面比较方便</li>
+<li>页面和程序分离<ul>
+<li>缺点</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>缺点<br> 1.iframe有不好之处 样式脚本需要额外链如 ，会增加请求。另外用js放盗链只防得了小偷，防不了大盗<br> 2.iframe好在能够把原先的网页全部原封不动显示下来,但是如果用在首页,是搜索引擎最讨厌的.那么你<br>的网站即使做的在好,也排不到好的名次! <ol start="3">
+<li>调用外部页面,需要额外调用css,给页面带来额外的请求次数;</li>
+<li>链接导航疑问。运用框架结构时，你必须保证正确配置所有的导航链接，如不然，会给访问者带来很大<br>的麻烦。比如被链接的页面出现在导航框架内，这种情况下访问者便被陷住了，因为此时他没有其他地点<br>可去。</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>css</category>
+      </categories>
+      <tags>
+        <tag>webBUG</tag>
       </tags>
   </entry>
   <entry>
