@@ -1,6 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>2020-3/nginx</title>
+    <url>/2020/03/12/2020-3/nginx/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><hr>
+<hr>
+<p>Nginx 介绍<br>由Igor Sysoev(俄罗斯)于2005年编写，是一个免费、开源、高性能的HTTP服务器和反向代理，也可以作为一个IMAP/POP3代理服务器。<br>优点<br>Nginx因为稳定，丰富的功能集，配置简单，资源占用低而闻名世界。，目前使用最多的就是负载均衡。<br> <a id="more"></a></p>
+<h3 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h3><ol>
+<li>sudo yum -y install nginx   <em># 安装 nginx</em></li>
+<li>sudo yum remove nginx  <em># 卸载 nginx</em></li>
+</ol>
+<p>安装nginx 的源 </p>
+<p> <em>rpm -ivh <a href="http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm" target="_blank" rel="noopener">http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm</a></em> </p>
+<p>查看源 是否安装  /etc/yum.respos.d  </p>
+<h3 id="nginx-启动命令"><a href="#nginx-启动命令" class="headerlink" title="nginx 启动命令"></a>nginx 启动命令</h3><pre><code>sudo systemctl enable nginx *# 设置开机启动* 
+
+ sudo service nginx start *# 启动nginx服务*
+
+ sudo service nginx stop *# 停止nginx服务*
+
+ sudo service nginx restart *# 重启nginx服务*
+
+ sudo service nginx reload *# 重新加载配置，一般是在修改过nginx配置文件时使用*</code></pre><h3 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h3><pre><code>安装位置 配置文件  /etc/nginx/nginx.conf
+服务器默根 /usr/share/nginx/html;</code></pre><h3 id="重新url"><a href="#重新url" class="headerlink" title="重新url"></a>重新url</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 访问 &#x2F;last.html 的时候，页面内容重写到 &#x2F;index.html 中</span><br><span class="line"> rewrite &#x2F;last.html &#x2F;index.html last;</span><br><span class="line"></span><br><span class="line"> # 访问 &#x2F;break.html 的时候，页面内容重写到 &#x2F;index.html 中，并停止后续的匹配</span><br><span class="line"> rewrite &#x2F;break.html &#x2F;index.html break;</span><br><span class="line"></span><br><span class="line"> # 访问 &#x2F;redirect.html 的时候，页面直接302定向到 &#x2F;index.html中</span><br><span class="line"> rewrite &#x2F;redirect.html &#x2F;index.html redirect;</span><br><span class="line"></span><br><span class="line"> # 访问 &#x2F;permanent.html 的时候，页面直接301定向到 &#x2F;index.html中</span><br><span class="line"> rewrite &#x2F;permanent.html &#x2F;index.html permanent;</span><br><span class="line"></span><br><span class="line"> # 把 &#x2F;html&#x2F;*.html &#x3D;&gt; &#x2F;post&#x2F;*.html ，301定向</span><br><span class="line"> rewrite ^&#x2F;html&#x2F;(.+?).html$ &#x2F;post&#x2F;$1.html permanent;</span><br><span class="line"></span><br><span class="line"> # 把 &#x2F;search&#x2F;key &#x3D;&gt; &#x2F;search.html?keyword&#x3D;key</span><br><span class="line"> rewrite ^&#x2F;search\&#x2F;([^\&#x2F;]+?)(\&#x2F;|$) &#x2F;search.html?keyword&#x3D;$1 permanent;</span><br></pre></td></tr></table></figure>
+
+<h3 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">   listen    80;</span><br><span class="line">   server_name www.baidu.test.com;#你要填写的域名，多个用逗号隔开</span><br><span class="line">   location &#x2F; &#123;</span><br><span class="line">     proxy_pass http:&#x2F;&#x2F;localhost:8083; </span><br><span class="line">     proxy_set_header Host $host; </span><br><span class="line">     proxy_set_header X-Real-IP $remote_addr; </span><br><span class="line">     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; </span><br><span class="line">     root  &#x2F;app&#x2F;esop_web&#x2F;esopschool;</span><br><span class="line">     index index.html;</span><br><span class="line">     try_files $uri $uri&#x2F; &#x2F;index.html;</span><br><span class="line">   &#125;</span><br><span class="line">   location &#x2F;rest&#123;</span><br><span class="line">     proxy_pass http:&#x2F;&#x2F;localhost:9803; </span><br><span class="line">     proxy_set_header  Host  $host; </span><br><span class="line">     proxy_set_header  X-Real-IP  $remote_addr; </span><br><span class="line">     proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for; </span><br><span class="line">   &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h3><h3 id="端口转发"><a href="#端口转发" class="headerlink" title="端口转发"></a>端口转发</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">location &#x2F; &#123;</span><br><span class="line">   proxy_pass  http:&#x2F;&#x2F;127.0.0.1:9002;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
+    <title>2020-3/Centos</title>
+    <url>/2020/03/12/2020-3/Centos/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><hr>
+<hr>
+<p>linux 安装软件例如安装 wget</p>
+<p>yum -y install wget</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>2020-3/linux</title>
+    <url>/2020/03/11/2020-3/linux/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><hr>
+<hr>
+<h3 id="查看系统架构和版本"><a href="#查看系统架构和版本" class="headerlink" title="查看系统架构和版本"></a>查看系统架构和版本</h3><p>lsb_release -a</p>
+<h3 id="查看进程"><a href="#查看进程" class="headerlink" title="查看进程"></a>查看进程</h3><p>UID        PID        PPID       C      STIME          TTY           CMD</p>
+<p>nginx     9622      9621          0         10:05 ?        00:00:00     nginx: worker process</p>
+<ol>
+<li>UID      ：程序被该 UID 所拥有</li>
+<li>PID      ：就是这个程序的 ID </li>
+<li>PPID    ：则是其上级父程序的ID</li>
+<li>C          ：CPU使用的资源百分比</li>
+<li>STIME ：系统启动时间</li>
+<li>TTY     ：登入者的终端机位置</li>
+<li>TIME   ：使用掉的CPU时间。</li>
+<li>CMD   ：所下达的是什么指令</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ps -ef|grep nginx</span><br></pre></td></tr></table></figure>
+<p>ps 命令将某个进程显示出来<br>grep 命令是查找</p>
+<p>| 管道命令 指ps命令与grep同时执行</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>2020-3/vueweb</title>
+    <url>/2020/03/11/2020-3/vueweb/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><hr>
+<hr>
+<p>vue3.0创建前端项目</p>
+<p>npm install -g @vue/cli-init</p>
+<p>vue init webpack myproject</p>
+<p>### 配置参数</p>
+<p>  vue.config.js可选配置文件</p>
+<p>  @vue/cli-service 会自动加载 package.json中的vue字段</p>
+<p>  但是注意的是这种写法需要严格的json格式</p>
+<p>  首先需要导出一个包含了选项的对象</p>
+<p>  ```</p>
+<p>  //vue.config.js</p>
+<p>  module.exports={</p>
+<p>​    //选项</p>
+<p>  }</p>
+<p>  ```</p>
+<p>  publicPath </p>
+<p>  用法和webpack中的output.publicPath一致但是Vue CLI 在一些其他地方需要用到这个值 所以请始终使用publicPach 而不要直接修改webpack的output.publicPath</p>
+<p>  默认情况下 VueCli会假设你的应用是被部署在一个域名的根路径上</p>
+<h3 id="vue引用font-awesome字体图标fontawesome-简单方法"><a href="#vue引用font-awesome字体图标fontawesome-简单方法" class="headerlink" title="vue引用font-awesome字体图标fontawesome 简单方法"></a>vue引用font-awesome字体图标fontawesome 简单方法</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install font-awesome --save</span><br><span class="line"># main.js</span><br><span class="line">import &#39;font-awesome&#x2F;css&#x2F;font-awesome.css&#39;;</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>wxjssdk</title>
+    <url>/2020/03/01/2020-3/wxJssdk/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>—官方介绍<br>微信JS-SDK 是微信公众平台面向网页开发者提供的基于微信内的网页开发工具包。<br>通过使用微信JS-SDK ,页面开发者可借助微信高效地使用拍照，选图，语音，位置等手机系统功能，同时也可以直接使用微信分享，扫一扫，卡卷，支付等等<br>特有的能力，为微信用户提供更优质的页面体验</p>
+<a id="more"></a>
+
+<h3 id="绑定域名-引入js文件"><a href="#绑定域名-引入js文件" class="headerlink" title="绑定域名 引入js文件"></a>绑定域名 引入js文件</h3><pre><code>js地址（支持https） http://res.wx.qq.com/open/js/jweixin-1.0.0.js
+如果页面使用了 https加密服务就必须 引入加密地址 </code></pre><h3 id="通过config-接口注入权限验证配置-调用使用接口"><a href="#通过config-接口注入权限验证配置-调用使用接口" class="headerlink" title="通过config 接口注入权限验证配置 调用使用接口"></a>通过config 接口注入权限验证配置 调用使用接口</h3><pre><code><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">wx.config(&#123;</span><br><span class="line">    debug: <span class="literal">true</span>, <span class="comment">// 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。</span></span><br><span class="line">    appId: <span class="string">''</span>, <span class="comment">// 必填，公众号的唯一标识</span></span><br><span class="line">    timestamp: , <span class="comment">// 必填，生成签名的时间戳</span></span><br><span class="line">    nonceStr: <span class="string">''</span>, <span class="comment">// 必填，生成签名的随机串</span></span><br><span class="line">    signature: <span class="string">''</span>,<span class="comment">// 必填，签名，见附录1</span></span><br><span class="line">    jsApiList: [] <span class="comment">// 必填，需要使用的JS接口列表，所有JS接口列表见附录2</span></span><br><span class="line">&#125;);</span><br><span class="line">wx.ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    wx.onMenuShareTimeline(&#123;</span><br><span class="line">        title: <span class="string">''</span>, <span class="comment">// 分享标题</span></span><br><span class="line">        link: <span class="string">''</span>, <span class="comment">// 分享链接</span></span><br><span class="line">        imgUrl: <span class="string">''</span>, <span class="comment">// 分享图标</span></span><br><span class="line">        success: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; </span><br><span class="line">            <span class="comment">// 用户确认分享后执行的回调函数</span></span><br><span class="line">        &#125;,</span><br><span class="line">        cancel: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; </span><br><span class="line">            <span class="comment">// 用户取消分享后执行的回调函数</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="comment">// config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></code></pre><h3 id="后台部分-js-SDK-使用权限签名算法"><a href="#后台部分-js-SDK-使用权限签名算法" class="headerlink" title="后台部分 js-SDK 使用权限签名算法"></a>后台部分 js-SDK 使用权限签名算法</h3><pre><code>jsapi_ticket 是公众号用于调用微信js接口的临时票据。正常情况下 jsapi_ticket的有效期为7200秒
+使用get方式请求获得jsapi_ticket https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=ACCESS_TOKEN&amp;type=jsapi
+成功返回的json
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">"errcode":0,</span><br><span class="line">"errmsg":"ok",</span><br><span class="line">"ticket":"bxLdikRXVbTPdHSM05e5u5sUoXNKd8-41ZO3MhKoyN5OfkWITDGgnr2fwJ0m9E8NYzWKVZvdVtaUgWvsdshFKA",</span><br><span class="line">"expires_in":7200</span><br></pre></td></tr></table></figure>
+获得jsapi_ticket 之后就可生成JS_SDK权限验证签名了
+签名算法生成规则：参与签名的字段包括noncestr（随机字符串），有效的jsapi_ticket,timestamp(时间戳)
+url（当前的url，不包含#及后面部分）对于签名参数按照字段名ASCII吗从小到大排列 url键值对格式
+官方示例 ：
+jsapi_ticket=sM4AOVdWfPE4DxkXGEs8VMCPGGVi4C3VM0P37wVUCFvkVAy_90u5h9nbSlYy3-Sl-HhTdfl2fzFy1AOcHKP7qg&amp;noncestr=Wm3WZYTPz0wzccnW&amp;timestamp=1414587457&amp;url=http://mp.weixin.qq.com?params=value</code></pre>]]></content>
+      <tags>
+        <tag>web框架</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2019-12/linux</title>
+    <url>/2020/01/03/2019-12/linux/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
+  </entry>
+  <entry>
+    <title>2019-12/gulp</title>
+    <url>/2020/01/02/2019-12/gulp/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>#Gulp<br>特点任务化 基于流 数据流 IO </p>
+<p>gulp 会读取文件 </p>
+<p>gulp API<br>gulp对象自</p>
+<h3 id="入口"><a href="#入口" class="headerlink" title="入口"></a>入口</h3><p>gulp.src()</p>
+<h3 id="出口"><a href="#出口" class="headerlink" title="出口"></a>出口</h3><p>gulp.dest(name)</p>
+<h3 id="监听"><a href="#监听" class="headerlink" title="监听"></a>监听</h3><p>gulp.watch()</p>
+<h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3>]]></content>
+  </entry>
+  <entry>
     <title>Bower</title>
     <url>/2019/12/25/2019-12/bower/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Bower 是用于 web 前端开发的包管理器。对于前端包管理方面的问题，它提供了一套通用、客观的解决方案。<br>它通过一个 API 暴露包之间的依赖模型，这样更利于使用更合适的构建工具。bower 没有系统级的依赖，在不同 app 之间也不互相依赖，依赖树是扁平的。<br>该工具帮助用户轻松安装css、javascipt、图像的相关包，并管理这些包之间的依赖</p>
@@ -16,7 +138,7 @@
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>git远程操作</p>
 <a id="more"></a>
 
-<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 在当前目录新建一个Git代码库</span><br><span class="line">git init</span><br><span class="line"></span><br><span class="line"># 新建一个目录，将其初始化为Git代码库</span><br><span class="line">git init [project-name]</span><br><span class="line"></span><br><span class="line"># 下载一个项目和它的整个代码历史</span><br><span class="line">git clone [url]</span><br></pre></td></tr></table></figure>
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 在当前目录新建一个Git代码库</span><br><span class="line">git init</span><br><span class="line"></span><br><span class="line"># 新建一个目录，将其初始化为Git代码库</span><br><span class="line">git init [project-name]</span><br><span class="line"></span><br><span class="line"># 下载一个项目和它的整个代码历史</span><br><span class="line"># clone an existing repository  </span><br><span class="line">git clone [url]</span><br></pre></td></tr></table></figure>
 
 <h3 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 显示当前的Git配置</span><br><span class="line">git config --list</span><br><span class="line"></span><br><span class="line"># 编辑Git配置文件</span><br><span class="line">git config -e [--global]</span><br><span class="line"></span><br><span class="line"># 设置提交代码时的用户信息</span><br><span class="line">git config [--global] user.name &quot;[name]&quot;</span><br><span class="line">git config [--global] user.email &quot;[email address]&quot;</span><br></pre></td></tr></table></figure>
 
@@ -44,7 +166,7 @@
 <h3 id="列出所有远程主机-查看远程主机的地址"><a href="#列出所有远程主机-查看远程主机的地址" class="headerlink" title="列出所有远程主机 查看远程主机的地址"></a>列出所有远程主机 查看远程主机的地址</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#列出所有远程主机</span><br><span class="line">git remote</span><br><span class="line"># 查看远程主机的地址</span><br><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
 
 <h3 id="克隆指定远程主机"><a href="#克隆指定远程主机" class="headerlink" title="克隆指定远程主机"></a>克隆指定远程主机</h3><p>git clone -o URL<br>git remote<br>jQuery</p>
-<h3 id="添加远程主机"><a href="#添加远程主机" class="headerlink" title="添加远程主机"></a>添加远程主机</h3><p>git remote add &lt;主机名&gt; &lt;网址&gt;</p>
+<h3 id="添加远程主机"><a href="#添加远程主机" class="headerlink" title="添加远程主机"></a>添加远程主机</h3><p>git remote add &lt;主机名 origin&gt; &lt;网址&gt;</p>
 <h3 id="删除远程主机"><a href="#删除远程主机" class="headerlink" title="删除远程主机"></a>删除远程主机</h3><p>git remote rm &lt;主机名&gt;</p>
 <h3 id="重命名远程主机"><a href="#重命名远程主机" class="headerlink" title="重命名远程主机"></a>重命名远程主机</h3><p>git remote rename &lt;原主机名&gt; &lt;新主机名&gt;</p>
 <h3 id="修改远程仓库地址"><a href="#修改远程仓库地址" class="headerlink" title="修改远程仓库地址"></a>修改远程仓库地址</h3><p>git remote set-url origin [url]</p>
@@ -149,9 +271,10 @@
 
 <h3 id="阿什比"><a href="#阿什比" class="headerlink" title="阿什比"></a>阿什比</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">webkit-filter</span>: <span class="selector-tag">sepia</span>(<span class="selector-class">.5</span>) <span class="selector-tag">contrast</span>(1<span class="selector-class">.2</span>) <span class="selector-tag">saturate</span>(1<span class="selector-class">.8</span>);</span><br></pre></td></tr></table></figure>
 
-<h3 id="图片懒加载"><a href="#图片懒加载" class="headerlink" title="图片懒加载"></a>图片懒加载</h3><!-- more -->
+<h3 id="图片懒加载"><a href="#图片懒加载" class="headerlink" title="图片懒加载"></a>图片懒加载</h3><p>原生懒加载</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"image.jpg"</span> <span class="attr">loading</span>=<span class="string">"lazy"</span> <span class="attr">alt</span>=<span class="string">"Sample image"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>代码</p>
+<p>基于 JavaScript 的方案</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 一开始没有滚动的时候，出现在视窗中的图片也会加载</span></span><br><span class="line">start();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当页面开始滚动的时候，遍历图片，如果图片出现在视窗中，就加载图片</span></span><br><span class="line"><span class="keyword">var</span> clock; <span class="comment">//函数节流</span></span><br><span class="line">$(<span class="built_in">window</span>).on(<span class="string">'scroll'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(clock) &#123;</span><br><span class="line">		clearTimeout(clock);</span><br><span class="line">	&#125;</span><br><span class="line">	clock = setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		start()</span><br><span class="line">	&#125;, <span class="number">200</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">start</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	$(<span class="string">'.container img'</span>).not(<span class="string">'[data-isLoading]'</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(isShow($(<span class="keyword">this</span>))) &#123;</span><br><span class="line">			loadImg($(<span class="keyword">this</span>));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断图片是否出现在视窗的函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isShow</span>(<span class="params">$node</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> $node.offset().top &lt;= $(<span class="built_in">window</span>).height() + $(<span class="built_in">window</span>).scrollTop();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 加载图片的函数，就是把自定义属性data-src 存储的真正的图片地址，赋值给src</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">loadImg</span>(<span class="params">$img</span>) </span>&#123;</span><br><span class="line">	$img.attr(<span class="string">'src'</span>, $img.attr(<span class="string">'data-src'</span>));</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 已经加载的图片，我给它设置一个属性，值为1，作为标识</span></span><br><span class="line">	<span class="comment">// 弄这个的初衷是因为，每次滚动的时候，所有的图片都会遍历一遍，这样有点浪费，所以做个标识，滚动的时候只遍历哪些还没有加载的图片</span></span><br><span class="line">	$img.attr(<span class="string">'data-isLoading'</span>, <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>web前段</category>
@@ -395,8 +518,7 @@ npm 安装</code></pre><p>​        npm install jshint -g</p>
   <entry>
     <title>求职简历</title>
     <url>/2019/10/25/2019-6/resume/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><img src="/images/150256440.jpg" alt="blockchain" title="杨富国"></p>
-<h3 id="求职意向Job-search-intention"><a href="#求职意向Job-search-intention" class="headerlink" title="求职意向Job search intention"></a>求职意向Job search intention</h3><p>职位：Web全栈工程师</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="求职意向Job-search-intention"><a href="#求职意向Job-search-intention" class="headerlink" title="求职意向Job search intention"></a>求职意向Job search intention</h3><p>职位：Web全栈工程师</p>
 <a id="more"></a>
 
 <h3 id="联系方式-Contact-information"><a href="#联系方式-Contact-information" class="headerlink" title="联系方式 Contact information"></a>联系方式 Contact information</h3><p>wx:yfg526162469</p>
@@ -404,17 +526,13 @@ npm 安装</code></pre><p>​        npm install jshint -g</p>
 <h3 id="专业技能-Professional-skills"><a href="#专业技能-Professional-skills" class="headerlink" title="专业技能 Professional skills"></a>专业技能 Professional skills</h3><ul>
 <li><p>精通HTML、css、JavaScript</p>
 </li>
-<li><p>熟练 html5，css3，JavaScript, jquery</p>
+<li><p>熟练 html5，css3，JavaScript, jquery,git,vue.js,react</p>
 </li>
-<li><p>了解，github，小程序，python爬虫，运维工具 kail  nmap 进行简单的扫描，等等 </p>
+<li><p>能使用 bootstrap，mui，Swiper，Echarts等前端框架快速开发</p>
 </li>
-<li><p>能使用 vue.js，bootstrap，mui，Swiper，Echarts等前端框架快速开发</p>
+<li><p>对java+mysql，node.js+mysql有一定了解</p>
 </li>
-<li><p>对php+mysql，node.js+mysql有一定了解</p>
-</li>
-<li><p>还熟悉JAVAweb 、 C语言</p>
-</li>
-<li><p>会运用Photoshop进行一些简单的网页排版设计</p>
+<li><p>会运用Photoshop CorelDRAW进行一些简单的网页排版设计</p>
 </li>
 </ul>
 <h3 id="项目经验-Project-experience"><a href="#项目经验-Project-experience" class="headerlink" title="项目经验 Project experience"></a>项目经验 Project experience</h3><p>码云地址：<a href="https://gitee.com/augo/dashboard" target="_blank" rel="noopener">https://gitee.com/augo/dashboard</a></p>
@@ -433,8 +551,7 @@ npm 安装</code></pre><p>​        npm install jshint -g</p>
 </li>
 </ul>
 <p><a href="https://m.atyit.com/">https://m.atyit.com/</a></p>
-<h3 id="证-书-Certificate"><a href="#证-书-Certificate" class="headerlink" title="证    书 Certificate"></a>证    书 Certificate</h3><p>全国计算机一级证书     英语B级证书 </p>
-<h3 id="自我介绍-Self-introduction"><a href="#自我介绍-Self-introduction" class="headerlink" title="自我介绍 Self introduction."></a>自我介绍 Self introduction.</h3><p>衷心感谢您抽出宝贵时间审阅我的简历。另外我今天应聘的岗位是web全栈开发工程师。我大学主修的课程有HTML、CSS、jQuery、JavaScript、平时业余时间喜欢通过逛博客和论坛来了解前端的前沿信息。我擅长flex页面布局。写过静态网页，当然也有移动端的，我相信我进入贵公司也可以快速的上手。<br>　　，我牢固地掌握了HTML，CSS ，JavaScript 的基础知识，并使用它们 ，另外还熟练Office办公软件，对各种网页的书写也体会深刻，并在各种实践中获得了必须的实际运用的能力。业余时间我还广泛阅读计算机方面的文章，扩展了知识面。另外我是一个很好相处的人，喜欢帮助他人，有一颗善良的心。</p>
+<h3 id="自我介绍-Self-introduction"><a href="#自我介绍-Self-introduction" class="headerlink" title="自我介绍 Self introduction."></a>自我介绍 Self introduction.</h3><p>衷心感谢您抽出宝贵时间审阅我的简历。另外我今天应聘的岗位是web全栈开发工程师。所学专业是计算机应用技术，平时业余时间喜欢通过逛博客和论坛来了解前端的前沿信息。我擅长flex页面布局。写过静态网页，当然也有移动端的，我相信我进入贵公司也可以快速的上手。<br>　　，我牢固地掌握了HTML，CSS ，JavaScript 的基础知识，并使用它们 ，另外还熟练Office办公软件，对各种网页的书写也体会深刻，并在各种实践中获得了必须的实际运用的能力。业余时间我还广泛阅读计算机方面的文章，扩展了知识面。另外我是一个很好相处的人，喜欢帮助他人，有一颗善良的心。</p>
 <p>今天很高兴来贵公司面试。以上就是我的自我介绍谢谢！</p>
 ]]></content>
       <categories>
@@ -442,6 +559,20 @@ npm 安装</code></pre><p>​        npm install jshint -g</p>
       </categories>
       <tags>
         <tag>个人简历</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>webEnglish</title>
+    <url>/2019/10/11/2019-9/web/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="web"><a href="#web" class="headerlink" title="web"></a>web</h3><a id="more"></a>
+<p>Hyper Text Markup Language(超文本标记语言, 又称 HTML)<br>Cascading Style Sheets (层叠式样式表, 又称 CSS)<br>Document Object Model (文档对象模型, 又称 DOM)<br>JavaScript Programming Language (JavaScript编程语言, 又称: ECMAScript 6, ES6, JavaScript 2015)<br>Web API’s (Web应用程序接口, 又称 HTML5 API 或浏览器 API)<br>Hypertext Transfer Protocol (超文本传输协议, 又称 HTTP)<br>Uniform Resource Locator’s (统一资源定位符, 又称 URL)<br>JavaScript Object Notation (JavaScript对象表示, 又称 JSON)<br>Web Content Accessibility Guidelines (网页内容无障碍设计指南, 又称 WCAG) &amp; Accessible Rich Internet Applications (富Internet应用程序的无障碍设计, 又称 ARIA)</p>
+<p>Content Management System (内容管理系统, 又称 CMS)<br>Node.js<br>Cross-browser testing (跨浏览器测试)<br>Cross-platform testing (跨平台测试)<br>Unit Testing (单元测试)<br>Cross-device testing (跨设备测试)<br>Accessibility / WAI-ARIA (无障碍访问/无障碍富Internet应用程序)<br>Search Engine Optimization (搜索引擎优化, 又称 SEO)<br>Interaction or User Interface design (交互或用户设计)<br>User Experience (用户体验)<br>Usability (可用性/易用性)<br>E-commerce Systems (电子商务系统)<br>Portal Systems (门户系统)<br>Wireframing (框架)<br>CSS layout / Grids (CSS 布局/栅格系统)<br>DOM manipulation (e.g. jQuery) (DOM 操作)<br>Mobile Web Performance (移动Web性能)<br>Load Testing (载荷测试)<br>Performance Testing (性能测试)<br>Progressive Enhancement / Graceful Degradation (渐进增强/优雅降级)<br>Version Control (e.g. GIT) (版本控制)<br>MVC / MVVM / MV (MV 框架)<br>Functional Programming (函数式编程)<br>Data Formats (e.g. JSON, XML) (数据格式)<br>Data API’s (e.g Restful API) (数据API)<br>Web Font Embedding (Web字体嵌入)<br>Scalable Vector Graphics (可伸缩向量图形, 又称 SVG)<br>Regular Expressions (正则表达式)<br>Content Strategy (内容策略)<br>Microdata / Microformats (微数据/微格式)<br>Task Runners, Build Tools, Process Automation Tools (任务管道, 构建工具, 过程自动化工具)<br>Responsive Web Design (响应式设计)<br>Object Oriented Programming (面向对象编程)<br>Application Architecture (应用架构)<br>Modules (模块)<br>Dependency Managers (依赖关系管理)<br>Package Managers (包管理)<br>JavaScript Animation (JavaScript 动画)<br>CSS Animation (CSS 动画)<br>Charts / Graphs (图表/图形)<br>UI widgets (UI工具集)<br>Code Quality Testing (代码质量测试)<br>Code Coverage Testing (代码覆盖测试)<br>Code Complexity Analysis (代码复杂度测试)<br>Integration Testing (集成测试)<br>Command Line / CLI (命令行/命令行界面)<br>Templating Strategies (模板策略)<br>Templating Engines (模板引擎)<br>Single Page Applications (单页应用)<br>XHR Requests (aka AJAX) (XHR 请求, 又称 AJAX)<br>Web/Browser Security (Web/浏览器安全)<br>HTML Semantics (HTML 语义化)<br>Browser Developer Tools (浏览器开发者工具)</p>
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
       </tags>
   </entry>
   <entry>
@@ -464,20 +595,6 @@ npm 安装</code></pre><p>​        npm install jshint -g</p>
 
 
 
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>webEnglish</title>
-    <url>/2019/10/11/2019-9/web/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="web"><a href="#web" class="headerlink" title="web"></a>web</h3><a id="more"></a>
-<p>Hyper Text Markup Language(超文本标记语言, 又称 HTML)<br>Cascading Style Sheets (层叠式样式表, 又称 CSS)<br>Document Object Model (文档对象模型, 又称 DOM)<br>JavaScript Programming Language (JavaScript编程语言, 又称: ECMAScript 6, ES6, JavaScript 2015)<br>Web API’s (Web应用程序接口, 又称 HTML5 API 或浏览器 API)<br>Hypertext Transfer Protocol (超文本传输协议, 又称 HTTP)<br>Uniform Resource Locator’s (统一资源定位符, 又称 URL)<br>JavaScript Object Notation (JavaScript对象表示, 又称 JSON)<br>Web Content Accessibility Guidelines (网页内容无障碍设计指南, 又称 WCAG) &amp; Accessible Rich Internet Applications (富Internet应用程序的无障碍设计, 又称 ARIA)</p>
-<p>Content Management System (内容管理系统, 又称 CMS)<br>Node.js<br>Cross-browser testing (跨浏览器测试)<br>Cross-platform testing (跨平台测试)<br>Unit Testing (单元测试)<br>Cross-device testing (跨设备测试)<br>Accessibility / WAI-ARIA (无障碍访问/无障碍富Internet应用程序)<br>Search Engine Optimization (搜索引擎优化, 又称 SEO)<br>Interaction or User Interface design (交互或用户设计)<br>User Experience (用户体验)<br>Usability (可用性/易用性)<br>E-commerce Systems (电子商务系统)<br>Portal Systems (门户系统)<br>Wireframing (框架)<br>CSS layout / Grids (CSS 布局/栅格系统)<br>DOM manipulation (e.g. jQuery) (DOM 操作)<br>Mobile Web Performance (移动Web性能)<br>Load Testing (载荷测试)<br>Performance Testing (性能测试)<br>Progressive Enhancement / Graceful Degradation (渐进增强/优雅降级)<br>Version Control (e.g. GIT) (版本控制)<br>MVC / MVVM / MV (MV 框架)<br>Functional Programming (函数式编程)<br>Data Formats (e.g. JSON, XML) (数据格式)<br>Data API’s (e.g Restful API) (数据API)<br>Web Font Embedding (Web字体嵌入)<br>Scalable Vector Graphics (可伸缩向量图形, 又称 SVG)<br>Regular Expressions (正则表达式)<br>Content Strategy (内容策略)<br>Microdata / Microformats (微数据/微格式)<br>Task Runners, Build Tools, Process Automation Tools (任务管道, 构建工具, 过程自动化工具)<br>Responsive Web Design (响应式设计)<br>Object Oriented Programming (面向对象编程)<br>Application Architecture (应用架构)<br>Modules (模块)<br>Dependency Managers (依赖关系管理)<br>Package Managers (包管理)<br>JavaScript Animation (JavaScript 动画)<br>CSS Animation (CSS 动画)<br>Charts / Graphs (图表/图形)<br>UI widgets (UI工具集)<br>Code Quality Testing (代码质量测试)<br>Code Coverage Testing (代码覆盖测试)<br>Code Complexity Analysis (代码复杂度测试)<br>Integration Testing (集成测试)<br>Command Line / CLI (命令行/命令行界面)<br>Templating Strategies (模板策略)<br>Templating Engines (模板引擎)<br>Single Page Applications (单页应用)<br>XHR Requests (aka AJAX) (XHR 请求, 又称 AJAX)<br>Web/Browser Security (Web/浏览器安全)<br>HTML Semantics (HTML 语义化)<br>Browser Developer Tools (浏览器开发者工具)</p>
 ]]></content>
       <categories>
         <category>web</category>
@@ -516,7 +633,7 @@ npm 安装</code></pre><p>​        npm install jshint -g</p>
   <entry>
     <title>H5样式</title>
     <url>/2019/09/16/2019-6/htm5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>HTML5 是 W3C 与 WHATWG 合作的结果,WHATWG 指 Web Hypertext Application Technology Working Group。<br>WHATWG 致力于 web 表单和应用程序，而 W3C 专注于 XHTML 2.0。在 2006 年，双方决定进行合作，来创建一个新版本的 HTML。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>HTML (Hyper Text Mark-up Language ) 超文本标记语言<br>HTML5 是 W3C 与 WHATWG 合作的结果,WHATWG 指 Web Hypertext Application Technology Working Group。<br>WHATWG 致力于 web 表单和应用程序，而 W3C 专注于 XHTML 2.0。在 2006 年，双方决定进行合作，来创建一个新版本的 HTML。</p>
 <a id="more"></a>
 <p>HTML5 中的一些有趣的新特性：<br>    + 于绘画的 canvas 元素<br>    + 用于媒介回放的 video 和 audio 元素<br>    + 对本地离线存储的更好的支持<br>    + 新的特殊内容元素，比如 article、footer、header、nav、section<br>    + 新的表单控件，比如 calendar、date、time、email、url、search<br>HTML5声明 <!DOCTYPE html></p>
 <h3 id="兼容IE"><a href="#兼容IE" class="headerlink" title="兼容IE"></a>兼容IE</h3><!--[if lt IE 9]>
@@ -860,15 +977,22 @@ npm install hexo-generator-index-pin-top --save
   <entry>
     <title>webpack配置文件设置</title>
     <url>/2019/06/20/2019-12/webpack.config.js/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Webpack是用于为浏览器构建JavaScript模块脚本的前端工具</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>webpack的核心价值是前端代码的打包，即将前端代码中每一个文件都当成一个pack<br>然后分析依赖，将其最终打包出线上运行的代码。<br>Webpack是用于为浏览器构建JavaScript模块脚本的前端工具</p>
 <a id="more"></a>
 
-<p>全局安装 npm install -g webpack </p>
-<p>安装到项目内 npm install –save-dev webpack</p>
-<p>安装webpack脚手架 npm install  -D webpack webpack-cli</p>
-<p>安装webpack服务器 npm install  -g webpack-dev-server</p>
-<p>安装loader npm install  -D style-loader css-loader</p>
-<h3 id="文件内部配置"><a href="#文件内部配置" class="headerlink" title="文件内部配置"></a>文件内部配置</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;导入路径模块</span><br><span class="line">const path &#x3D; require(&quot;path&quot;);</span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">	&#x2F;&#x2F;所选模式告诉webpack相应地使用其内置优化。</span><br><span class="line">	mode:&quot;production&quot;,&#x2F;&#x2F;生产模式</span><br><span class="line">	mode:&quot;development&quot;,&#x2F;&#x2F;开发模式</span><br><span class="line">	mode:&quot;none&quot;,&#x2F;&#x2F;默认模式</span><br><span class="line">    &#x2F;&#x2F; 入口</span><br><span class="line">    entry: &#123;</span><br><span class="line">     	bundle2:&quot;.&#x2F;App.css&quot;,</span><br><span class="line">        bundl:[&quot;.&#x2F;main.js&quot;,&quot;.&#x2F;main1.js&quot;,&quot;.&#x2F;main.jsx&quot;],</span><br><span class="line">        </span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; 出口</span><br><span class="line">    output: &#123;</span><br><span class="line">        &#x2F;&#x2F; 绝对路径</span><br><span class="line">        filename: &#39;[name].js&#39;,</span><br><span class="line">        path:path.resolve(__dirname,&quot;dist&quot;)</span><br><span class="line">    &#125;,</span><br><span class="line">    filename:&quot;bundle.js&quot;,&#x2F;&#x2F;入口快的文件名模板</span><br><span class="line">    filename:&quot;[name].js&quot;,&#x2F;&#x2F;入口快的文件名模板</span><br><span class="line">    filename:&quot;[chunkhash].js&quot;,&#x2F;&#x2F;入口快的文件名模板</span><br><span class="line">    </span><br><span class="line">    publicPath: &quot;&#x2F;assets&#x2F;&quot;, &#x2F;&#x2F; string</span><br><span class="line">    publicPath: &quot;&quot;,</span><br><span class="line">    publicPath: &quot;https:&#x2F;&#x2F;cdn.example.com&#x2F;&quot;,</span><br><span class="line">    &#x2F;&#x2F; 输出解析文件的目录url相对于HTML页面</span><br><span class="line">    &#x2F;&#x2F; 模块</span><br><span class="line">     library: &quot;MyLibrary&quot;, &#x2F;&#x2F; string,</span><br><span class="line">        libraryTarget: &quot;umd2&quot;, &#x2F;&#x2F; 通用模块定义</span><br><span class="line">        libraryTarget: &quot;commonjs2&quot;, &#x2F;&#x2F; exported with module.exports</span><br><span class="line">        libraryTarget: &quot;commonjs-module&quot;, &#x2F;&#x2F; 使用 module.exports 导出</span><br><span class="line">        libraryTarget: &quot;commonjs&quot;, &#x2F;&#x2F; 作为 exports 的属性导出</span><br><span class="line">        libraryTarget: &quot;amd&quot;, &#x2F;&#x2F; 使用 AMD 定义方法来定义</span><br><span class="line">        libraryTarget: &quot;this&quot;, &#x2F;&#x2F; 在 this 上设置属性</span><br><span class="line">        libraryTarget: &quot;var&quot;, &#x2F;&#x2F; 变量定义于根作用域下</span><br><span class="line">        libraryTarget: &quot;assign&quot;, &#x2F;&#x2F; 盲分配(blind assignment)</span><br><span class="line">        libraryTarget: &quot;window&quot;, &#x2F;&#x2F; 在 window 对象上设置属性</span><br><span class="line">        libraryTarget: &quot;global&quot;, &#x2F;&#x2F; property set to global object</span><br><span class="line">        libraryTarget: &quot;jsonp&quot;, &#x2F;&#x2F; jsonp wrapper</span><br><span class="line">    &#x2F;&#x2F; 导出库(exported library)的名称</span><br><span class="line">    &#x2F;&#x2F;模块相关的配置</span><br><span class="line">    module: &#123;</span><br><span class="line">    &#x2F;&#x2F;模块规则 配置loader 解析器等选项）</span><br><span class="line">        rules:[</span><br><span class="line">            &#123;</span><br><span class="line">            </span><br><span class="line">            &#x2F;&#x2F; 每个选项都接收一个正则表达式 或字符 匹配条件</span><br><span class="line">            	&#x2F;&#x2F;正则选择文件 test 或者 include 具有相同的作用</span><br><span class="line">                test:&#x2F;\.jsx?$&#x2F;,</span><br><span class="line">                &#x2F;&#x2F;导入模块</span><br><span class="line">                exclude:&#x2F;(node_modules)&#x2F;,</span><br><span class="line">                use:&#123;</span><br><span class="line">                    loader:&#39;babel-loader&#39;,</span><br><span class="line">                    options:&#123;</span><br><span class="line">                        presets: [&#39;react&#39;]</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,&#123;</span><br><span class="line">                test:&#x2F;\.css$&#x2F;,</span><br><span class="line">                use : [&#39;style-loader&#39;,&#39;css-loader&#39;]</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"> </span><br><span class="line">   </span><br><span class="line">    &#x2F;&#x2F; 插件</span><br><span class="line">    plugins:[],</span><br><span class="line">    &#x2F;&#x2F; 开发服务器</span><br><span class="line">    devServer:&#123;</span><br><span class="line">        proxy: &#123; &#x2F;&#x2F; proxy URLs to backend development server</span><br><span class="line">          &#39;&#x2F;api&#39;: &#39;http:&#x2F;&#x2F;localhost:3000&#39;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#x2F;&#x2F; 模块安装</span><br><span class="line">        &#x2F;&#x2F; npm install webpack-dev-server --save-dev</span><br><span class="line">        &#x2F;&#x2F; contentBase: path.resolve(__dirname, &#39;dist&#39;),</span><br><span class="line">        &#x2F;&#x2F; host: &#39;192.168.1.9&#39;,</span><br><span class="line">        &#x2F;&#x2F; compress: true, &#x2F;&#x2F;服务端是否启用压缩</span><br><span class="line">        &#x2F;&#x2F; port:1717</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>创建项目<br>npm init -y</p>
+<p>全局安装<br>npm install -g webpack </p>
+<p>安装到项目内<br>npm install –save-dev webpack</p>
+<p>安装webpack脚手架<br>npm install  -D webpack webpack-cli</p>
+<p>安装webpack服务器<br>npm install  -g webpack-dev-server</p>
+<p>安装loader<br>npm install  -D style-loader css-loader</p>
+<h3 id="四个核心部分"><a href="#四个核心部分" class="headerlink" title="四个核心部分"></a>四个核心部分</h3><ul>
+<li>entry 规定入口文件，一个或多个</li>
+<li>output规定输出文件的位置</li>
+<li>loader各个类型的转换工具</li>
+<li>plugin打包过程中各种自定义功能的插件</li>
+</ul>
+<h3 id="文件内部配置"><a href="#文件内部配置" class="headerlink" title="文件内部配置"></a>文件内部配置</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;导入路径模块</span><br><span class="line">const path &#x3D; require(&quot;path&quot;);</span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">	&#x2F;&#x2F;所选模式告诉webpack相应地使用其内置优化。</span><br><span class="line">	mode:&quot;production&quot;,&#x2F;&#x2F;生产模式 会默认压缩代码并进行优化（如 tree shaking）</span><br><span class="line">	mode:&quot;development&quot;,&#x2F;&#x2F;开发模式</span><br><span class="line">	mode:&quot;none&quot;,&#x2F;&#x2F;默认模式</span><br><span class="line">    &#x2F;&#x2F; 入口</span><br><span class="line">    entry: &#123;</span><br><span class="line">     	bundle2:&quot;.&#x2F;App.css&quot;,</span><br><span class="line">        bundl:[&quot;.&#x2F;main.js&quot;,&quot;.&#x2F;main1.js&quot;,&quot;.&#x2F;main.jsx&quot;],</span><br><span class="line">        </span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; 出口</span><br><span class="line">    output: &#123;</span><br><span class="line">        &#x2F;&#x2F; 绝对路径</span><br><span class="line">        filename: &#39;[name].js&#39;,</span><br><span class="line">        path:path.resolve(__dirname,&quot;dist&quot;)</span><br><span class="line">    &#125;,</span><br><span class="line">    filename:&quot;bundle.js&quot;,&#x2F;&#x2F;入口快的文件名模板</span><br><span class="line">    filename:&quot;[name].js&quot;,&#x2F;&#x2F;入口快的文件名模板</span><br><span class="line">    filename:&quot;[chunkhash].js&quot;,&#x2F;&#x2F;入口快的文件名模板</span><br><span class="line">    </span><br><span class="line">    publicPath: &quot;&#x2F;assets&#x2F;&quot;, &#x2F;&#x2F; string</span><br><span class="line">    publicPath: &quot;&quot;,</span><br><span class="line">    publicPath: &quot;https:&#x2F;&#x2F;cdn.example.com&#x2F;&quot;,</span><br><span class="line">    &#x2F;&#x2F; 输出解析文件的目录url相对于HTML页面</span><br><span class="line">    &#x2F;&#x2F; 模块</span><br><span class="line">     library: &quot;MyLibrary&quot;, &#x2F;&#x2F; string,</span><br><span class="line">        libraryTarget: &quot;umd2&quot;, &#x2F;&#x2F; 通用模块定义</span><br><span class="line">        libraryTarget: &quot;commonjs2&quot;, &#x2F;&#x2F; exported with module.exports</span><br><span class="line">        libraryTarget: &quot;commonjs-module&quot;, &#x2F;&#x2F; 使用 module.exports 导出</span><br><span class="line">        libraryTarget: &quot;commonjs&quot;, &#x2F;&#x2F; 作为 exports 的属性导出</span><br><span class="line">        libraryTarget: &quot;amd&quot;, &#x2F;&#x2F; 使用 AMD 定义方法来定义</span><br><span class="line">        libraryTarget: &quot;this&quot;, &#x2F;&#x2F; 在 this 上设置属性</span><br><span class="line">        libraryTarget: &quot;var&quot;, &#x2F;&#x2F; 变量定义于根作用域下</span><br><span class="line">        libraryTarget: &quot;assign&quot;, &#x2F;&#x2F; 盲分配(blind assignment)</span><br><span class="line">        libraryTarget: &quot;window&quot;, &#x2F;&#x2F; 在 window 对象上设置属性</span><br><span class="line">        libraryTarget: &quot;global&quot;, &#x2F;&#x2F; property set to global object</span><br><span class="line">        libraryTarget: &quot;jsonp&quot;, &#x2F;&#x2F; jsonp wrapper</span><br><span class="line">    &#x2F;&#x2F; 导出库(exported library)的名称</span><br><span class="line">    &#x2F;&#x2F;模块相关的配置</span><br><span class="line">    module: &#123;</span><br><span class="line">    &#x2F;&#x2F;模块规则 配置loader 解析器等选项）</span><br><span class="line">        rules:[</span><br><span class="line">            &#123;</span><br><span class="line">            </span><br><span class="line">            &#x2F;&#x2F; 每个选项都接收一个正则表达式 或字符 匹配条件</span><br><span class="line">            	&#x2F;&#x2F;正则选择文件 test 或者 include 具有相同的作用</span><br><span class="line">                test:&#x2F;\.jsx?$&#x2F;,</span><br><span class="line">                &#x2F;&#x2F;导入模块</span><br><span class="line">                exclude:&#x2F;(node_modules)&#x2F;,</span><br><span class="line">                use:&#123;</span><br><span class="line">                    loader:&#39;babel-loader&#39;,</span><br><span class="line">                    options:&#123;</span><br><span class="line">                        presets: [&#39;react&#39;]</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,&#123;</span><br><span class="line">                test:&#x2F;\.css$&#x2F;,</span><br><span class="line">                use : [&#39;style-loader&#39;,&#39;css-loader&#39;]</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"> </span><br><span class="line">   </span><br><span class="line">    &#x2F;&#x2F; 插件</span><br><span class="line">    plugins:[],</span><br><span class="line">    &#x2F;&#x2F; 开发服务器</span><br><span class="line">    devServer:&#123;</span><br><span class="line">        proxy: &#123; &#x2F;&#x2F; proxy URLs to backend development server</span><br><span class="line">          &#39;&#x2F;api&#39;: &#39;http:&#x2F;&#x2F;localhost:3000&#39;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#x2F;&#x2F; 模块安装</span><br><span class="line">        &#x2F;&#x2F; npm install webpack-dev-server --save-dev</span><br><span class="line">        &#x2F;&#x2F; contentBase: path.resolve(__dirname, &#39;dist&#39;),</span><br><span class="line">        &#x2F;&#x2F; host: &#39;192.168.1.9&#39;,</span><br><span class="line">        &#x2F;&#x2F; compress: true, &#x2F;&#x2F;服务端是否启用压缩</span><br><span class="line">        &#x2F;&#x2F; port:1717</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -889,48 +1013,6 @@ npm install hexo-generator-index-pin-top --save
       </categories>
       <tags>
         <tag>前段框架</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CSSBUG</title>
-    <url>/2019/06/20/2019-6/cssbug/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="BFC基本概念"><a href="#BFC基本概念" class="headerlink" title="BFC基本概念"></a>BFC基本概念</h3><p>BFC:块级格式化上下文</p>
-<p>BFC基本概念：BFC是CSS布局的一个概念，是一块独立的渲染区域，是一个环境，里面的元素不会影响到外部的元素。</p>
-<p>父级元素和兄弟元素边距重叠，重叠原则取最大值。空空元素的边距重叠是取margin与padding的最大值</p>
-<a id="more"></a>
-
-<p>1、根元素，即HTML元素（最大的一个BFC）</p>
-<p>2、就对定位元素 （position的值为absolute或fixed）</p>
-<p>3、行内块（display为inline-block）</p>
-<p>4、表格单元（display为table、table-cell、table-caption、inline-block等 HTML表格相关的属性）</p>
-<p>5、弹性盒（display为flex 或者inline-flex）</p>
-<p>6、默认值。内容不会被修剪，会呈现在元素框之外（overflow不为visible）</p>
-<p>可以让父级元素的高度包含子浮动元素，清除内部的浮动（原理：触发父div的BFC属性是下面的子div都处于父div的同一个BFC时，可以阻止margin重叠）</p>
-<h3 id="论iframe的优缺点"><a href="#论iframe的优缺点" class="headerlink" title="论iframe的优缺点"></a>论iframe的优缺点</h3><p>html5不再执行使用frame iframe只有src属性</p>
-<ol>
-<li>使用iframe的优缺点<ul>
-<li>优点<ol>
-<li>程序调入静态页面比较方便</li>
-<li>页面和程序分离<ul>
-<li>缺点</li>
-</ul>
-</li>
-</ol>
-</li>
-<li>缺点<br> 1.iframe有不好之处 样式脚本需要额外链如 ，会增加请求。另外用js放盗链只防得了小偷，防不了大盗<br> 2.iframe好在能够把原先的网页全部原封不动显示下来,但是如果用在首页,是搜索引擎最讨厌的.那么你<br>的网站即使做的在好,也排不到好的名次! <ol start="3">
-<li>调用外部页面,需要额外调用css,给页面带来额外的请求次数;</li>
-<li>链接导航疑问。运用框架结构时，你必须保证正确配置所有的导航链接，如不然，会给访问者带来很大<br>的麻烦。比如被链接的页面出现在导航框架内，这种情况下访问者便被陷住了，因为此时他没有其他地点<br>可去。</li>
-</ol>
-</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>css</category>
-      </categories>
-      <tags>
-        <tag>webBUG</tag>
       </tags>
   </entry>
   <entry>
@@ -975,6 +1057,48 @@ npm install hexo-generator-index-pin-top --save
       </categories>
       <tags>
         <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSSBUG</title>
+    <url>/2019/06/20/2019-6/cssbug/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="BFC基本概念"><a href="#BFC基本概念" class="headerlink" title="BFC基本概念"></a>BFC基本概念</h3><p>BFC:块级格式化上下文</p>
+<p>BFC基本概念：BFC是CSS布局的一个概念，是一块独立的渲染区域，是一个环境，里面的元素不会影响到外部的元素。</p>
+<p>父级元素和兄弟元素边距重叠，重叠原则取最大值。空空元素的边距重叠是取margin与padding的最大值</p>
+<a id="more"></a>
+
+<p>1、根元素，即HTML元素（最大的一个BFC）</p>
+<p>2、就对定位元素 （position的值为absolute或fixed）</p>
+<p>3、行内块（display为inline-block）</p>
+<p>4、表格单元（display为table、table-cell、table-caption、inline-block等 HTML表格相关的属性）</p>
+<p>5、弹性盒（display为flex 或者inline-flex）</p>
+<p>6、默认值。内容不会被修剪，会呈现在元素框之外（overflow不为visible）</p>
+<p>可以让父级元素的高度包含子浮动元素，清除内部的浮动（原理：触发父div的BFC属性是下面的子div都处于父div的同一个BFC时，可以阻止margin重叠）</p>
+<h3 id="论iframe的优缺点"><a href="#论iframe的优缺点" class="headerlink" title="论iframe的优缺点"></a>论iframe的优缺点</h3><p>html5不再执行使用frame iframe只有src属性</p>
+<ol>
+<li>使用iframe的优缺点<ul>
+<li>优点<ol>
+<li>程序调入静态页面比较方便</li>
+<li>页面和程序分离<ul>
+<li>缺点</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>缺点<br> 1.iframe有不好之处 样式脚本需要额外链如 ，会增加请求。另外用js放盗链只防得了小偷，防不了大盗<br> 2.iframe好在能够把原先的网页全部原封不动显示下来,但是如果用在首页,是搜索引擎最讨厌的.那么你<br>的网站即使做的在好,也排不到好的名次! <ol start="3">
+<li>调用外部页面,需要额外调用css,给页面带来额外的请求次数;</li>
+<li>链接导航疑问。运用框架结构时，你必须保证正确配置所有的导航链接，如不然，会给访问者带来很大<br>的麻烦。比如被链接的页面出现在导航框架内，这种情况下访问者便被陷住了，因为此时他没有其他地点<br>可去。</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>css</category>
+      </categories>
+      <tags>
+        <tag>webBUG</tag>
       </tags>
   </entry>
   <entry>
