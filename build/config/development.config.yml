@@ -1,0 +1,32 @@
+# 默认启动 配置
+
+# 项目名称
+title: 示例模板
+
+# 开发或生产环境服务的公共基础路径。合法的值包括以下几种：
+# 项目路径
+# 绝对 URL 路径名，例如 /foo/
+# 完整的 URL，例如 https://foo.com/
+# 空字符串或 ./（用于开发环境）
+basePath: "./"
+
+
+#  指定输出路径 
+outDir: dist
+
+
+# 静态资源文件 指定生成静态资源的存放路径assetsPublicPath
+assetsDir:  assets
+
+
+
+# envPrefix  开头的环境变量会通过 import.meta.env 暴露在你的客户端源码中
+envPrefix:
+  - VITE_
+    - AUGO_
+
+
+# 代理
+proxy:
+  - "/cms"
+  - 'http://localhost:7001/cms'
